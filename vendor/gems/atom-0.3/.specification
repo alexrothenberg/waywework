@@ -1,0 +1,54 @@
+--- !ruby/object:Gem::Specification 
+name: atom
+version: !ruby/object:Gem::Version 
+  version: "0.3"
+platform: ruby
+authors: 
+- Martin Traverso
+autorequire: 
+bindir: bin
+cert_chain: 
+date: 2006-04-11 00:00:00 -04:00
+default_executable: 
+dependencies: []
+
+description: 
+email: mtraverso@acm.org
+executables: []
+
+extensions: []
+
+extra_rdoc_files: []
+
+files: 
+- lib/atom.rb
+- lib/xmlmapping.rb
+has_rdoc: false
+homepage: http://http://rubyforge.org/projects/atom/
+post_install_message: 
+rdoc_options: []
+
+require_paths: 
+- bin
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">"
+    - !ruby/object:Gem::Version 
+      version: 0.0.0
+  version: 
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      version: "0"
+  version: 
+requirements: []
+
+rubyforge_project: 
+rubygems_version: 1.2.0
+signing_key: 
+specification_version: 1
+summary: Ruby library for working with the Atom syndication format
+test_files: []
+
