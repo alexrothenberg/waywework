@@ -1,0 +1,971 @@
+
+
+Processing FeedsController#destroy (for 0.0.0.0 at 2008-10-22 12:33:05) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"1", "controller"=>"feeds"}
+Redirected to http://test.host/feeds
+Completed in 0.00240 (416 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/feeds/1]
+
+
+Processing FeedsController#destroy (for 0.0.0.0 at 2008-10-22 12:33:05) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"37", "controller"=>"feeds"}
+Redirected to http://test.host/feeds
+Completed in 0.00034 (2949 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/feeds/37]
+
+
+Processing FeedsController#update (for 0.0.0.0 at 2008-10-22 12:33:05) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"1", "controller"=>"feeds"}
+Rendering feeds/edit
+Completed in 0.00055 (1807 reqs/sec) | Rendering: 0.00013 (23%) | DB: 0.00000 (0%) | 200 OK [http://test.host/feeds/1]
+
+
+Processing FeedsController#update (for 0.0.0.0 at 2008-10-22 12:33:05) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"1", "controller"=>"feeds"}
+Rendering feeds/edit
+Completed in 0.00052 (1930 reqs/sec) | Rendering: 0.00012 (22%) | DB: 0.00000 (0%) | 200 OK [http://test.host/feeds/1]
+
+
+Processing FeedsController#update (for 0.0.0.0 at 2008-10-22 12:33:05) [PUT]
+  Session ID: 
+  Parameters: {"feed"=>{"these"=>"params"}, "action"=>"update", "id"=>"37", "controller"=>"feeds"}
+Rendering feeds/edit
+Completed in 0.00056 (1779 reqs/sec) | Rendering: 0.00014 (25%) | DB: 0.00000 (0%) | 200 OK [http://test.host/feeds/37?feed%5Bthese%5D=params]
+
+
+Processing FeedsController#update (for 0.0.0.0 at 2008-10-22 12:33:05) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"1", "controller"=>"feeds"}
+Redirected to http://test.host/feeds/1006
+Completed in 0.00069 (1449 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/feeds/1]
+
+
+Processing FeedsController#update (for 0.0.0.0 at 2008-10-22 12:33:05) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"1", "controller"=>"feeds"}
+Redirected to http://test.host/feeds/1007
+Completed in 0.00047 (2126 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/feeds/1]
+
+
+Processing FeedsController#update (for 0.0.0.0 at 2008-10-22 12:33:05) [PUT]
+  Session ID: 
+  Parameters: {"feed"=>{"these"=>"params"}, "action"=>"update", "id"=>"37", "controller"=>"feeds"}
+Rendering feeds/edit
+Completed in 0.00049 (2053 reqs/sec) | Rendering: 0.00012 (24%) | DB: 0.00000 (0%) | 200 OK [http://test.host/feeds/37?feed%5Bthese%5D=params]
+
+
+Processing FeedsController#create (for 0.0.0.0 at 2008-10-22 12:33:05) [POST]
+  Session ID: 
+  Parameters: {"feed"=>{}, "action"=>"create", "controller"=>"feeds"}
+Rendering feeds/new
+Completed in 0.00151 (662 reqs/sec) | Rendering: 0.00017 (11%) | DB: 0.00000 (0%) | 200 OK [http://test.host/feeds?]
+
+
+Processing FeedsController#create (for 0.0.0.0 at 2008-10-22 12:33:05) [POST]
+  Session ID: 
+  Parameters: {"feed"=>{"these"=>"params"}, "action"=>"create", "controller"=>"feeds"}
+Rendering feeds/new
+Completed in 0.00060 (1675 reqs/sec) | Rendering: 0.00013 (22%) | DB: 0.00000 (0%) | 200 OK [http://test.host/feeds?feed%5Bthese%5D=params]
+
+
+Processing FeedsController#create (for 0.0.0.0 at 2008-10-22 12:33:05) [POST]
+  Session ID: 
+  Parameters: {"feed"=>{}, "action"=>"create", "controller"=>"feeds"}
+Redirected to http://test.host/feeds/1011
+Completed in 0.00072 (1381 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/feeds?]
+
+
+Processing FeedsController#create (for 0.0.0.0 at 2008-10-22 12:33:05) [POST]
+  Session ID: 
+  Parameters: {"feed"=>{"these"=>"params"}, "action"=>"create", "controller"=>"feeds"}
+Redirected to http://test.host/feeds/1012
+Completed in 0.00048 (2101 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/feeds?feed%5Bthese%5D=params]
+
+
+Processing FeedsController#edit (for 0.0.0.0 at 2008-10-22 12:33:05) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"37", "controller"=>"feeds"}
+Rendering feeds/edit
+Completed in 0.00035 (2833 reqs/sec) | Rendering: 0.00015 (41%) | DB: 0.00000 (0%) | 200 OK [http://test.host/feeds/37/edit]
+
+
+Processing FeedsController#new (for 0.0.0.0 at 2008-10-22 12:33:05) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"feeds"}
+Rendering feeds/new
+Completed in 0.00048 (2070 reqs/sec) | Rendering: 0.00013 (26%) | DB: 0.00000 (0%) | 200 OK [http://test.host/feeds/new]
+
+
+Processing FeedsController#show (for 0.0.0.0 at 2008-10-22 12:33:05) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"37", "controller"=>"feeds"}
+Completed in 0.00048 (2101 reqs/sec) | Rendering: 0.00008 (16%) | DB: 0.00000 (0%) | 200 OK [http://test.host/feeds/37]
+
+
+Processing FeedsController#show (for 0.0.0.0 at 2008-10-22 12:33:05) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"37", "controller"=>"feeds"}
+Rendering feeds/show
+Completed in 0.00051 (1960 reqs/sec) | Rendering: 0.00014 (26%) | DB: 0.00000 (0%) | 200 OK [http://test.host/feeds/37]
+
+
+Processing FeedsController#index (for 0.0.0.0 at 2008-10-22 12:33:05) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"feeds"}
+Completed in 0.00045 (2202 reqs/sec) | Rendering: 0.00007 (16%) | DB: 0.00000 (0%) | 200 OK [http://test.host/feeds]
+
+
+Processing FeedsController#index (for 0.0.0.0 at 2008-10-22 12:33:05) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"feeds"}
+Rendering feeds/index
+Completed in 0.00047 (2136 reqs/sec) | Rendering: 0.00012 (26%) | DB: 0.00000 (0%) | 200 OK [http://test.host/feeds]
+  [4;36;1mFeed Create (0.000364)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 16:33:05', 'value for feed_url', 'value for url', '2008-10-22 16:33:05')[0m
+Rendering /feeds/show.html.erb
+Rendering /feeds/new.html.erb
+Rendering /feeds/index.html.erb
+Rendering /feeds/edit.html.erb
+  [4;35;1mPost Create (0.000348)[0m   [0mINSERT INTO "posts" ("feed_url_id", "updated_at", "contents", "created_at") VALUES(1, '2008-10-22 16:33:05', 'value for contents', '2008-10-22 16:33:05')[0m
+Rendering /posts/edit.html.erb
+Rendering /posts/index.html.erb
+
+
+Processing PostsController#destroy (for 0.0.0.0 at 2008-10-22 12:33:05) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"1", "controller"=>"posts"}
+Redirected to http://test.host/posts
+Completed in 0.00241 (415 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/posts/1]
+
+
+Processing PostsController#destroy (for 0.0.0.0 at 2008-10-22 12:33:05) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"37", "controller"=>"posts"}
+Redirected to http://test.host/posts
+Completed in 0.00034 (2957 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/posts/37]
+
+
+Processing PostsController#update (for 0.0.0.0 at 2008-10-22 12:33:05) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"1", "controller"=>"posts"}
+Rendering posts/edit
+Completed in 0.00058 (1733 reqs/sec) | Rendering: 0.00014 (24%) | DB: 0.00000 (0%) | 200 OK [http://test.host/posts/1]
+
+
+Processing PostsController#update (for 0.0.0.0 at 2008-10-22 12:33:05) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"1", "controller"=>"posts"}
+Rendering posts/edit
+Completed in 0.00057 (1766 reqs/sec) | Rendering: 0.00013 (22%) | DB: 0.00000 (0%) | 200 OK [http://test.host/posts/1]
+
+
+Processing PostsController#update (for 0.0.0.0 at 2008-10-22 12:33:05) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "post"=>{"these"=>"params"}, "id"=>"37", "controller"=>"posts"}
+Rendering posts/edit
+Completed in 0.00056 (1801 reqs/sec) | Rendering: 0.00012 (22%) | DB: 0.00000 (0%) | 200 OK [http://test.host/posts/37?post%5Bthese%5D=params]
+
+
+Processing PostsController#update (for 0.0.0.0 at 2008-10-22 12:33:05) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"1", "controller"=>"posts"}
+Redirected to http://test.host/posts/1031
+Completed in 0.00052 (1934 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/posts/1]
+
+
+Processing PostsController#update (for 0.0.0.0 at 2008-10-22 12:33:05) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"1", "controller"=>"posts"}
+Redirected to http://test.host/posts/1032
+Completed in 0.00053 (1886 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/posts/1]
+
+
+Processing PostsController#update (for 0.0.0.0 at 2008-10-22 12:33:05) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "post"=>{"these"=>"params"}, "id"=>"37", "controller"=>"posts"}
+Rendering posts/edit
+Completed in 0.00051 (1949 reqs/sec) | Rendering: 0.00013 (24%) | DB: 0.00000 (0%) | 200 OK [http://test.host/posts/37?post%5Bthese%5D=params]
+
+
+Processing PostsController#create (for 0.0.0.0 at 2008-10-22 12:33:05) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "post"=>{}, "controller"=>"posts"}
+Rendering posts/new
+Completed in 0.00053 (1897 reqs/sec) | Rendering: 0.00013 (24%) | DB: 0.00000 (0%) | 200 OK [http://test.host/posts?]
+
+
+Processing PostsController#create (for 0.0.0.0 at 2008-10-22 12:33:05) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "post"=>{"these"=>"params"}, "controller"=>"posts"}
+Rendering posts/new
+Completed in 0.00049 (2037 reqs/sec) | Rendering: 0.00012 (23%) | DB: 0.00000 (0%) | 200 OK [http://test.host/posts?post%5Bthese%5D=params]
+
+
+Processing PostsController#create (for 0.0.0.0 at 2008-10-22 12:33:05) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "post"=>{}, "controller"=>"posts"}
+Redirected to http://test.host/posts/1036
+Completed in 0.00054 (1858 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/posts?]
+
+
+Processing PostsController#create (for 0.0.0.0 at 2008-10-22 12:33:05) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "post"=>{"these"=>"params"}, "controller"=>"posts"}
+Redirected to http://test.host/posts/1037
+Completed in 0.00049 (2041 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/posts?post%5Bthese%5D=params]
+
+
+Processing PostsController#edit (for 0.0.0.0 at 2008-10-22 12:33:05) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"37", "controller"=>"posts"}
+Rendering posts/edit
+Completed in 0.00036 (2779 reqs/sec) | Rendering: 0.00015 (41%) | DB: 0.00000 (0%) | 200 OK [http://test.host/posts/37/edit]
+
+
+Processing PostsController#new (for 0.0.0.0 at 2008-10-22 12:33:05) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"posts"}
+Rendering posts/new
+Completed in 0.00053 (1872 reqs/sec) | Rendering: 0.00017 (32%) | DB: 0.00000 (0%) | 200 OK [http://test.host/posts/new]
+
+
+Processing PostsController#show (for 0.0.0.0 at 2008-10-22 12:33:05) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"37", "controller"=>"posts"}
+Completed in 0.00046 (2183 reqs/sec) | Rendering: 0.00008 (17%) | DB: 0.00000 (0%) | 200 OK [http://test.host/posts/37]
+
+
+Processing PostsController#show (for 0.0.0.0 at 2008-10-22 12:33:05) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"37", "controller"=>"posts"}
+Rendering posts/show
+Completed in 0.00048 (2062 reqs/sec) | Rendering: 0.00012 (25%) | DB: 0.00000 (0%) | 200 OK [http://test.host/posts/37]
+
+
+Processing PostsController#index (for 0.0.0.0 at 2008-10-22 12:33:05) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Completed in 0.00046 (2174 reqs/sec) | Rendering: 0.00007 (16%) | DB: 0.00000 (0%) | 200 OK [http://test.host/posts]
+
+
+Processing PostsController#index (for 0.0.0.0 at 2008-10-22 12:33:05) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering posts/index
+Completed in 0.00048 (2096 reqs/sec) | Rendering: 0.00013 (26%) | DB: 0.00000 (0%) | 200 OK [http://test.host/posts]
+Rendering /posts/new.html.erb
+Rendering /posts/show.html.erb
+  [4;36;1mFeed Create (0.000349)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 16:42:46', 'value for feed_url', 'value for url', '2008-10-22 16:42:46')[0m
+  [4;35;1mFeed Create (0.000480)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 16:42:46', 'value for feed_url', 'value for url', '2008-10-22 16:42:46')[0m
+  [4;36;1mFeed Create (0.000349)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 16:43:51', 'value for feed_url', 'value for url', '2008-10-22 16:43:51')[0m
+  [4;35;1mFeed Create (0.001232)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 16:43:51', 'value for feed_url', 'value for url', '2008-10-22 16:43:51')[0m
+  [4;36;1mFeed Create (0.000383)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 16:44:26', 'value for feed_url', 'value for url', '2008-10-22 16:44:26')[0m
+  [4;35;1mFeed Create (0.000365)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 16:44:26', 'value for feed_url', 'value for url', '2008-10-22 16:44:26')[0m
+  [4;36;1mFeed Create (0.000359)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 16:44:40', 'value for feed_url', 'value for url', '2008-10-22 16:44:40')[0m
+  [4;35;1mFeed Create (0.000634)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 16:44:40', 'value for feed_url', 'value for url', '2008-10-22 16:44:40')[0m
+  [4;36;1mFeed Create (0.000369)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 16:45:01', 'value for feed_url', 'value for url', '2008-10-22 16:45:01')[0m
+  [4;35;1mFeed Create (0.001129)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 16:45:01', 'value for feed_url', 'value for url', '2008-10-22 16:45:01')[0m
+  [4;36;1mFeed Create (0.000341)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 16:45:38', 'value for feed_url', 'value for url', '2008-10-22 16:45:38')[0m
+  [4;35;1mFeed Create (0.000899)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 16:45:38', 'value for feed_url', 'value for url', '2008-10-22 16:45:38')[0m
+  [4;36;1mFeed Create (0.000415)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 16:53:58', 'value for feed_url', 'value for url', '2008-10-22 16:53:58')[0m
+  [4;35;1mFeed Create (0.000319)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 16:53:59', 'value for feed_url', 'value for url', '2008-10-22 16:53:59')[0m
+  [4;36;1mFeed Create (0.000360)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 16:53:59', 'value for feed_url', 'value for url', '2008-10-22 16:53:59')[0m
+  [4;35;1mSQL (0.000239)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000181)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000165)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000158)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mFeed Create (0.000368)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 16:56:54', 'value for feed_url', 'value for url', '2008-10-22 16:56:54')[0m
+  [4;35;1mFeed Create (0.000442)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 16:56:54', 'value for feed_url', 'value for url', '2008-10-22 16:56:54')[0m
+  [4;36;1mFeed Create (0.000253)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 16:56:54', 'value for feed_url', 'value for url', '2008-10-22 16:56:54')[0m
+  [4;35;1mSQL (0.000222)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000167)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000164)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000160)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mFeed Create (0.000397)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 16:57:12', 'value for feed_url', 'value for url', '2008-10-22 16:57:12')[0m
+  [4;35;1mFeed Create (0.000382)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 16:57:12', 'value for feed_url', 'value for url', '2008-10-22 16:57:12')[0m
+  [4;36;1mFeed Create (0.000439)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 16:57:12', 'value for feed_url', 'value for url', '2008-10-22 16:57:12')[0m
+  [4;35;1mSQL (0.000208)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000133)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000165)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000168)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000137)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000138)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000208)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000170)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000176)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000210)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mFeed Create (0.000351)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 16:58:06', 'value for feed_url', 'value for url', '2008-10-22 16:58:06')[0m
+  [4;35;1mFeed Create (0.000508)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 16:58:06', 'value for feed_url', 'value for url', '2008-10-22 16:58:06')[0m
+  [4;36;1mFeed Create (0.000552)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 16:58:06', 'value for feed_url', 'value for url', '2008-10-22 16:58:06')[0m
+  [4;35;1mSQL (0.000318)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000236)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000216)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000373)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000148)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000143)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000343)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000287)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000197)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000163)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mPost Create (0.000340)[0m   [0;1mINSERT INTO "posts" ("feed_url_id", "updated_at", "contents", "created_at") VALUES(1, '2008-10-22 16:58:48', 'value for contents', '2008-10-22 16:58:48')[0m
+  [4;36;1mFeed Create (0.000409)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 16:58:59', 'value for feed_url', 'value for url', '2008-10-22 16:58:59')[0m
+  [4;35;1mFeed Create (0.001253)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 16:58:59', 'value for feed_url', 'value for url', '2008-10-22 16:58:59')[0m
+  [4;36;1mFeed Create (0.000404)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 16:58:59', 'value for feed_url', 'value for url', '2008-10-22 16:58:59')[0m
+  [4;36;1mFeed Create (0.000388)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 16:59:13', 'value for feed_url', 'value for url', '2008-10-22 16:59:13')[0m
+  [4;35;1mFeed Create (0.000555)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 16:59:13', 'value for feed_url', 'value for url', '2008-10-22 16:59:13')[0m
+  [4;36;1mFeed Create (0.000665)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 16:59:13', 'value for feed_url', 'value for url', '2008-10-22 16:59:13')[0m
+  [4;35;1mSQL (0.000201)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000134)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000135)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000134)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000193)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000135)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000241)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000165)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000179)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000162)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mFeed Create (0.000377)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:03:58', 'value for feed_url', 'value for url', '2008-10-22 17:03:58')[0m
+  [4;35;1mFeed Create (0.000451)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:03:58', 'value for feed_url', 'value for url', '2008-10-22 17:03:58')[0m
+  [4;36;1mFeed Create (0.000452)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:03:58', 'value for feed_url', 'value for url', '2008-10-22 17:03:58')[0m
+  [4;35;1mSQL (0.000403)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000180)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000175)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000176)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000172)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000174)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000208)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000168)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000182)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000162)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mFeed Create (0.000350)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:06:50', 'value for feed_url', 'value for url', '2008-10-22 17:06:50')[0m
+  [4;35;1mFeed Create (0.000580)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:06:50', 'value for feed_url', 'value for url', '2008-10-22 17:06:50')[0m
+  [4;36;1mFeed Create (0.000422)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:06:50', 'value for feed_url', 'value for url', '2008-10-22 17:06:50')[0m
+  [4;35;1mSQL (0.000231)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000174)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000167)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000168)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mFeed Create (0.000352)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:07:45', 'value for feed_url', 'value for url', '2008-10-22 17:07:45')[0m
+  [4;35;1mFeed Create (0.000545)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:07:45', 'value for feed_url', 'value for url', '2008-10-22 17:07:45')[0m
+  [4;36;1mFeed Create (0.000450)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:07:45', 'value for feed_url', 'value for url', '2008-10-22 17:07:45')[0m
+  [4;35;1mSQL (0.000246)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000187)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000188)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000179)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mFeed Create (0.000452)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:07:56', 'value for feed_url', 'value for url', '2008-10-22 17:07:56')[0m
+  [4;35;1mFeed Create (0.000515)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:07:56', 'value for feed_url', 'value for url', '2008-10-22 17:07:56')[0m
+  [4;36;1mFeed Create (0.000506)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:07:56', 'value for feed_url', 'value for url', '2008-10-22 17:07:56')[0m
+  [4;35;1mSQL (0.000302)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000200)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000194)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000206)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000198)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000190)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000226)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000161)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000165)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000159)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mFeed Create (0.000460)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:09:04', 'value for feed_url', 'value for url', '2008-10-22 17:09:04')[0m
+  [4;35;1mFeed Create (0.000810)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:09:04', 'value for feed_url', 'value for url', '2008-10-22 17:09:04')[0m
+  [4;36;1mFeed Create (0.000514)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:09:04', 'value for feed_url', 'value for url', '2008-10-22 17:09:04')[0m
+  [4;35;1mSQL (0.000249)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000403)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000175)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000139)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000142)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000130)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000200)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000160)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000162)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000159)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mFeed Create (0.000403)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:09:31', 'value for feed_url', 'value for url', '2008-10-22 17:09:31')[0m
+  [4;35;1mFeed Create (0.000571)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:09:31', 'value for feed_url', 'value for url', '2008-10-22 17:09:31')[0m
+  [4;36;1mFeed Create (0.001165)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:09:31', 'value for feed_url', 'value for url', '2008-10-22 17:09:31')[0m
+  [4;35;1mSQL (0.000207)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000142)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000189)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000138)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000142)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000131)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000209)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000164)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000232)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000239)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mFeed Create (0.000370)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:09:51', 'value for feed_url', 'value for url', '2008-10-22 17:09:51')[0m
+  [4;35;1mFeed Create (0.001268)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:09:51', 'value for feed_url', 'value for url', '2008-10-22 17:09:51')[0m
+  [4;36;1mFeed Create (0.000609)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:09:51', 'value for feed_url', 'value for url', '2008-10-22 17:09:51')[0m
+  [4;35;1mSQL (0.000203)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000141)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000149)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000132)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000133)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000141)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000235)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000160)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000163)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000203)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mFeed Create (0.000358)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:11:06', 'value for feed_url', 'value for url', '2008-10-22 17:11:06')[0m
+  [4;35;1mFeed Create (0.000655)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:11:06', 'value for feed_url', 'value for url', '2008-10-22 17:11:06')[0m
+  [4;36;1mFeed Create (0.000286)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:11:06', 'value for feed_url', 'value for url', '2008-10-22 17:11:06')[0m
+  [4;35;1mSQL (0.000632)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000360)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000380)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000428)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mFeed Create (0.000374)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:11:28', 'value for feed_url', 'value for url', '2008-10-22 17:11:28')[0m
+  [4;35;1mFeed Create (0.000572)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:11:28', 'value for feed_url', 'value for url', '2008-10-22 17:11:28')[0m
+  [4;36;1mFeed Create (0.000293)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:11:28', 'value for feed_url', 'value for url', '2008-10-22 17:11:28')[0m
+  [4;35;1mSQL (0.000216)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000133)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000133)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000129)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000130)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000129)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000261)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000162)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000168)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000160)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mFeed Create (0.000373)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:13:56', 'value for feed_url', 'value for url', '2008-10-22 17:13:56')[0m
+  [4;35;1mFeed Create (0.000550)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:13:56', 'value for feed_url', 'value for url', '2008-10-22 17:13:56')[0m
+  [4;36;1mFeed Create (0.000324)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:13:56', 'value for feed_url', 'value for url', '2008-10-22 17:13:56')[0m
+  [4;35;1mSQL (0.000287)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000150)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000147)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000141)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000136)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000136)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000192)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000161)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000164)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000161)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mFeed Create (0.000358)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:15:54', 'value for feed_url', 'value for url', '2008-10-22 17:15:54')[0m
+  [4;35;1mFeed Create (0.000552)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:15:54', 'value for feed_url', 'value for url', '2008-10-22 17:15:54')[0m
+  [4;36;1mFeed Create (0.001224)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:15:54', 'value for feed_url', 'value for url', '2008-10-22 17:15:54')[0m
+  [4;35;1mSQL (0.000294)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000224)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000212)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000212)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000209)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000208)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000574)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000623)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000367)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000292)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mFeed Create (0.000371)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:16:33', 'value for feed_url', 'value for url', '2008-10-22 17:16:33')[0m
+  [4;35;1mFeed Create (0.000536)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:16:33', 'value for feed_url', 'value for url', '2008-10-22 17:16:33')[0m
+  [4;36;1mFeed Create (0.001150)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:16:33', 'value for feed_url', 'value for url', '2008-10-22 17:16:33')[0m
+  [4;35;1mSQL (0.000218)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000139)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000131)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000133)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000129)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000129)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000666)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000350)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000361)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000293)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mFeed Create (0.000363)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:17:09', 'value for feed_url', 'value for url', '2008-10-22 17:17:09')[0m
+  [4;35;1mFeed Create (0.000549)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:17:09', 'value for feed_url', 'value for url', '2008-10-22 17:17:09')[0m
+  [4;36;1mFeed Create (0.000994)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:17:09', 'value for feed_url', 'value for url', '2008-10-22 17:17:09')[0m
+  [4;35;1mSQL (0.000300)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000225)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000219)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000215)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000217)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000213)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000263)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000285)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000165)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000158)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mFeed Create (0.000356)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:17:55', 'value for feed_url', 'value for url', '2008-10-22 17:17:55')[0m
+  [4;35;1mFeed Create (0.000535)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:17:56', 'value for feed_url', 'value for url', '2008-10-22 17:17:56')[0m
+  [4;36;1mFeed Create (0.000610)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('value for name', '2008-10-22 17:17:56', 'value for feed_url', 'value for url', '2008-10-22 17:17:56')[0m
+  [4;35;1mSQL (0.000223)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000205)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000320)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000142)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000164)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000143)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000226)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000204)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000166)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000158)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m

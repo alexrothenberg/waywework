@@ -1,0 +1,22 @@
+<h1>Listing posts</h1>
+
+<table>
+  <tr>
+    <th>Feed url</th>
+    <th>Contents</th>
+  </tr>
+
+<% for post in @posts %>
+  <tr>
+    <td><%=h post.feed_url_id %></td>
+    <td><%=h post.contents %></td>
+    <td><%= link_to 'Show', post %></td>
+    <td><%= link_to 'Edit', edit_post_path(post) %></td>
+    <td><%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New post', new_post_path %>

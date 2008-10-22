@@ -1,0 +1,135 @@
+  [4;36;1mSQL (0.000220)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.417075)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.002455)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.001874)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000281)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000136)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateFeeds (20081022162743)
+  [4;36;1mSQL (0.001979)[0m   [0;1mCREATE TABLE "feeds" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "url" varchar(255), "name" varchar(255), "feed_url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.001786)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081022162743')[0m
+Migrating to CreatePosts (20081022162832)
+  [4;36;1mSQL (0.001985)[0m   [0;1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "feed_url_id" integer, "contents" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.002274)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081022162832')[0m
+  [4;36;1mSQL (0.000358)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000214)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000263)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000063)[0m   [0mPRAGMA index_list("feeds")[0m
+  [4;36;1mSQL (0.000054)[0m   [0;1mPRAGMA index_list("posts")[0m
+
+
+Processing FeedsController#index (for 127.0.0.1 at 2008-10-22 12:31:32) [GET]
+  Session ID: 1cf624540eed5bdb4a32c8e65b109e12
+  Parameters: {"action"=>"index", "controller"=>"feeds"}
+  [4;36;1mFeed Load (0.000405)[0m   [0;1mSELECT * FROM "feeds" [0m
+Rendering feeds/index
+Completed in 0.00748 (133 reqs/sec) | Rendering: 0.00146 (19%) | DB: 0.00040 (5%) | 200 OK [http://localhost/feeds]
+
+
+Processing FeedsController#new (for 127.0.0.1 at 2008-10-22 12:31:34) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--293d0bc4226877a90b679b09ceaf0c5625787e7b
+  Parameters: {"action"=>"new", "controller"=>"feeds"}
+Rendering feeds/new
+Completed in 0.00984 (101 reqs/sec) | Rendering: 0.00400 (40%) | DB: 0.00000 (0%) | 200 OK [http://localhost/feeds/new]
+
+
+Processing FeedsController#create (for 127.0.0.1 at 2008-10-22 12:32:35) [POST]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlOGQ2ZTI3NzQwYjBiNjkwMmM2
+ODg0ZGEwMDRiYjY2MWU=--4a38e987aa2a053da33619370fa8300d9ada8b6f
+  Parameters: {"commit"=>"Create", "feed"=>{"name"=>"Pat Shaughnessy", "feed_url"=>"http://patshaughnessy.net/feed/atom.xml", "url"=>"http://patshaughnessy.net"}, "authenticity_token"=>"f7e0f5d71a1dab36552aba80d18d5a75b5aed61f", "action"=>"create", "controller"=>"feeds"}
+  [4;35;1mFeed Create (0.000403)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "created_at") VALUES('Pat Shaughnessy', '2008-10-22 16:32:35', 'http://patshaughnessy.net/feed/atom.xml', 'http://patshaughnessy.net', '2008-10-22 16:32:35')[0m
+Redirected to http://localhost:3000/feeds/1
+Completed in 0.07965 (12 reqs/sec) | DB: 0.00040 (0%) | 302 Found [http://localhost/feeds]
+
+
+Processing FeedsController#show (for 127.0.0.1 at 2008-10-22 12:32:35) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsGOgtub3RpY2UiI0ZlZWQgd2FzIHN1Y2Nlc3NmdWxseSBjcmVhdGVk
+LgY6CkB1c2VkewY7BkY6DGNzcmZfaWQiJThkNmUyNzc0MGIwYjY5MDJjNjg4
+NGRhMDA0YmI2NjFl--04c7228c72d85659c8a60acb3dd53b0b7e4d7d86
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"feeds"}
+  [4;36;1mFeed Load (0.000212)[0m   [0;1mSELECT * FROM "feeds" WHERE ("feeds"."id" = 1) [0m
+Rendering feeds/show
+Completed in 0.00893 (112 reqs/sec) | Rendering: 0.00188 (21%) | DB: 0.00021 (2%) | 200 OK [http://localhost/feeds/1]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2008-10-22 12:32:44) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsGOgtub3RpY2UiI0ZlZWQgd2FzIHN1Y2Nlc3NmdWxseSBjcmVhdGVk
+LgY6CkB1c2VkewY7BlQ6DGNzcmZfaWQiJThkNmUyNzc0MGIwYjY5MDJjNjg4
+NGRhMDA0YmI2NjFl--d9113bbe28bb6b79cbdc37345f62a18d1cfb4b72
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;35;1mPost Load (0.000337)[0m   [0mSELECT * FROM "posts" [0m
+Rendering posts/index
+Completed in 0.00738 (135 reqs/sec) | Rendering: 0.00119 (16%) | DB: 0.00034 (4%) | 200 OK [http://localhost/posts]
+  [4;36;1mSQL (0.000465)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000138)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000115)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000156)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.012797)[0m   [0;1mCREATE TABLE "feeds" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "url" varchar(255), "name" varchar(255), "feed_url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.000407)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.002306)[0m   [0;1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "feed_url_id" integer, "contents" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.000406)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.002133)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.003436)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000465)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000163)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.001822)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20081022162832')[0m
+  [4;35;1mSQL (0.001835)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20081022162743')[0m
+  [4;36;1mSQL (0.000218)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000114)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.012681)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.002493)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000541)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000188)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateFeeds (20081022162743)
+  [4;36;1mSQL (0.001999)[0m   [0;1mCREATE TABLE "feeds" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "url" varchar(255), "name" varchar(255), "feed_url" varchar(255), "author" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.001810)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081022162743')[0m
+Migrating to CreatePosts (20081022162832)
+  [4;36;1mSQL (0.002592)[0m   [0;1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "feed_url_id" integer, "contents" text, "title" varchar(255), "url" varchar(255), "published" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.002273)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081022162832')[0m
+  [4;36;1mSQL (0.000476)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000250)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000305)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000072)[0m   [0mPRAGMA index_list("feeds")[0m
+  [4;36;1mSQL (0.000068)[0m   [0;1mPRAGMA index_list("posts")[0m

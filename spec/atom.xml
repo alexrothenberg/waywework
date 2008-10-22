@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom">
+  <title>Pat Shaughnessy - Home</title>
+  <id>tag:patshaughnessy.net,2008:mephisto/</id>
+  <generator version="0.8.0" uri="http://mephistoblog.com">Mephisto Drax</generator>
+  <link href="http://patshaughnessy.net/feed/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="http://patshaughnessy.net/" rel="alternate" type="text/html"/>
+  <updated>2008-10-21T03:15:37Z</updated>
+  <entry xml:base="http://patshaughnessy.net/">
+    <author>
+      <name>admin</name>
+    </author>
+    <id>tag:patshaughnessy.net,2008-10-21:4</id>
+    <published>2008-10-21T02:51:00Z</published>
+    <updated>2008-10-21T03:15:37Z</updated>
+    <category term="Rails"/>
+    <category term="rails"/>
+    <link href="http://patshaughnessy.net/2008/10/21/autocomplete-plugin-doesn-t-work-for-repeated-fields" rel="alternate" type="text/html"/>
+    <titlea>Autocomplete plugin doesn&#8217;t work for repeated fields</titlea>
+    <content type="html">
+            the first post
+    </content>  
+  </entry>
+  <entry xml:base="http://patshaughnessy.net/">
+    <author>
+      <name>admin</name>
+    </author>
+    <id>tag:patshaughnessy.net,2008-09-28:3</id>
+    <published>2008-09-28T03:01:00Z</published>
+    <updated>2008-10-16T16:59:00Z</updated>
+    <category term="Mephisto Notes"/>
+    <category term="Rails"/>
+    <link href="http://patshaughnessy.net/2008/9/28/problems-installing-the-cutline-theme-in-mephisto" rel="alternate" type="text/html"/>
+    <title>Problems Installing the Cutline Theme in Mephisto</title>
+<content type="html">the second post
+          </content>  </entry>
+
+</feed>
