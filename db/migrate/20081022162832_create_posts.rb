@@ -1,7 +1,7 @@
 class CreatePosts < ActiveRecord::Migration
   def self.up
     create_table :posts do |t|
-      t.integer :feed_url_id
+      t.integer :feed_id
       t.text :contents
       t.string :title
       t.string :url

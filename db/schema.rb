@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(:version => 20081022162832) do
   end
 
   create_table "posts", :force => true do |t|
-    t.integer  "feed_url_id"
+    t.integer  "feed_id"
     t.text     "contents"
     t.string   "title"
     t.string   "url"
