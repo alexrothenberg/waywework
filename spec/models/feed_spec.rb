@@ -23,8 +23,9 @@ describe Feed do
   it 'should parse an atom feed' do
     feed = Feed.create!(@valid_attributes)
     xml=IO.read(File.join(RAILS_ROOT, 'spec', 'atom.xml'))
-    Post.should_receive(:new).with(hash_including( :contents=>'the first post', :title=>'Title for my first post', :published=>'2008-10-21 02:51:00', :url=>'http://my.blog.com/first_post.html')).and_return(post1=mock('post1'))
-    Post.should_receive(:new).with(hash_including( :contents=>'the second post', :title=>'The title of my second post', :published=>'2008-09-28 03:01:00', :url=>'http://my.blog.com/the_second_post.html')).and_return(post2=mock('post2'))
+    feed.should_receive(:posts).twice.and_return(myposts=mock('posts'))
+    myposts.should_receive(:build).with(hash_including(:contents=>'the first post', :title=>'Title for my first post', :published=>'2008-10-21 02:51:00', :url=>'http://my.blog.com/first_post.html')).and_return(post1=mock('post1'))
+    myposts.should_receive(:build).with(hash_including(:contents=>'the second post', :title=>'The title of my second post', :published=>'2008-09-28 03:01:00', :url=>'http://my.blog.com/the_second_post.html')).and_return(post2=mock('post2'))
     posts = feed.get_posts_from_atom(xml)
     posts.should == [post1, post2]
   end
@@ -32,10 +33,13 @@ describe Feed do
   it 'should parse a rss feed' do
     feed = Feed.create!(@valid_attributes)
     xml=IO.read(File.join(RAILS_ROOT, 'spec', 'rss.xml'))
-    Post.should_receive(:new).with(hash_including(:contents=>'the first post', :title=>'Title for my first post', :published=>'2008-09-15 19:15:00', :url=>'http://my.blog.com/first_post.html')).and_return(post1=mock('post1'))
-    Post.should_receive(:new).with(hash_including(:contents=>'the second post', :title=>'The title of my second post', :published=>'2008-02-13 11:24:00', :url=>'http://my.blog.com/the_second_post.html')).and_return(post2=mock('post2'))
+    feed.should_receive(:posts).twice.and_return(myposts=mock('posts'))
+    myposts.should_receive(:build).with(hash_including(:contents=>'the first post', :title=>'Title for my first post', :published=>'2008-09-15 19:15:00', :url=>'http://my.blog.com/first_post.html')).and_return(post1=mock('post1'))
+    myposts.should_receive(:build).with(hash_including(:contents=>'the second post', :title=>'The title of my second post', :published=>'2008-02-13 11:24:00', :url=>'http://my.blog.com/the_second_post.html')).and_return(post2=mock('post2'))
     posts = feed.get_posts_from_rss(xml)
     posts.should == [post1, post2]
+    post1.should_receive(:feed).and_return(feed)
+    post1.feed.should == feed
   end
   
   it 'should get the atom feed and save posts' do

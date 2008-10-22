@@ -4957,3 +4957,446 @@ Completed in 0.00052 (1938 reqs/sec) | Rendering: 0.00014 (26%) | DB: 0.00000 (0
   [4;36;1mFeed Create (0.000357)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:00:56', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:00:56')[0m
   [4;35;1mFeed Create (0.000351)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:00:56', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:00:56')[0m
   [4;36;1mFeed Create (0.001499)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:00:56', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:00:56')[0m
+  [4;36;1mFeed Create (0.000356)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:16:42', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:16:42')[0m
+  [4;35;1mFeed Create (0.000676)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:16:42', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:16:42')[0m
+  [4;36;1mFeed Create (0.000733)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:16:42', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:16:42')[0m
+  [4;35;1mFeed Create (0.000547)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:16:42', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:16:42')[0m
+  [4;36;1mFeed Create (0.000387)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:16:42', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:16:42')[0m
+  [4;35;1mFeed Create (0.000323)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:16:42', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:16:42')[0m
+  [4;36;1mFeed Create (0.000408)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:17:57', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:17:57')[0m
+  [4;35;1mFeed Create (0.000800)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:17:57', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:17:57')[0m
+  [4;36;1mFeed Create (0.000394)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:17:57', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:17:57')[0m
+  [4;35;1mFeed Create (0.000342)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:17:57', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:17:57')[0m
+  [4;36;1mSQL (0.000203)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000291)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mFeed Create (0.000366)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:17:57', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:17:57')[0m
+  [4;35;1mFeed Create (0.000448)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:17:57', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:17:57')[0m
+  [4;36;1mFeed Create (0.000363)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:18:08', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:18:08')[0m
+  [4;35;1mFeed Create (0.000674)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:18:08', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:18:08')[0m
+  [4;36;1mFeed Create (0.000537)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:18:08', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:18:08')[0m
+  [4;35;1mFeed Create (0.000353)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:18:08', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:18:08')[0m
+  [4;36;1mFeed Create (0.000320)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:18:08', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:18:08')[0m
+  [4;35;1mFeed Create (0.000257)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:18:08', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:18:08')[0m
+  [4;36;1mFeed Create (0.000404)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:18:19', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:18:19')[0m
+  [4;35;1mFeed Create (0.000658)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:18:19', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:18:19')[0m
+  [4;36;1mFeed Create (0.000590)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:18:19', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:18:19')[0m
+  [4;35;1mFeed Create (0.000349)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:18:19', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:18:19')[0m
+  [4;36;1mSQL (0.000275)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000306)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mFeed Create (0.000876)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:18:19', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:18:19')[0m
+  [4;35;1mFeed Create (0.000470)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:18:19', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:18:19')[0m
+  [4;36;1mFeed Create (0.000353)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:19:36', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:19:36')[0m
+  [4;35;1mFeed Create (0.000518)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:19:36', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:19:36')[0m
+  [4;36;1mFeed Create (0.000468)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:19:36', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:19:36')[0m
+  [4;35;1mFeed Create (0.000509)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:19:36', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:19:36')[0m
+  [4;36;1mPost Load (0.000000)[0m   [0;1mSQLite3::SQLException: no such column: posts.feed_id: SELECT * FROM "posts" WHERE ("posts".feed_id = 1) [0m
+  [4;35;1mPost Load (0.000000)[0m   [0mSQLite3::SQLException: no such column: posts.feed_id: SELECT * FROM "posts" WHERE ("posts".feed_id = 1) [0m
+  [4;36;1mFeed Create (0.000380)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:19:36', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:19:36')[0m
+  [4;35;1mFeed Create (0.000257)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:19:36', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:19:36')[0m
+  [4;36;1mFeed Create (0.000358)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:20:16', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:20:16')[0m
+  [4;35;1mFeed Create (0.000652)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:20:16', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:20:16')[0m
+  [4;36;1mFeed Create (0.001287)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:20:16', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:20:16')[0m
+  [4;35;1mSQL (0.000238)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mFeed Create (0.000707)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:20:16', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:20:16')[0m
+  [4;35;1mPost Load (0.000000)[0m   [0mSQLite3::SQLException: no such column: posts.feed_id: SELECT * FROM "posts" WHERE ("posts".feed_id = 1) [0m
+  [4;36;1mPost Load (0.000000)[0m   [0;1mSQLite3::SQLException: no such column: posts.feed_id: SELECT * FROM "posts" WHERE ("posts".feed_id = 1) [0m
+  [4;35;1mFeed Create (0.000317)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:20:16', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:20:16')[0m
+  [4;36;1mFeed Create (0.000249)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:20:16', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:20:16')[0m
+  [4;36;1mFeed Create (0.000356)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:20:40', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:20:40')[0m
+  [4;35;1mFeed Create (0.000916)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:20:40', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:20:40')[0m
+  [4;36;1mFeed Create (0.000326)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:20:40', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:20:40')[0m
+  [4;35;1mPost Load (0.000000)[0m   [0mSQLite3::SQLException: no such column: posts.feed_id: SELECT * FROM "posts" WHERE ("posts".feed_id = 1) [0m
+  [4;36;1mFeed Create (0.000476)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:20:40', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:20:40')[0m
+  [4;35;1mPost Load (0.000000)[0m   [0mSQLite3::SQLException: no such column: posts.feed_id: SELECT * FROM "posts" WHERE ("posts".feed_id = 1) [0m
+  [4;36;1mPost Load (0.000000)[0m   [0;1mSQLite3::SQLException: no such column: posts.feed_id: SELECT * FROM "posts" WHERE ("posts".feed_id = 1) [0m
+  [4;35;1mFeed Create (0.000506)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:20:40', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:20:40')[0m
+  [4;36;1mFeed Create (0.000436)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:20:40', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:20:40')[0m
+  [4;36;1mFeed Create (0.000561)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:20:57', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:20:57')[0m
+  [4;35;1mFeed Create (0.000656)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:20:57', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:20:57')[0m
+  [4;36;1mFeed Create (0.001286)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:20:57', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:20:57')[0m
+  [4;35;1mPost Load (0.000000)[0m   [0mSQLite3::SQLException: no such column: posts.feed_id: SELECT * FROM "posts" WHERE ("posts".feed_id = 1) [0m
+  [4;36;1mPost Load (0.000000)[0m   [0;1mSQLite3::SQLException: no such column: posts.feed_id: SELECT * FROM "posts" WHERE ("posts".feed_id = 1) [0m
+  [4;35;1mFeed Create (0.001766)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:20:57', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:20:57')[0m
+  [4;36;1mPost Load (0.000000)[0m   [0;1mSQLite3::SQLException: no such column: posts.feed_id: SELECT * FROM "posts" WHERE ("posts".feed_id = 1) [0m
+  [4;35;1mPost Load (0.000000)[0m   [0mSQLite3::SQLException: no such column: posts.feed_id: SELECT * FROM "posts" WHERE ("posts".feed_id = 1) [0m
+  [4;36;1mFeed Create (0.000470)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:20:57', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:20:57')[0m
+  [4;35;1mFeed Create (0.000248)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:20:57', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:20:57')[0m
+  [4;36;1mFeed Create (0.000422)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:22:07', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:22:07')[0m
+  [4;35;1mFeed Create (0.001495)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:22:07', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:22:07')[0m
+  [4;36;1mFeed Create (0.000500)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:22:07', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:22:07')[0m
+  [4;35;1mFeed Create (0.000680)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:22:07', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:22:07')[0m
+  [4;36;1mPost Load (0.000000)[0m   [0;1mSQLite3::SQLException: no such column: posts.feed_id: SELECT * FROM "posts" WHERE ("posts".feed_id = 1) [0m
+  [4;35;1mPost Load (0.000000)[0m   [0mSQLite3::SQLException: no such column: posts.feed_id: SELECT * FROM "posts" WHERE ("posts".feed_id = 1) [0m
+  [4;36;1mFeed Create (0.000325)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:22:07', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:22:07')[0m
+  [4;35;1mFeed Create (0.000415)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:22:07', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:22:07')[0m
+  [4;36;1mFeed Create (0.000362)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:22:29', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:22:29')[0m
+  [4;35;1mFeed Create (0.000841)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:22:30', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:22:30')[0m
+  [4;36;1mFeed Create (0.000499)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:22:30', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:22:30')[0m
+  [4;35;1mFeed Create (0.000481)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:22:30', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:22:30')[0m
+  [4;36;1mPost Load (0.000000)[0m   [0;1mSQLite3::SQLException: no such column: posts.feed_id: SELECT * FROM "posts" WHERE ("posts".feed_id = 1) [0m
+  [4;35;1mPost Load (0.000000)[0m   [0mSQLite3::SQLException: no such column: posts.feed_id: SELECT * FROM "posts" WHERE ("posts".feed_id = 1) [0m
+  [4;36;1mFeed Create (0.000318)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:22:30', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:22:30')[0m
+  [4;35;1mFeed Create (0.000253)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:22:30', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:22:30')[0m
+  [4;36;1mFeed Create (0.000571)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:22:59', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:22:59')[0m
+  [4;35;1mFeed Create (0.000571)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:22:59', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:22:59')[0m
+  [4;36;1mFeed Create (0.000292)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:22:59', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:22:59')[0m
+  [4;35;1mFeed Create (0.000432)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:22:59', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:22:59')[0m
+  [4;36;1mPost Load (0.000000)[0m   [0;1mSQLite3::SQLException: no such column: posts.feed_id: SELECT * FROM "posts" WHERE ("posts".feed_id = 1) [0m
+  [4;35;1mPost Load (0.000000)[0m   [0mSQLite3::SQLException: no such column: posts.feed_id: SELECT * FROM "posts" WHERE ("posts".feed_id = 1) [0m
+  [4;36;1mFeed Create (0.000332)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:22:59', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:22:59')[0m
+  [4;35;1mFeed Create (0.000240)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:22:59', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:22:59')[0m
+  [4;36;1mFeed Create (0.000354)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:23:12', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:23:12')[0m
+  [4;35;1mFeed Create (0.001680)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:23:12', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:23:12')[0m
+  [4;36;1mFeed Create (0.000426)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:23:12', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:23:12')[0m
+  [4;35;1mFeed Create (0.000379)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:23:12', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:23:12')[0m
+  [4;36;1mPost Load (0.000000)[0m   [0;1mSQLite3::SQLException: no such column: posts.feed_id: SELECT * FROM "posts" WHERE ("posts".feed_id = 1) [0m
+  [4;35;1mPost Load (0.000000)[0m   [0mSQLite3::SQLException: no such column: posts.feed_id: SELECT * FROM "posts" WHERE ("posts".feed_id = 1) [0m
+  [4;36;1mFeed Create (0.000618)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:23:12', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:23:12')[0m
+  [4;35;1mFeed Create (0.000370)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:23:12', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:23:12')[0m
+  [4;36;1mFeed Create (0.000369)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:24:26', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:24:26')[0m
+  [4;35;1mFeed Create (0.002495)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:24:26', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:24:26')[0m
+  [4;36;1mFeed Create (0.001204)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:24:26', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:24:26')[0m
+  [4;35;1mFeed Create (0.000460)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:24:26', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:24:26')[0m
+  [4;36;1mPost Load (0.000000)[0m   [0;1mSQLite3::SQLException: no such column: posts.feed_id: SELECT * FROM "posts" WHERE ("posts".feed_id = 1) [0m
+  [4;35;1mPost Load (0.000000)[0m   [0mSQLite3::SQLException: no such column: posts.feed_id: SELECT * FROM "posts" WHERE ("posts".feed_id = 1) [0m
+  [4;36;1mFeed Create (0.000786)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:24:26', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:24:26')[0m
+  [4;35;1mFeed Create (0.000496)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:24:26', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:24:26')[0m
+  [4;36;1mFeed Create (0.000595)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:25:00', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:25:00')[0m
+  [4;35;1mFeed Create (0.000601)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:25:00', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:25:00')[0m
+  [4;36;1mFeed Create (0.000601)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:25:00', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:25:00')[0m
+  [4;35;1mFeed Create (0.000411)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:25:00', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:25:00')[0m
+  [4;36;1mPost Load (0.000000)[0m   [0;1mSQLite3::SQLException: no such column: posts.feed_id: SELECT * FROM "posts" WHERE ("posts".feed_id = 1) [0m
+  [4;35;1mPost Load (0.000000)[0m   [0mSQLite3::SQLException: no such column: posts.feed_id: SELECT * FROM "posts" WHERE ("posts".feed_id = 1) [0m
+  [4;36;1mFeed Create (0.000348)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:25:00', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:25:00')[0m
+  [4;35;1mFeed Create (0.000266)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:25:00', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:25:00')[0m
+  [4;36;1mFeed Create (0.000563)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:25:40', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:25:40')[0m
+  [4;35;1mFeed Create (0.000543)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:25:40', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:25:40')[0m
+  [4;36;1mFeed Create (0.000579)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:25:40', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:25:40')[0m
+  [4;35;1mFeed Create (0.000394)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:25:40', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:25:40')[0m
+  [4;36;1mFeed Create (0.000375)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:25:40', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:25:40')[0m
+  [4;35;1mFeed Create (0.000458)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:25:40', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:25:40')[0m
+  [4;36;1mFeed Create (0.000385)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:26:20', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:26:20')[0m
+  [4;35;1mFeed Create (0.000651)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:26:20', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:26:20')[0m
+  [4;36;1mFeed Create (0.000460)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:26:20', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:26:20')[0m
+  [4;35;1mFeed Create (0.000314)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:26:20', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:26:20')[0m
+  [4;36;1mFeed Create (0.000378)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:26:20', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:26:20')[0m
+  [4;35;1mFeed Create (0.000258)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:26:20', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:26:20')[0m
+Rendering /feeds/edit.html.erb
+Rendering /feeds/index.html.erb
+Rendering /feeds/show.html.erb
+Rendering /feeds/new.html.erb
+Rendering /posts/show.html.erb
+Rendering /posts/edit.html.erb
+Rendering /posts/new.html.erb
+Rendering /posts/index.html.erb
+
+
+Processing FeedsController#destroy (for 0.0.0.0 at 2008-10-22 15:26:36) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"1", "controller"=>"feeds"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00038 (2603 reqs/sec) | Rendering: 0.00011 (28%) | DB: 0.00000 (0%) | 401 Unauthorized [http://test.host/feeds/1]
+
+
+Processing FeedsController#destroy (for 0.0.0.0 at 2008-10-22 15:26:36) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"37", "controller"=>"feeds"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00038 (2644 reqs/sec) | Rendering: 0.00014 (37%) | DB: 0.00000 (0%) | 401 Unauthorized [http://test.host/feeds/37]
+  [4;36;1mSQL (0.000222)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FeedsController#update (for 0.0.0.0 at 2008-10-22 15:26:36) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"1", "controller"=>"feeds"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00036 (2809 reqs/sec) | Rendering: 0.00010 (28%) | DB: 0.00022 (62%) | 401 Unauthorized [http://test.host/feeds/1]
+
+
+Processing FeedsController#update (for 0.0.0.0 at 2008-10-22 15:26:36) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"1", "controller"=>"feeds"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00035 (2826 reqs/sec) | Rendering: 0.00010 (28%) | DB: 0.00000 (0%) | 401 Unauthorized [http://test.host/feeds/1]
+
+
+Processing FeedsController#update (for 0.0.0.0 at 2008-10-22 15:26:36) [PUT]
+  Session ID: 
+  Parameters: {"feed"=>{"these"=>"params"}, "action"=>"update", "id"=>"37", "controller"=>"feeds"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00034 (2933 reqs/sec) | Rendering: 0.00009 (27%) | DB: 0.00000 (0%) | 401 Unauthorized [http://test.host/feeds/37?feed%5Bthese%5D=params]
+  [4;35;1mSQL (0.000228)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FeedsController#update (for 0.0.0.0 at 2008-10-22 15:26:36) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"1", "controller"=>"feeds"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00037 (2688 reqs/sec) | Rendering: 0.00011 (28%) | DB: 0.00023 (61%) | 401 Unauthorized [http://test.host/feeds/1]
+
+
+Processing FeedsController#update (for 0.0.0.0 at 2008-10-22 15:26:36) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"1", "controller"=>"feeds"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00035 (2839 reqs/sec) | Rendering: 0.00010 (28%) | DB: 0.00000 (0%) | 401 Unauthorized [http://test.host/feeds/1]
+
+
+Processing FeedsController#update (for 0.0.0.0 at 2008-10-22 15:26:36) [PUT]
+  Session ID: 
+  Parameters: {"feed"=>{"these"=>"params"}, "action"=>"update", "id"=>"37", "controller"=>"feeds"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00035 (2872 reqs/sec) | Rendering: 0.00010 (28%) | DB: 0.00000 (0%) | 401 Unauthorized [http://test.host/feeds/37?feed%5Bthese%5D=params]
+  [4;36;1mSQL (0.000249)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FeedsController#create (for 0.0.0.0 at 2008-10-22 15:26:36) [POST]
+  Session ID: 
+  Parameters: {"feed"=>{}, "action"=>"create", "controller"=>"feeds"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00036 (2801 reqs/sec) | Rendering: 0.00010 (28%) | DB: 0.00025 (69%) | 401 Unauthorized [http://test.host/feeds?]
+
+
+Processing FeedsController#create (for 0.0.0.0 at 2008-10-22 15:26:36) [POST]
+  Session ID: 
+  Parameters: {"feed"=>{"these"=>"params"}, "action"=>"create", "controller"=>"feeds"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00034 (2941 reqs/sec) | Rendering: 0.00010 (28%) | DB: 0.00000 (0%) | 401 Unauthorized [http://test.host/feeds?feed%5Bthese%5D=params]
+
+
+Processing FeedsController#create (for 0.0.0.0 at 2008-10-22 15:26:36) [POST]
+  Session ID: 
+  Parameters: {"feed"=>{}, "action"=>"create", "controller"=>"feeds"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00040 (2481 reqs/sec) | Rendering: 0.00011 (27%) | DB: 0.00000 (0%) | 401 Unauthorized [http://test.host/feeds?]
+
+
+Processing FeedsController#create (for 0.0.0.0 at 2008-10-22 15:26:36) [POST]
+  Session ID: 
+  Parameters: {"feed"=>{"these"=>"params"}, "action"=>"create", "controller"=>"feeds"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00039 (2537 reqs/sec) | Rendering: 0.00011 (27%) | DB: 0.00000 (0%) | 401 Unauthorized [http://test.host/feeds?feed%5Bthese%5D=params]
+  [4;35;1mSQL (0.000247)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FeedsController#edit (for 0.0.0.0 at 2008-10-22 15:26:36) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"37", "controller"=>"feeds"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00042 (2380 reqs/sec) | Rendering: 0.00011 (25%) | DB: 0.00025 (58%) | 401 Unauthorized [http://test.host/feeds/37/edit]
+  [4;36;1mSQL (0.000234)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FeedsController#new (for 0.0.0.0 at 2008-10-22 15:26:37) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"feeds"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00039 (2538 reqs/sec) | Rendering: 0.00011 (26%) | DB: 0.00023 (59%) | 401 Unauthorized [http://test.host/feeds/new]
+  [4;35;1mSQL (0.000232)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FeedsController#show (for 0.0.0.0 at 2008-10-22 15:26:37) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"37", "controller"=>"feeds"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00043 (2341 reqs/sec) | Rendering: 0.00014 (31%) | DB: 0.00023 (54%) | 401 Unauthorized [http://test.host/feeds/37]
+  [4;36;1mSQL (0.000222)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FeedsController#show (for 0.0.0.0 at 2008-10-22 15:26:37) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"37", "controller"=>"feeds"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00039 (2551 reqs/sec) | Rendering: 0.00010 (26%) | DB: 0.00022 (56%) | 401 Unauthorized [http://test.host/feeds/37]
+  [4;35;1mSQL (0.000223)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FeedsController#index (for 0.0.0.0 at 2008-10-22 15:26:37) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"feeds"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00041 (2410 reqs/sec) | Rendering: 0.00013 (31%) | DB: 0.00022 (53%) | 401 Unauthorized [http://test.host/feeds]
+  [4;36;1mSQL (0.000228)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FeedsController#index (for 0.0.0.0 at 2008-10-22 15:26:37) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"feeds"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00039 (2577 reqs/sec) | Rendering: 0.00010 (26%) | DB: 0.00023 (58%) | 401 Unauthorized [http://test.host/feeds]
+  [4;35;1mSQL (0.000225)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing PostsController#destroy (for 0.0.0.0 at 2008-10-22 15:26:37) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"1", "controller"=>"posts"}
+Redirected to http://test.host/posts
+Completed in 0.00268 (373 reqs/sec) | DB: 0.00023 (8%) | 302 Found [http://test.host/posts/1]
+
+
+Processing PostsController#destroy (for 0.0.0.0 at 2008-10-22 15:26:37) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"37", "controller"=>"posts"}
+Redirected to http://test.host/posts
+Completed in 0.00035 (2826 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/posts/37]
+
+
+Processing PostsController#update (for 0.0.0.0 at 2008-10-22 15:26:37) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"1", "controller"=>"posts"}
+Rendering posts/edit
+Completed in 0.00061 (1631 reqs/sec) | Rendering: 0.00015 (24%) | DB: 0.00000 (0%) | 200 OK [http://test.host/posts/1]
+
+
+Processing PostsController#update (for 0.0.0.0 at 2008-10-22 15:26:37) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"1", "controller"=>"posts"}
+Rendering posts/edit
+Completed in 0.00052 (1912 reqs/sec) | Rendering: 0.00012 (23%) | DB: 0.00000 (0%) | 200 OK [http://test.host/posts/1]
+
+
+Processing PostsController#update (for 0.0.0.0 at 2008-10-22 15:26:37) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "post"=>{"these"=>"params"}, "id"=>"37", "controller"=>"posts"}
+Rendering posts/edit
+Completed in 0.00051 (1957 reqs/sec) | Rendering: 0.00012 (22%) | DB: 0.00000 (0%) | 200 OK [http://test.host/posts/37?post%5Bthese%5D=params]
+
+
+Processing PostsController#update (for 0.0.0.0 at 2008-10-22 15:26:37) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"1", "controller"=>"posts"}
+Redirected to http://test.host/posts/1033
+Completed in 0.00050 (1984 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/posts/1]
+
+
+Processing PostsController#update (for 0.0.0.0 at 2008-10-22 15:26:37) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"1", "controller"=>"posts"}
+Redirected to http://test.host/posts/1034
+Completed in 0.00061 (1647 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/posts/1]
+
+
+Processing PostsController#update (for 0.0.0.0 at 2008-10-22 15:26:37) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "post"=>{"these"=>"params"}, "id"=>"37", "controller"=>"posts"}
+Rendering posts/edit
+Completed in 0.00055 (1818 reqs/sec) | Rendering: 0.00014 (24%) | DB: 0.00000 (0%) | 200 OK [http://test.host/posts/37?post%5Bthese%5D=params]
+
+
+Processing PostsController#create (for 0.0.0.0 at 2008-10-22 15:26:37) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "post"=>{}, "controller"=>"posts"}
+Rendering posts/new
+Completed in 0.00060 (1661 reqs/sec) | Rendering: 0.00014 (22%) | DB: 0.00000 (0%) | 200 OK [http://test.host/posts?]
+
+
+Processing PostsController#create (for 0.0.0.0 at 2008-10-22 15:26:37) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "post"=>{"these"=>"params"}, "controller"=>"posts"}
+Rendering posts/new
+Completed in 0.00050 (1987 reqs/sec) | Rendering: 0.00012 (24%) | DB: 0.00000 (0%) | 200 OK [http://test.host/posts?post%5Bthese%5D=params]
+
+
+Processing PostsController#create (for 0.0.0.0 at 2008-10-22 15:26:37) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "post"=>{}, "controller"=>"posts"}
+Redirected to http://test.host/posts/1038
+Completed in 0.00061 (1647 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/posts?]
+
+
+Processing PostsController#create (for 0.0.0.0 at 2008-10-22 15:26:37) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "post"=>{"these"=>"params"}, "controller"=>"posts"}
+Redirected to http://test.host/posts/1039
+Completed in 0.00062 (1610 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/posts?post%5Bthese%5D=params]
+
+
+Processing PostsController#edit (for 0.0.0.0 at 2008-10-22 15:26:37) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"37", "controller"=>"posts"}
+Rendering posts/edit
+Completed in 0.00112 (896 reqs/sec) | Rendering: 0.00028 (25%) | DB: 0.00000 (0%) | 200 OK [http://test.host/posts/37/edit]
+
+
+Processing PostsController#new (for 0.0.0.0 at 2008-10-22 15:26:37) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"posts"}
+Rendering posts/new
+Completed in 0.00048 (2074 reqs/sec) | Rendering: 0.00013 (26%) | DB: 0.00000 (0%) | 200 OK [http://test.host/posts/new]
+
+
+Processing PostsController#show (for 0.0.0.0 at 2008-10-22 15:26:37) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"37", "controller"=>"posts"}
+Completed in 0.00056 (1792 reqs/sec) | Rendering: 0.00013 (23%) | DB: 0.00000 (0%) | 200 OK [http://test.host/posts/37]
+
+
+Processing PostsController#show (for 0.0.0.0 at 2008-10-22 15:26:37) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"37", "controller"=>"posts"}
+Rendering posts/show
+Completed in 0.00049 (2041 reqs/sec) | Rendering: 0.00013 (25%) | DB: 0.00000 (0%) | 200 OK [http://test.host/posts/37]
+
+
+Processing PostsController#index (for 0.0.0.0 at 2008-10-22 15:26:37) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Completed in 0.00055 (1825 reqs/sec) | Rendering: 0.00011 (19%) | DB: 0.00000 (0%) | 200 OK [http://test.host/posts]
+
+
+Processing PostsController#index (for 0.0.0.0 at 2008-10-22 15:26:37) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering posts/index
+Completed in 0.00060 (1678 reqs/sec) | Rendering: 0.00014 (23%) | DB: 0.00000 (0%) | 200 OK [http://test.host/posts]
+  [4;36;1mFeed Create (0.000419)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:26:37', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:26:37')[0m
+  [4;35;1mFeed Create (0.000906)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:26:37', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:26:37')[0m
+  [4;36;1mFeed Create (0.000456)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:26:37', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:26:37')[0m
+  [4;35;1mFeed Create (0.000448)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:26:37', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:26:37')[0m
+  [4;36;1mFeed Create (0.000279)[0m   [0;1mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:26:37', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:26:37')[0m
+  [4;35;1mFeed Create (0.000415)[0m   [0mINSERT INTO "feeds" ("name", "updated_at", "feed_url", "url", "author", "created_at") VALUES('value for name', '2008-10-22 19:26:37', 'value for feed_url', 'value for url', NULL, '2008-10-22 19:26:37')[0m

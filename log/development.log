@@ -925,3 +925,571 @@ ODg0ZGEwMDRiYjY2MWU=--4a38e987aa2a053da33619370fa8300d9ada8b6f
   [4;36;1mPost Load (0.000832)[0m   [0;1mSELECT * FROM "posts" [0m
 Rendering posts/index
 Completed in 0.02858 (34 reqs/sec) | Rendering: 0.02157 (75%) | DB: 0.00083 (2%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2008-10-22 15:15:37) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlOGQ2ZTI3NzQwYjBiNjkwMmM2
+ODg0ZGEwMDRiYjY2MWU=--4a38e987aa2a053da33619370fa8300d9ada8b6f
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.001002)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering posts/index
+
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.author) on line #11 of posts/index.html.erb:
+8: 
+9: <% for post in @posts %>
+10: 
+11: <%= link_to "#{post.feed.author}: #{post.feed.name}", post.feed.url %><br/>
+12: <%= post.published %><br/>
+13: <%= link_to post.title, post.url %><br/>
+14: <%=h post.contents %>
+
+    app/views/posts/index.html.erb:11:in `_run_erb_47app47views47posts47index46html46erb'
+    app/views/posts/index.html.erb:9:in `each'
+    app/views/posts/index.html.erb:9:in `_run_erb_47app47views47posts47index46html46erb'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:342:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:342:in `execute'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:35:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:22:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:248:in `render_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1112:in `render_for_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:869:in `render_with_no_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:884:in `render_with_no_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/layout.rb:259:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:131:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:131:in `custom'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:160:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:160:in `respond'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:154:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:154:in `respond'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/posts_controller.rb:7:in `index'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:579:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/session_management.rb:130:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:389:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.1/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.1/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+  [4;36;1mSQL (0.000436)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000225)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000134)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000168)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.013674)[0m   [0;1mCREATE TABLE "feeds" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "url" varchar(255), "name" varchar(255), "feed_url" varchar(255), "author" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.000215)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.001937)[0m   [0;1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "feed_id" integer, "contents" text, "title" varchar(255), "url" varchar(255), "published" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.000305)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.001497)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.001829)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000296)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000138)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.002107)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20081022162832')[0m
+  [4;35;1mSQL (0.001258)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20081022162743')[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2008-10-22 15:28:26) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlOGQ2ZTI3NzQwYjBiNjkwMmM2
+ODg0ZGEwMDRiYjY2MWU=--4a38e987aa2a053da33619370fa8300d9ada8b6f
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;35;1mPost Load (0.000933)[0m   [0mSELECT * FROM "posts" [0m
+Rendering posts/index
+
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.author) on line #11 of posts/index.html.erb:
+8: 
+9: <% for post in @posts %>
+10: 
+11: <%= link_to "#{post.feed.author}: #{post.feed.name}", post.feed.url %><br/>
+12: <%= post.published %><br/>
+13: <%= link_to post.title, post.url %><br/>
+14: <%=h post.contents %>
+
+    app/views/posts/index.html.erb:11:in `_run_erb_47app47views47posts47index46html46erb'
+    app/views/posts/index.html.erb:9:in `each'
+    app/views/posts/index.html.erb:9:in `_run_erb_47app47views47posts47index46html46erb'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:342:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:342:in `execute'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:35:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:22:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:248:in `render_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1112:in `render_for_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:869:in `render_with_no_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:884:in `render_with_no_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/layout.rb:259:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:131:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:131:in `custom'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:160:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:160:in `respond'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:154:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:154:in `respond'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/posts_controller.rb:7:in `index'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:579:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/session_management.rb:130:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:389:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.1/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.1/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+  [4;36;1mPost Load (0.000795)[0m   [0;1mSELECT * FROM "posts" [0m
+  [4;35;1mPost Destroy (0.000339)[0m   [0m DELETE FROM "posts"
+ WHERE "id" = 1
+[0m
+  [4;36;1mPost Destroy (0.000505)[0m   [0;1m DELETE FROM "posts"
+ WHERE "id" = 2
+[0m
+  [4;35;1mPost Destroy (0.000531)[0m   [0m DELETE FROM "posts"
+ WHERE "id" = 3
+[0m
+  [4;36;1mPost Destroy (0.000423)[0m   [0;1m DELETE FROM "posts"
+ WHERE "id" = 4
+[0m
+  [4;36;1mFeed Load (0.000529)[0m   [0;1mSELECT * FROM "feeds" [0m
+  [4;35;1mPost Create (0.000495)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "published", "url", "feed_id", "contents", "created_at") VALUES('2008-10-22 19:29:05', 'Autocomplete plugin doesn’t work for repeated fields', '2008-10-21', 'http://patshaughnessy.net/2008/10/21/autocomplete-plugin-doesn-t-work-for-repeated-fields', 1, 'Recently I tried using the <a href="http://svn.rubyonrails.org/rails/plugins/auto_complete">autocomplete plugin</a> from Rails for the first time. It was a great way to quickly implement type-ahead Ajax behavior by writing little or no code. By simply adding two lines – one to my controller:
+<pre>auto_complete_for :group, :name</pre>
+
+and another to my form:
+<pre>&lt;%= text_field_with_auto_complete :group, :name, {}, {:method => :get} %&gt;</pre>
+
+users of my form were able to easily pick from a long list of group names simply by typing the first few letters. What I love about Rails is not only was I able to implement this complex feature with only 2 lines, but those 2 lines were very easy to read: my controller has to handle “autocompletion for group names” and my form should contain a “text field with auto complete behavior for group names”. It’s very natural and intuitive.
+<p />
+<p>The only ugly detail here is that the “{:method => :get}” hash is required to avoid errors related to form security… without it I get an error like this:</p>
+<pre>ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+ /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/request_forgery_protection.rb:86:in ''verify_authenticity_token''</pre>
+
+<a href="http://groups.google.com/group/rubyonrails-spinoffs/browse_thread/thread/7ed6dbb6bdcabf40/287a90ed28bba7da">This discussion explains</a> that we can avoid the security exception by forcing the autocomplete request to use GET instead of POST. Note that you also need to change config/routes.rb to map the GET request for the completion values to the autocomplete action in your controller. This is a bit ugly, but not a big deal.
+
+<p />
+<p>However, once I tried adding additional fields to the form I ran into some real trouble. I enhanced my form by adding multiple child model objects; in this case I associated a series of people for each group. That is:</p>
+<pre>class Person &lt; ActiveRecord::Base`
+ belongs_to :group</pre>
+
+and:
+<pre>class Group &lt; ActiveRecord::Base
+ has_many :people</pre>
+
+Following <a href="http://railscasts.com/episodes/73">Ryan Bates’ great explanation on railcasts</a> about how to implement a form for both parent and child records at the same time, I ended up with a form that looked like this:
+<pre>&lt;p&gt;
+ Group &lt;%= f.label :name %&gt;&lt;br /&gt;
+ &lt;%= text_field_with_auto_complete :group, :name, {}, {:method =&gt; :get} %&gt;
+&lt;/p&gt;
+&lt;% for person in @group.people %&gt;
+ &lt;% fields_for "group[person_attributes][]", person do |person_form| %&gt;
+ &lt;p&gt;
+ Person &lt;%= person_form.label :name %&gt;&lt;br /&gt;
+ &lt;%= text_field_with_auto_complete :person, :name, {:index =&gt; nil}, {:method =&gt; :get} %&gt;&lt;/p&gt;
+ &lt;% unless person.new_record? %&gt;
+ &lt;%= person_form.hidden_field :id, :index =&gt; nil %&gt;
+ &lt;% end %&gt;
+ &lt;% end %&gt;
+&lt;% end %&gt;</pre>
+
+This looks a lot more complicated, but except for the “index => nil” hack (see <a href="http://railscasts.com/episodes/75">part 3 of Ryan’s screen cast</a> for an explanation) the code is very clean and straightforward to understand. We display the group name autocomplete text field as before, and then iterate over the people contained in this group, displaying a new autocomplete text field for each one.
+
+<p /><p>Too bad it doesn’t work! Even worse, this code actually has 3 separate problems:
+
+First, the &lt;input&gt; tag generated by text_field_with_auto_complete is not what we want for the child objects. Without autocomplete, we would use:
+<pre>&lt;%= person_form.text_field :name %&gt;</pre>
+
+referring to the “fields_for” method just above and get this HTML:
+<pre>&lt;input id="group_person_attributes__name" name="group[person_attributes][][name]" size="30" type="text" /&gt;</pre>
+
+But text_field_with_auto_complete :person, :name, … yields this instead:
+<pre>&lt;input id="person__name" name="person[][name]" size="30" type="text" /&gt;</pre>
+
+along with CSS and Javascript for the auto complete behavior.
+
+<p /><p>Second, the server side code added to my controller also doesn’t know where to look for the person name value in the actual parameter hash; instead it assumes it will receive the parameter as specified in the &lt;input&gt; above: params[“person”][“name”]. See vendor/plugins/autocomplete/lib/auto_complete.rb for details.</p>
+
+<p /><p>And the last and worst problem of all is that the DHTML/Javascript code inside of controls.js from script.aculo.us assumes that the &lt;input&gt; tag id passed in will be unique on the page. But since we will have many person fields for each group field, the script.aculo.us code will fail trying to location the &lt;input&gt; and &lt;div&gt; tags specified by text_field_with_auto_complete.</p>
+
+<p /><p>So what to do? The first time I solved this problem, I simply copied and hard coded the HTML and Javascript produced by the autocomplete plugin into my form erb file. Then I changed it to make it work. I also manually added a function to my controller on the server side to get it to find and process the parameter hash properly. If I were still writing PHP code, then I would probably assume this was sufficient and call it a day. If I happened to be using J2EE for this project, I’d probably look at creating a subclass of the autocomplete plugin somehow and extending/modifying the behavior as necessary. Then I would have yet another class and another JAR file to maintain and worry about – not quite as messy, but still ugly or at best complicated.</p>
+
+<p /><p>There must be a better way! Since I’m using Ruby I don’t need to settle for overly complicated code or ugly code. Instead I’ll try to develop a solution using what seems to me the Ruby philosophy: write the cleanest, tightest code you can that makes sense and then find a way to make it work. In my next post I’ll tell you what happened.</p>', '2008-10-22 19:29:05')[0m
+  [4;36;1mPost Create (0.000397)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "published", "url", "feed_id", "contents", "created_at") VALUES('2008-10-22 19:29:05', 'Problems Installing the Cutline Theme in Mephisto', '2008-09-28', 'http://patshaughnessy.net/2008/9/28/problems-installing-the-cutline-theme-in-mephisto', 1, 'My next step was to switch away from the standard “simpla” theme to another more interesting one. Once again I expected this to be a very easy task but ended up spending hours debugging and troubleshooting Mephisto and my blog setup on HostingRails.com.
+
+I started by downloading the theme onto my server:
+<pre>cd themes/site-1/
+mkdir cutline
+curl http://mephisto-themes.nanorails.com/download?theme
+	=cutline.mephisto-themes.nanorails.com > cutline/cutline.zip
+cd cutline
+unzip cutline.zip</pre>
+
+Now when I logged into the Mephisto console and viewed Design->Manage Themes I saw the new theme. The first problem occurred when I clicked on the new theme and selected “Use Theme." I expected to see the new theme or a message in the admin console, but instead got a page full of text:
+<pre>$("dialog-box").update("\u003Cdiv id=\"theme-info\" class=\"clearfix\"\u003E\n \u003Ch3\u003E\n Cutline (rhtml) (v1.1)by \u003Ca
+href=\"http://cutline.tubetorial.com/\"\u003EPearsonified\u003C/a\u003E\n \u003Ca href=\"#\" id=\"close-dialog\" onclick=\"Dialog.close();
+return false;\"\u003Eclose\u003C/a\u003E\n \u003C/h3\u003E\n \u003Cdiv id=\"screenshot\"\u003E\n \u003Cimg
+src=\"/admin/themes/preview_for/cutline\" alt=\"Theme preview\" title=\"Cutline (rhtml) (v1.1)\" /\u003E\n \u003Cp\u003EToday, you can put
+an end to boring default styling and step into a world where your posts will become more artistic, more engaging, and more
+compelling!\u003C/p\u003E\n \u003C/div\u003E\n \u003Cdiv id=\"theme-options\"\u003E\n \u003Cul\u003E\n \u003Cli\u003E\u003Ca
+href=\"/admin/themes/change_to/cutline\"\u003EUse theme\u003C/a\u003E\u003C/li\u003E\n \u003Cli\u003E\u003Ca
+href=\"/admin/design?theme=cutline\"\u003EEdit theme\u003C/a\u003E\u003C/li\u003E\n \u003Cli\u003E\u003Ca
+href=\"/admin/themes/export/cutline\"\u003EDownload theme\u003C/a\u003E\u003C/li\u003E\n \u003Cli\u003E\u003Ca href=\"#\"
+onclick=\"if (confirm(''Are you sure you wish to delete this theme stored at \\''themes/site-1/cutline\\''?'')) { new
+Ajax.Request(''/admin/themes/destroy/cutline'', {asynchronous:true, evalScripts:true, method:''delete''}); }; return false;\"\u003EDelete
+theme\u003C/a\u003E\u003C/li\u003E\n \u003C/ul\u003E\n \u003C/div\u003E\n\u003C/div\u003E");
+Dialog.current.layout();</pre>
+
+It looks like the parent window from the admin console was redirected to “/admin/themes/show/cutline” and the meta data/contents of the theme dialog box intended for some javascript was displayed as plain text to me. After staring at this for a while I started looking for help on the Internet and eventually found an article explaining that I needed to make a code change to app/controllers/admin/themes_controller.rb near line 5:
+
+<pre>before_filter :protect_action, :only => [:export, :change_to, :rollback,
+ :import]</pre>
+
+...should be changed to:
+
+<pre>before_filter :protect_action, :only => [:export, :rollback]</pre>
+
+<p>One to do item here is to check whether the latest, edge version of Mephisto contains this fix already or not. I’m sure it does. Even after making the change on hostingrails.com I struggled for some more time before realizing that I had to kill any dispatch.fcgi processes running on the server before a code change would take effect. This wasn’t a problem in my local, development setup. Passenger must load and cache Ruby code after the first request. This would be interesting to explore further.</p>
+
+<p>I tried again and this time: success! Finally I was able to switch to the new theme. Excited, I quickly took a look at my new site and saw... nothing! More troubleshooting revealed this error in my production.log file:</p>
+
+<pre>SystemExit (Define INLINEDIR or HOME in your environment and try again):
+...ruby/gems/1.8/gems/RubyInline-3.7.0/lib/inline.rb:93:in ''abort''
+...ruby/gems/1.8/gems/RubyInline-3.7.0/lib/inline.rb:93:in ''rootdir''
+...ruby/gems/1.8/gems/RubyInline-3.7.0/lib/inline.rb:107:in ''directory''
+...ruby/gems/1.8/gems/RubyInline-3.7.0/lib/inline.rb:277:in ''so_name''
+...ruby/gems/1.8/gems/RubyInline-3.7.0/lib/inline.rb:317:in ''load_cache''
+...ruby/gems/1.8/gems/RubyInline-3.7.0/lib/inline.rb:653:in ''inline''
+...ruby/gems/1.8/gems/image_science-1.1.3/lib/image_science.rb:84
+...ruby/site_ruby/1.8/rubygems/custom_require.rb:32:in ''gem_original_require''
+...ruby/site_ruby/1.8/rubygems/custom_require.rb:32:in ''require''
+...rails/activesupport/lib/active_support/dependencies.rb:496:in ''require''
+...rails/activesupport/lib/active_support/dependencies.rb:342:in ''new_constants_in''
+...rails/activesupport/lib/active_support/dependencies.rb:496:in ''require''
+...plugins/attachment_fu/lib/technoweenie/attachment_fu/processors/image_science_processor.rb:1
+...ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in ''gem_original_require''
+etc...</pre>
+
+Some further searching on the Internet revealed that the problem here was that an image library called <a href="http://seattlerb.rubyforge.org/ImageScience.html">ImageScience</a> requires something called <a href="http://rubyforge.org/projects/rubyinline">RubyInline</a>. Looking at the stack trace, it seems that the “attachment_fu” plugin uses the ImageScience library. Probably this is used by Mephisto to produce the thumbnail preview images in the Admin->Assets page. The solution in this case is to create a folder on the server for RubyInline, and to set this value near the top of Mephisto’s environment.rb file. Along with my change from last week to force the production environment, the top of config/environment.rb looks like this:
+
+<pre># Uncomment below to force Rails into production mode when
+# you don''t control web/app server and can''t set it the proper way
+ENV[''RAILS_ENV''] ||= ''production''
+ENV[''INLINEDIR''] ||= ''inline''</pre>
+
+I tried again to see my site, and this time still saw a blank page. View->Source revealed that the Ruby code in the view was not being executed. Finally I installed the “mephisto_erb_templates” plugin as instructed by <a href="http://mephisto-themes.nanorails.com/2007/3/21/cutline-theme">http://mephisto-themes.nanorails.com/2007/3/21/cutline-theme</a>.
+
+<pre>script/plugin install http://svn.nanorails.com/plugins/mephisto_erb_templates/</pre>
+
+Now the theme worked properly. I made a few cosmetic CSS tweaks, picked my own image and ended up with this page.', '2008-10-22 19:29:05')[0m
+  [4;35;1mPost Create (0.000416)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "published", "url", "feed_id", "contents", "created_at") VALUES('2008-10-22 19:29:05', 'Mephisto Setup on HostingRails.com', '2008-09-09', 'http://patshaughnessy.net/2008/9/9/mephisto-on-hostingrails-com', 1, '<p>In the past I’ve setup blog sites using <a href="http://b2evolution.net/">B2Evolution</a>, <a href="http://wordpress.org/">WordPress</a> and other PHP frameworks and had no trouble at all. Last week I setup this web site using <a href="http://mephistoblog.com/">Mephisto</a> on a Rails hosting service (<a href="http://www.hostingrails.com/">hostingrails.com</a>), and expected to get it up and running in just a few minutes; after all, if installing and configuring a PHP blog site in 2005 was easy, certainly doing the same in 2008 with better technology (Rails) should be even easier.</p>
+
+<p>Wrong!</p>
+
+<p>First I created a MySQL database on my production server and called it “mephisto”. Then I set the char set and collation settings using the command line:<pre># mysql -u myusername -p
+mysql> ALTER DATABASE mydatabasename DEFAULT CHARACTER SET utf8
+ COLLATE utf8<em>unicode</em>ci</pre></p>
+
+<p>Since I’m not ready to write my own Rails blog site, I decided to download and setup the latest version of <a href="http://mephistoblog.com/download">Mephisto (0.8 “Drax”)</a>. When I tried to download the TAR file from the 0.8 Drax link using curl I got HTML that redirected me to a different location:</p>
+
+<pre># cat master.tar.gz
+&lt;html>&lt;body>You are being &lt;a href="http://github.com/tarballs/technoweenie-
+mephisto-90e2cc253d94e2e544bc8b21f361c7360c1e9baa.tar.gz">redirected&lt;/a>.&lt;/body>&lt;/html></pre>
+
+<p>Probably this is standard behavior by github and I should have used that directly. I need to stop thinking like a PHP developer! Regardless, it wasn’t much trouble to download the actual Mephisto TAR file:</p>
+
+<pre># curl -O http://github.com/tarballs/
+ technoweenie-mephisto-90e2cc253d94e2e544bc8b21f361c7360c1e9baa.tar.gz
+# tar xvf technoweenie-mephisto-90e2cc253d94e2e544bc8b21f361c7360c1e9baa.tar.gz
+# mv technoweenie-mephisto-90e2cc253d94e2e544bc8b21f361c7360c1e9baa mephisto</pre>
+
+<p>No big deal; so far this was a very similar experience to setting up a PHP web site: create the database, download the code and you’re almost done. Next, I entered the proper values in database.yml and tried to initialize the database:</p>
+
+<pre># rake db:bootstrap RAILS_ENV=production
+(in /home/myusername/mephisto)
+Your config/boot.rb is outdated: Run "rake rails:update".</pre>
+
+<p>It was at this point that my problems started. First I wasn’t sure why I received this error message at all. Next I tried to use rails:update to fix it as instructed and ran into further trouble. A couple of hours and 5 or 10 blog posts later I discovered the solution <a href="http://groups.google.com/group/MephistoBlog/browse_thread/thread/a03e8ac350382e0e">here in this great write up</a>. It turns out that Mephisto 0.8 does not work with Rails 2.1 and I needed to downgrade to Rails 2.0.2. Since I’m using a shared server on hostingrails.com I used rails:freeze:edge to get the proper version of Rails installed in my app’s folder:</p>
+
+<pre># rake rails:freeze:edge RELEASE=2.0.2
+Downloading Rails from http://dev.rubyonrails.org/archives/rails_2.0.2.zip
+Unpacking Rails
+Updating current scripts, javascripts, and configuration settings</pre>
+
+<p>At this point I tried to initialize the database again but this time got a different error:</p>
+
+<pre># rake db:bootstrap RAILS_ENV=production
+(in /home/myusername/mephisto)
+rake aborted!
+undefined method ''install_gem_spec_stubs'' for #&lt;Rails::Initializer:0xb7c652e8></pre>
+
+<p>As <a href="http://groups.google.com/group/MephistoBlog/browse_thread/thread/a03e8ac350382e0e">explained here</a>, I still had to manually copy one file from Rails to my application which rails:freeze:edge didn’t handle properly, using this command from my app''s folder:</p>
+
+<pre># cp vendor/rails/railties/environments/boot.rb config/boot.rb</pre>
+
+<p>Finally I was able to run rake db:bootstrap successfully! The last bit of configuration I had to do was to add this line to config/environment.rb in order to insure hostingrails.com used the production configuration:</p>
+
+<pre># Uncomment below to force Rails into production mode when
+# you don''t control web/app server and can''t set it the proper way
+ENV[''RAILS_ENV''] ||= ''production''</pre>
+
+<p>After creating a symlink and doing some other <a href="http://www.hostingrails.com/forums/wiki_thread/1">standard configuration for hostingrails.com</a>, I was finally able to get my site up and running. It was a lot harder than configuring a PHP site and ruined a whole evening, but in the end wasn’t all that bad.</p>', '2008-10-22 19:29:05')[0m
+  [4;36;1mPost Create (0.000379)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "published", "url", "feed_id", "contents", "created_at") VALUES('2008-10-22 19:29:05', 'Why to use TDD with Drupal', '2008-09-03', 'http://patshaughnessy.net/2008/9/3/drupal-tdd-1', 1, '<p><a href="http://drupal.org">Drupal</a> is a very popular Content Management System (CMS) developed using PHP. It’s a great way to get an interactive, community web site such as a blog or discussion forum up and running quickly without writing any code. But Drupal is a poor choice for general, complex web application development for a few simple reasons:</p>
+
+<ol>
+<li>It doesn’t use a standard, general software architecture such as Model-View-Controller (MVC) like Rails or Struts.</li>
+<li>Drupal doesn’t employ or support modern development best practices such as <a href="http://en.wikipedia.org/wiki/Test-driven_development">Test Driven Development (TDD)</a> or automated testing more generally. (Exception: the <a href="http://drupal.org/project/simpletest">SimpleTest</a> module can provide some automated integration testing using HTTP without opening a real browser.)</li>
+<li>While the module API does allow for some customization, it can be easy to get into trouble if your target application is outside of Drupal’s design center. Specifically, you may end up having to modify Drupal’s core code or database schema when Drupal doesn’t behave the way you would like.</li>
+</ol>
+
+<p>A better choice for more general or complex web development would be Ruby on Rails.</p>
+
+<p>If you do need to develop a custom web application using the Drupal framework, you can avoid problems #2 and #3 by using a test driven approach. Instead of simply implementing your custom logic by writing PHP code to the Drupal module API, try pulling your custom code out of Drupal entirely and running it independently of the framework. This will insure that your custom code could someday be run with another web framework and also help you avoid the temptation of modifying Drupal’s core code directly. Of course, you will also get all of the normal benefits of TDD: better design oriented around business requirements, live documentation through executable code, etc.</p>
+
+<p>How to do this? Write tests first using PHPUnit (which fail), then get your tests to pass by implementing the desired behavior using PHP 5 objected oriented code. Lastly, write a “shell” module that calls out to your test driven object oriented PHP code from Drupal. This means your code will be run twice: once from the command line by PHPUnit during development and from your CI process, and again from Drupal to process end user requests in production.</p>
+
+<p>In a series of future posts I''ll write a Drupal module using TDD, using a few tips and tricks along the way to get PHPUnit and Drupal to play together nicely.</p>', '2008-10-22 19:29:05')[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2008-10-22 15:29:10) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlOGQ2ZTI3NzQwYjBiNjkwMmM2
+ODg0ZGEwMDRiYjY2MWU=--4a38e987aa2a053da33619370fa8300d9ada8b6f
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.000822)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering posts/index
+  [4;35;1mFeed Load (0.000242)[0m   [0mSELECT * FROM "feeds" WHERE ("feeds"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "feeds" WHERE ("feeds"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "feeds" WHERE ("feeds"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "feeds" WHERE ("feeds"."id" = 1) [0m
+Completed in 0.03205 (31 reqs/sec) | Rendering: 0.02419 (75%) | DB: 0.00106 (3%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2008-10-22 15:30:58) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlOGQ2ZTI3NzQwYjBiNjkwMmM2
+ODg0ZGEwMDRiYjY2MWU=--4a38e987aa2a053da33619370fa8300d9ada8b6f
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;35;1mPost Load (0.000785)[0m   [0mSELECT * FROM "posts" [0m
+Rendering posts/index
+  [4;36;1mFeed Load (0.000242)[0m   [0;1mSELECT * FROM "feeds" WHERE ("feeds"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "feeds" WHERE ("feeds"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "feeds" WHERE ("feeds"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "feeds" WHERE ("feeds"."id" = 1) [0m
+Completed in 0.02821 (35 reqs/sec) | Rendering: 0.02219 (78%) | DB: 0.00103 (3%) | 200 OK [http://localhost/posts]
+
+
+Processing FeedsController#index (for 127.0.0.1 at 2008-10-22 15:31:06) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlOGQ2ZTI3NzQwYjBiNjkwMmM2
+ODg0ZGEwMDRiYjY2MWU=--4a38e987aa2a053da33619370fa8300d9ada8b6f
+  Parameters: {"action"=>"index", "controller"=>"feeds"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00043 (2331 reqs/sec) | Rendering: 0.00023 (52%) | DB: 0.00000 (0%) | 401 Unauthorized [http://localhost/feeds]
+
+
+Processing FeedsController#index (for 127.0.0.1 at 2008-10-22 15:31:09) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlOGQ2ZTI3NzQwYjBiNjkwMmM2
+ODg0ZGEwMDRiYjY2MWU=--4a38e987aa2a053da33619370fa8300d9ada8b6f
+  Parameters: {"action"=>"index", "controller"=>"feeds"}
+  [4;36;1mFeed Load (0.000465)[0m   [0;1mSELECT * FROM "feeds" [0m
+Rendering feeds/index
+Completed in 0.02510 (39 reqs/sec) | Rendering: 0.00367 (14%) | DB: 0.00047 (1%) | 200 OK [http://localhost/feeds]
+
+
+Processing FeedsController#edit (for 127.0.0.1 at 2008-10-22 15:31:11) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlOGQ2ZTI3NzQwYjBiNjkwMmM2
+ODg0ZGEwMDRiYjY2MWU=--4a38e987aa2a053da33619370fa8300d9ada8b6f
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"feeds"}
+  [4;35;1mFeed Load (0.000218)[0m   [0mSELECT * FROM "feeds" WHERE ("feeds"."id" = 1) [0m
+Rendering feeds/edit
+Completed in 0.02286 (43 reqs/sec) | Rendering: 0.00392 (17%) | DB: 0.00022 (0%) | 200 OK [http://localhost/feeds/1/edit]
+
+
+Processing FeedsController#update (for 127.0.0.1 at 2008-10-22 15:31:25) [PUT]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlOGQ2ZTI3NzQwYjBiNjkwMmM2
+ODg0ZGEwMDRiYjY2MWU=--4a38e987aa2a053da33619370fa8300d9ada8b6f
+  Parameters: {"commit"=>"Update", "feed"=>{"name"=>"Pat's Ideas", "feed_url"=>"http://patshaughnessy.net/feed/atom.xml", "url"=>"http://patshaughnessy.net", "author"=>"Pat Shaughnessy"}, "authenticity_token"=>"f7e0f5d71a1dab36552aba80d18d5a75b5aed61f", "_method"=>"put", "action"=>"update", "id"=>"1", "controller"=>"feeds"}
+  [4;36;1mFeed Load (0.000196)[0m   [0;1mSELECT * FROM "feeds" WHERE ("feeds"."id" = 1) [0m
+  [4;35;1mFeed Update (0.000367)[0m   [0mUPDATE "feeds" SET "author" = 'Pat Shaughnessy', "name" = 'Pat''s Ideas', "updated_at" = '2008-10-22 19:31:25' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/feeds/1
+Completed in 0.02352 (42 reqs/sec) | DB: 0.00056 (2%) | 302 Found [http://localhost/feeds/1]
+
+
+Processing FeedsController#show (for 127.0.0.1 at 2008-10-22 15:31:25) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsGOgtub3RpY2UiI0ZlZWQgd2FzIHN1Y2Nlc3NmdWxseSB1cGRhdGVk
+LgY6CkB1c2VkewY7BkY6DGNzcmZfaWQiJThkNmUyNzc0MGIwYjY5MDJjNjg4
+NGRhMDA0YmI2NjFl--2c7b717636f07d72f17c41f8c7a834d1bbf6531c
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"feeds"}
+  [4;36;1mFeed Load (0.000202)[0m   [0;1mSELECT * FROM "feeds" WHERE ("feeds"."id" = 1) [0m
+Rendering feeds/show
+Completed in 0.02117 (47 reqs/sec) | Rendering: 0.00209 (9%) | DB: 0.00020 (0%) | 200 OK [http://localhost/feeds/1]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2008-10-22 15:31:31) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsGOgtub3RpY2UiI0ZlZWQgd2FzIHN1Y2Nlc3NmdWxseSB1cGRhdGVk
+LgY6CkB1c2VkewY7BlQ6DGNzcmZfaWQiJThkNmUyNzc0MGIwYjY5MDJjNjg4
+NGRhMDA0YmI2NjFl--bac868e058c9f7fbf456bf14761fa43e9308d578
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;35;1mPost Load (0.001064)[0m   [0mSELECT * FROM "posts" [0m
+Rendering posts/index
+  [4;36;1mFeed Load (0.000236)[0m   [0;1mSELECT * FROM "feeds" WHERE ("feeds"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "feeds" WHERE ("feeds"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "feeds" WHERE ("feeds"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "feeds" WHERE ("feeds"."id" = 1) [0m
+Completed in 0.02870 (34 reqs/sec) | Rendering: 0.02152 (74%) | DB: 0.00130 (4%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2008-10-22 15:32:27) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlOGQ2ZTI3NzQwYjBiNjkwMmM2
+ODg0ZGEwMDRiYjY2MWU=--4a38e987aa2a053da33619370fa8300d9ada8b6f
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.001006)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering posts/index
+  [4;35;1mFeed Load (0.000254)[0m   [0mSELECT * FROM "feeds" WHERE ("feeds"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "feeds" WHERE ("feeds"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "feeds" WHERE ("feeds"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "feeds" WHERE ("feeds"."id" = 1) [0m
+Completed in 0.10967 (9 reqs/sec) | Rendering: 0.10257 (93%) | DB: 0.00126 (1%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2008-10-22 15:32:35) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlOGQ2ZTI3NzQwYjBiNjkwMmM2
+ODg0ZGEwMDRiYjY2MWU=--4a38e987aa2a053da33619370fa8300d9ada8b6f
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;35;1mPost Load (0.000852)[0m   [0mSELECT * FROM "posts" [0m
+Rendering posts/index
+  [4;36;1mFeed Load (0.000243)[0m   [0;1mSELECT * FROM "feeds" WHERE ("feeds"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "feeds" WHERE ("feeds"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "feeds" WHERE ("feeds"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "feeds" WHERE ("feeds"."id" = 1) [0m
+Completed in 0.03027 (33 reqs/sec) | Rendering: 0.02333 (77%) | DB: 0.00109 (3%) | 200 OK [http://localhost/posts]

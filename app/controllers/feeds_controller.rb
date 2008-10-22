@@ -1,4 +1,6 @@
 class FeedsController < ApplicationController
+  before_filter :authenticate
+
   # GET /feeds
   # GET /feeds.xml
   def index
@@ -82,4 +84,12 @@ class FeedsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  protected
+  def authenticate
+     authenticate_or_request_with_http_basic do | user_name, password|
+      user_name == "alex" && password == 'pat'
+    end
+  end
+  
 end

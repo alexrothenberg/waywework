@@ -7,18 +7,13 @@
   </tr>
 
 <% for post in @posts %>
-  <tr>
-    <td><%=h post.feed %></td>
-    <td><%=h post.url %></td>
-    <td><%=h post.title %></td>
-    <td><%=h post.contents %></td>
-    <td><%= link_to 'Show', post %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+
+<%= link_to "#{post.feed.author}: #{post.feed.name}", post.feed.url %><br/>
+<%= distance_of_time_in_words(Time.now, post.published) %> ago<br/>
+<%= link_to post.title, post.url %><br/>
+<%=h post.contents %>
 
 <br />
-
-<%= link_to 'New post', new_post_path %>
+<br />
+<br />
+<% end %>
