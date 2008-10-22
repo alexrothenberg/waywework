@@ -16,34 +16,56 @@ class Feed < ActiveRecord::Base
   
   def get_posts_from_atom atom_xml
     feed = Atom::Feed.new(atom_xml)
-
-    newposts = []
     feed.entries.each { |entry|
-      newposts << posts.build(:contents=>entry.content.value.strip!, :url=>entry.links[0].href, :title=>entry.title, :published=>entry.published.to_s(:db))
+      link = entry.links.detect {|l| l.rel == 'alternate'}
+      create_post(:contents=>entry.content.value, :url=>link.href, :title=>entry.title, :published=>entry.published.to_s(:db))
     }
-    newposts
   end  
   
   def get_posts_from_rss rss_xml
     rss = RSS::Parser.parse(rss_xml, false)
-
-    newposts = []
     rss.items.each { |entry|
-      d = entry.date
-      newposts << posts.build(:contents=>entry.description.strip!, :url=>entry.link, :title=>entry.title, :published=>entry.date.to_formatted_s(:db))
+      create_post(:contents=>entry.description.strip!, :url=>entry.link, :title=>entry.title, :published=>entry.date.to_formatted_s(:db))
     }
-    newposts
+  end
+
+  def create_post params
+    params.merge!(:feed_id=>id) #, :contents=>htmlize(params[:contents]))
+    Post.create(params) unless Post.find_by_url(params[:url])
+  end
+
+  # htmlize the html codes back.
+  def htmlize(string, link=nil)
+    return unless string
+    string.gsub!('&lt;', '<')
+    string.gsub!('&gt;', '>')
+    string.gsub!('&amp;', '&')
+    string.gsub!('&#39;', "'")
+    string.gsub!('&quot;', '"')
+    string.gsub!('<![CDATA[', '')
+    string.gsub!(']]>', '')
+    
+    # for image srcs like <img src="/assets/2008/4/23/rails3.jpg_1208810865" />"
+    # adding host so that they become valid
+    # "<img src="http://www.google.com/assets/2008/4/23/rails3.jpg_1208810865" />"
+    if link
+      host = URI.parse(link).host
+      if host != "feeds.feedburner.com"
+        string.gsub!("src=\"/", "src=\"http://"+host+"/")
+      end
+    end
+    return string
   end
 
 
   def get_latest
+    puts "getting feed for #{name}"
     xml = get_feed
-    if xml =~ /rss/
-      myposts = get_posts_from_rss xml
+    if xml =~ /<rss/
+      get_posts_from_rss xml
     else
-      myposts = get_posts_from_atom xml
+      get_posts_from_atom xml
     end
-    myposts.each {|post| post.save }
   end
       
 end

@@ -3,7 +3,7 @@ require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 describe Post do
   before(:each) do
     @valid_attributes = {
-      :feed_url_id => "1",
+      :feed_id => "1",
       :contents => "value for contents"
     }
   end

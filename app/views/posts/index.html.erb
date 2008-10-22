@@ -11,7 +11,7 @@
 <%= link_to "#{post.feed.author}: #{post.feed.name}", post.feed.url %><br/>
 <%= distance_of_time_in_words(Time.now, post.published) %> ago<br/>
 <%= link_to post.title, post.url %><br/>
-<%=h post.contents %>
+<%= post.contents %>
 
 <br />
 <br />

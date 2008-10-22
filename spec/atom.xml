@@ -17,9 +17,7 @@
     <category term="rails"/>
     <link href="http://my.blog.com/first_post.html" rel="alternate" type="text/html"/>
     <title>Title for my first post</title>
-    <content type="html">
-            the first post
-    </content>  
+    <content type="html">the first post</content>  
   </entry>
   <entry xml:base="http://patshaughnessy.net/">
     <author>
@@ -32,7 +30,7 @@
     <category term="Rails"/>
     <link href="http://my.blog.com/the_second_post.html" rel="alternate" type="text/html"/>
     <title>The title of my second post</title>
-<content type="html">the second post
-          </content>  </entry>
+    <content type="html">the second post</content>
+  </entry>
 
 </feed>
