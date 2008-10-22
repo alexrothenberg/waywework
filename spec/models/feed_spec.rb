@@ -15,16 +15,16 @@ describe Feed do
   
   it 'should download a feed' do
     feed = Feed.create!(@valid_attributes)
-    URI.expects(:parse).with(feed.feed_url).returns(feed_uri=mock)
-    feed_uri.expects(:read).returns(expected_xml=mock)
+    URI.should_receive(:parse).with(feed.feed_url).and_return(feed_uri=mock('feed uri'))
+    feed_uri.should_receive(:read).and_return(expected_xml=mock('expected xml'))
     feed.get_feed.should == expected_xml
   end
   
   it 'should parse an atom feed' do
     feed = Feed.create!(@valid_attributes)
     xml=IO.read(File.join(RAILS_ROOT, 'spec', 'atom.xml'))
-    Post.expects(:new).with(has_entries( :contents=>'the first post', :title=>'Title for my first post', :published=>'2008-10-21 02:51:00', :url=>'http://my.blog.com/first_post.html')).returns(post1=mock)
-    Post.expects(:new).with(has_entries( :contents=>'the second post', :title=>'The title of my second post', :published=>'2008-09-28 03:01:00', :url=>'http://my.blog.com/the_second_post.html')).returns(post2=mock)
+    Post.should_receive(:new).with(hash_including( :contents=>'the first post', :title=>'Title for my first post', :published=>'2008-10-21 02:51:00', :url=>'http://my.blog.com/first_post.html')).and_return(post1=mock('post1'))
+    Post.should_receive(:new).with(hash_including( :contents=>'the second post', :title=>'The title of my second post', :published=>'2008-09-28 03:01:00', :url=>'http://my.blog.com/the_second_post.html')).and_return(post2=mock('post2'))
     posts = feed.get_posts_from_atom(xml)
     posts.should == [post1, post2]
   end
@@ -32,27 +32,27 @@ describe Feed do
   it 'should parse a rss feed' do
     feed = Feed.create!(@valid_attributes)
     xml=IO.read(File.join(RAILS_ROOT, 'spec', 'rss.xml'))
-    Post.expects(:new).with(has_entries( :contents=>'the first post', :title=>'Title for my first post', :published=>'2008-09-15 19:15:00', :url=>'http://my.blog.com/first_post.html')).returns(post1=mock)
-    Post.expects(:new).with(has_entries( :contents=>'the second post', :title=>'The title of my second post', :published=>'2008-02-13 11:24:00', :url=>'http://my.blog.com/the_second_post.html')).returns(post2=mock)
+    Post.should_receive(:new).with(hash_including(:contents=>'the first post', :title=>'Title for my first post', :published=>'2008-09-15 19:15:00', :url=>'http://my.blog.com/first_post.html')).and_return(post1=mock('post1'))
+    Post.should_receive(:new).with(hash_including(:contents=>'the second post', :title=>'The title of my second post', :published=>'2008-02-13 11:24:00', :url=>'http://my.blog.com/the_second_post.html')).and_return(post2=mock('post2'))
     posts = feed.get_posts_from_rss(xml)
     posts.should == [post1, post2]
   end
   
   it 'should get the atom feed and save posts' do
     feed = Feed.create!(@valid_attributes)
-    feed.expects(:get_feed).returns(xml='an atom feed')
-    feed.expects(:get_posts_from_atom).with(xml).returns([post1=mock, post2=mock])
-    post1.expects(:save)
-    post2.expects(:save)
+    feed.should_receive(:get_feed).and_return(xml='an atom feed')
+    feed.should_receive(:get_posts_from_atom).with(xml).and_return([post1=mock('post1'), post2=mock('post2')])
+    post1.should_receive(:save)
+    post2.should_receive(:save)
     feed.get_latest
   end
   
   it 'should get the atom feed and save posts' do
     feed = Feed.create!(@valid_attributes)
-    feed.expects(:get_feed).returns(xml='an rss feed')
-    feed.expects(:get_posts_from_rss).with(xml).returns([post1=mock, post2=mock])
-    post1.expects(:save)
-    post2.expects(:save)
+    feed.should_receive(:get_feed).and_return(xml='an rss feed')
+    feed.should_receive(:get_posts_from_rss).with(xml).and_return([post1=mock('post1'), post2=mock('post2')])
+    post1.should_receive(:save)
+    post2.should_receive(:save)
     feed.get_latest
   end
   

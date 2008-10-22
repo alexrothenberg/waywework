@@ -1945,7 +1945,7 @@ Element.Methods = {
     if (pos == 'static' || !pos) {
       element._madePositioned = true;
       element.style.position = 'relative';
-      // Opera returns the offset relative to the positioning context, when an
+      // Opera and_return the offset relative to the positioning context, when an
       // element is position relative but top and left have not been defined
       if (window.opera) {
         element.style.top = 0;
@@ -2200,10 +2200,10 @@ if (Prototype.Browser.Opera) {
         case 'left': case 'top': case 'right': case 'bottom':
           if (proceed(element, 'position') === 'static') return null;
         case 'height': case 'width':
-          // returns '0px' for hidden elements; we want it to return null
+          // and_return '0px' for hidden elements; we want it to return null
           if (!Element.visible(element)) return null;
 
-          // returns the border-box dimensions rather than the content-box
+          // and_return the border-box dimensions rather than the content-box
           // dimensions, so we subtract padding and borders from the value
           var dim = parseInt(proceed(element, style), 10);
 
@@ -2403,7 +2403,7 @@ else if (Prototype.Browser.WebKit) {
     return element;
   };
 
-  // Safari returns margins on body which is incorrect if the child is absolutely
+  // Safari and_return margins on body which is incorrect if the child is absolutely
   // positioned.  For performance reasons, redefine Element#cumulativeOffset for
   // KHTML/WebKit only.
   Element.Methods.cumulativeOffset = function(element) {
@@ -3366,7 +3366,7 @@ Object.extend(Selector, {
 });
 
 if (Prototype.Browser.IE) {
-  // IE returns comment nodes on getElementsByTagName("*").
+  // IE and_return comment nodes on getElementsByTagName("*").
   // Filter them out.
   Selector.handlers.concat = function(a, b) {
     for (var i = 0, node; node = b[i]; i++)

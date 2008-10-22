@@ -75,7 +75,7 @@ Autocompleter.Base = Class.create({
 
     if(typeof(this.options.tokens) == 'string') 
       this.options.tokens = new Array(this.options.tokens);
-    // Force carriage returns as token delimiters anyway
+    // Force carriage and_return as token delimiters anyway
     if (!this.options.tokens.include('\n'))
       this.options.tokens.push('\n');
 

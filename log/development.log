@@ -133,3 +133,177 @@ Migrating to CreatePosts (20081022162832)
 [0m
   [4;35;1mSQL (0.000072)[0m   [0mPRAGMA index_list("feeds")[0m
   [4;36;1mSQL (0.000068)[0m   [0;1mPRAGMA index_list("posts")[0m
+  [4;36;1mSQL (0.000441)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000135)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000160)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000242)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.012664)[0m   [0;1mCREATE TABLE "feeds" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "url" varchar(255), "name" varchar(255), "feed_url" varchar(255), "author" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.000345)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.002342)[0m   [0;1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "feed_url_id" integer, "contents" text, "title" varchar(255), "url" varchar(255), "published" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.000734)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.002379)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.001782)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000354)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000146)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.001446)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20081022162832')[0m
+  [4;35;1mSQL (0.001672)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20081022162743')[0m
+  [4;36;1mSQL (0.000437)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000136)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000120)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000156)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.012383)[0m   [0;1mCREATE TABLE "feeds" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "url" varchar(255), "name" varchar(255), "feed_url" varchar(255), "author" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.000351)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.002148)[0m   [0;1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "feed_url_id" integer, "contents" text, "title" varchar(255), "url" varchar(255), "published" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.000444)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.002202)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.002498)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000418)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000141)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.001956)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20081022162832')[0m
+  [4;35;1mSQL (0.001856)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20081022162743')[0m
+  [4;36;1mSQL (0.000440)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000142)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000124)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000178)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.012549)[0m   [0;1mCREATE TABLE "feeds" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "url" varchar(255), "name" varchar(255), "feed_url" varchar(255), "author" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.000386)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.002065)[0m   [0;1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "feed_url_id" integer, "contents" text, "title" varchar(255), "url" varchar(255), "published" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.000388)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.002181)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.002294)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000399)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000174)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.001657)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20081022162832')[0m
+  [4;35;1mSQL (0.002100)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20081022162743')[0m
+  [4;36;1mSQL (0.000440)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000134)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000223)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.011838)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.252506)[0m   [0;1mCREATE TABLE "feeds" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "url" varchar(255), "name" varchar(255), "feed_url" varchar(255), "author" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.000304)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.279948)[0m   [0;1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "feed_url_id" integer, "contents" text, "title" varchar(255), "url" varchar(255), "published" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.000569)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.304527)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.340828)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000411)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.012856)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.665038)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20081022162832')[0m
+  [4;35;1mSQL (0.001826)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20081022162743')[0m
+  [4;36;1mSQL (0.000506)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000150)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000146)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000205)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.007945)[0m   [0;1mCREATE TABLE "feeds" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "url" varchar(255), "name" varchar(255), "feed_url" varchar(255), "author" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.001579)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.002113)[0m   [0;1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "feed_url_id" integer, "contents" text, "title" varchar(255), "url" varchar(255), "published" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.000197)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.003391)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.001461)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000200)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000106)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.001279)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20081022162832')[0m
+  [4;35;1mSQL (0.002931)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20081022162743')[0m
+  [4;36;1mSQL (0.000437)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000134)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000134)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000168)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.011110)[0m   [0;1mCREATE TABLE "feeds" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "url" varchar(255), "name" varchar(255), "feed_url" varchar(255), "author" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.000314)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.001932)[0m   [0;1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "feed_url_id" integer, "contents" text, "title" varchar(255), "url" varchar(255), "published" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.000577)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.001956)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.001908)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000402)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000166)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.001549)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20081022162832')[0m
+  [4;35;1mSQL (0.001843)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20081022162743')[0m

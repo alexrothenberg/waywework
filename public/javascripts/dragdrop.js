@@ -942,7 +942,7 @@ var Sortable = {
   }
 }
 
-// Returns true if child is contained within element
+// and_return true if child is contained within element
 Element.isParent = function(child, element) {
   if (!child.parentNode || child == element) return false;
   if (child.parentNode == element) return true;
