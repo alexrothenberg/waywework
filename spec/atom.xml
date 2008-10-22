@@ -15,8 +15,8 @@
     <updated>2008-10-21T03:15:37Z</updated>
     <category term="Rails"/>
     <category term="rails"/>
-    <link href="http://patshaughnessy.net/2008/10/21/autocomplete-plugin-doesn-t-work-for-repeated-fields" rel="alternate" type="text/html"/>
-    <titlea>Autocomplete plugin doesn&#8217;t work for repeated fields</titlea>
+    <link href="http://my.blog.com/first_post.html" rel="alternate" type="text/html"/>
+    <title>Title for my first post</title>
     <content type="html">
             the first post
     </content>  
@@ -30,8 +30,8 @@
     <updated>2008-10-16T16:59:00Z</updated>
     <category term="Mephisto Notes"/>
     <category term="Rails"/>
-    <link href="http://patshaughnessy.net/2008/9/28/problems-installing-the-cutline-theme-in-mephisto" rel="alternate" type="text/html"/>
-    <title>Problems Installing the Cutline Theme in Mephisto</title>
+    <link href="http://my.blog.com/the_second_post.html" rel="alternate" type="text/html"/>
+    <title>The title of my second post</title>
 <content type="html">the second post
           </content>  </entry>
 

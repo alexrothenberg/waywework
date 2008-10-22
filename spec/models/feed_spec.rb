@@ -23,8 +23,8 @@ describe Feed do
   it 'should parse an atom feed' do
     feed = Feed.create!(@valid_attributes)
     feed.expects(:get_feed).returns(xml=IO.read(File.join(RAILS_ROOT, 'spec', 'atom.xml')))
-    Post.expects(:new).with(:contents=>'the first post', :title=>'Title for my first post', :published=>'2008-09-28T03:01:00Z').returns(post1=mock)
-    Post.expects(:new).with(:contents=>'the second post', :title=>'The title of my second post', :published=>'2008-09-29T03:01:00Z').returns(post2=mock)
+    Post.expects(:new).with(has_entries( :contents=>'the first post', :title=>'Title for my first post', :published=>'2008-10-21 02:51:00', :url=>'http://my.blog.com/first_post.html')).returns(post1=mock)
+    Post.expects(:new).with(has_entries( :contents=>'the second post', :title=>'The title of my second post', :published=>'2008-09-28 03:01:00', :url=>'http://my.blog.com/the_second_post.html')).returns(post2=mock)
     feed.get_posts.should == [post1, post2]
   end
   
