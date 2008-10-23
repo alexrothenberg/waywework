@@ -30,31 +30,8 @@ class Feed < ActiveRecord::Base
   end
 
   def create_post params
-    params.merge!(:feed_id=>id) #, :contents=>htmlize(params[:contents]))
+    params.merge!(:feed_id=>id) 
     Post.create(params) unless Post.find_by_url(params[:url])
-  end
-
-  # htmlize the html codes back.
-  def htmlize(string, link=nil)
-    return unless string
-    string.gsub!('&lt;', '<')
-    string.gsub!('&gt;', '>')
-    string.gsub!('&amp;', '&')
-    string.gsub!('&#39;', "'")
-    string.gsub!('&quot;', '"')
-    string.gsub!('<![CDATA[', '')
-    string.gsub!(']]>', '')
-    
-    # for image srcs like <img src="/assets/2008/4/23/rails3.jpg_1208810865" />"
-    # adding host so that they become valid
-    # "<img src="http://www.google.com/assets/2008/4/23/rails3.jpg_1208810865" />"
-    if link
-      host = URI.parse(link).host
-      if host != "feeds.feedburner.com"
-        string.gsub!("src=\"/", "src=\"http://"+host+"/")
-      end
-    end
-    return string
   end
 
 
