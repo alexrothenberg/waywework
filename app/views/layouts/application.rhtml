@@ -1,0 +1,34 @@
+<%= render :partial => "shared/head" %>
+
+<body>
+  
+  <%#= display_standard_flashes %>
+
+  <div id="band"></div>
+  <div id="wrapper">
+  <%= render :partial => "shared/header" %>
+
+  <div id="site">
+    
+    <div class="right right_column">
+    <h2>Who is talking?</h2>
+    <ul>
+    <li><%=link_to('Richard Simmons', 'http://www.lesseverything.com')%></li>
+    <li><%=link_to('Richard Simmons', 'http://www.lesseverything.com')%></li>
+    <li><%=link_to('Richard Simmons', 'http://www.lesseverything.com')%></li>
+    <li><%=link_to('Richard Simmons', 'http://www.lesseverything.com')%></li>    
+    </ul>
+    </div>
+    
+    <div class="left left_column">
+    <%= yield %>
+    </div>
+    
+    <div class="clear"></div>
+  </div>
+  
+  <%= render :partial => "shared/footer" %>
+  </div>
+
+</body>
+</html>
