@@ -1,4 +1,4 @@
-<h1>Listing posts</h1>
+
 
 <table>
   <tr>
@@ -8,12 +8,10 @@
 
 <% for post in @posts %>
 
-<%= link_to "#{post.feed.author}: #{post.feed.name}", post.feed.url %><br/>
-<%= distance_of_time_in_words(Time.now, post.published) %> ago<br/>
-<%= link_to post.title, post.url %><br/>
-<%= post.contents %>
+<h1><%= link_to post.title, post.url %></h1>
+<h2><%= distance_of_time_in_words(Time.now, post.published) %> ago | <%= link_to "#{post.feed.author}: #{post.feed.name}", post.feed.url %></h3>
 
-<br />
-<br />
-<br />
+<p class="content"><%= post.contents %></p>
+<div class="clear"></div>
+
 <% end %>
