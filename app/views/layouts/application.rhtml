@@ -11,13 +11,11 @@
   <div id="site">
     
     <div class="right right_column">
-    <h2>Who is talking?</h2>
-    <ul>
-    <li><%=link_to('Richard Simmons', 'http://www.lesseverything.com')%></li>
-    <li><%=link_to('Richard Simmons', 'http://www.lesseverything.com')%></li>
-    <li><%=link_to('Richard Simmons', 'http://www.lesseverything.com')%></li>
-    <li><%=link_to('Richard Simmons', 'http://www.lesseverything.com')%></li>    
-    </ul>
+      <%= render :partial=>'posts/whos_talking'%>
+      <br/>
+      <br/>
+      <%= render :partial=>'posts/archive'%>
+
     </div>
     
     <div class="left left_column">

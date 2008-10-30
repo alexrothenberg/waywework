@@ -1,3 +1,17 @@
+# == Schema Information
+# Schema version: 20081022162832
+#
+# Table name: feeds
+#
+#  id         :integer(4)      not null, primary key
+#  url        :string(255)
+#  name       :string(255)
+#  feed_url   :string(255)
+#  author     :string(255)
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 require 'atom'
 require 'net/http'
 require 'uri'
@@ -5,8 +19,13 @@ require 'rss/1.0'
 require 'rss/2.0'
 require 'open-uri'
 
+
 class Feed < ActiveRecord::Base
   has_many :posts
+
+  named_scope :by_author, :order => :author
+  named_scope :active, lambda {|since| {:conditions => like_condition(search_string, 'clients.name'), :include => :cst_contacts}}
+  
   
   def get_feed
     uri = URI.parse(feed_url)

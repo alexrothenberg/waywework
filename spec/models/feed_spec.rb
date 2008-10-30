@@ -1,3 +1,17 @@
+# == Schema Information
+# Schema version: 20081022162832
+#
+# Table name: feeds
+#
+#  id         :integer(4)      not null, primary key
+#  url        :string(255)
+#  name       :string(255)
+#  feed_url   :string(255)
+#  author     :string(255)
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe Feed do
