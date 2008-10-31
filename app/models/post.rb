@@ -15,21 +15,18 @@
 
 class Post < ActiveRecord::Base
   named_scope :most_recent_first, :order=>'published desc'
+  named_scope :by_date_published, lambda {|date| {:conditions=>["date_format(published, '%Y-%c')=?", date]}}
   
   belongs_to :feed
   
   def Post.activity_by_date
-    
-    {2008 => 
-      {:October => 10,
-      :Sepbember => 9,
-      :July => 5
-      },
-      2007 => 
-          {:July => 10,
-          :June => 9,
-          :April => 5
-            }
-        }
+    activity = Post.count(:published, :group=>"date_format(published, '%Y-%c')")
+    activity_by_date = {}
+    activity.each do |row|
+      year,month = row[0].split '-'
+      activity_for_this_year = activity_by_date[year] ||= {}
+      activity_for_this_year[month] = row[1]
+    end
+    activity_by_date
   end
 end

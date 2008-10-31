@@ -34,6 +34,7 @@ h1 a:hover        {text-decoration: underline;}
 h2                {font-size: 15px; font-weight: normal; padding: 0 0 10px 0;  margin-bottom: 20px;}
 
 .right_column h2  {font-weight: bold; margin-bottom: 0; padding: 0 0 5px 0;}
+.right_column ul ul li {padding-left:1.2em;}
 
 .content          {clear: both; padding-bottom: 20px;}
 pre {

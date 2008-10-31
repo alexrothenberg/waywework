@@ -9,5 +9,6 @@ TODO
 * password.yml
 * ln to database.yml on deploy
 * archive and whos talking filter
-* 
+* Atom feed
+* parse rss?
 

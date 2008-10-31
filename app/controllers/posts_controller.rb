@@ -14,7 +14,7 @@ class PostsController < ApplicationController
 
   # GET /posts
   def by_month
-    @posts = Post.most_recent_first.all(:conditions=>['MONTH(updated_at)=? AND YEAR(updated_at)=?', params[:month], params[:year]])
+    @posts = Post.most_recent_first.by_date_published("#{params[:year]}-#{params[:month]}")
     nav_info
     render :action=>:index
   end
