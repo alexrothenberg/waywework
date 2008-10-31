@@ -24,8 +24,8 @@ class Post < ActiveRecord::Base
     activity_by_date = {}
     activity.each do |row|
       year,month = row[0].split '-'
-      activity_for_this_year = activity_by_date[year] ||= {}
-      activity_for_this_year[month] = row[1]
+      activity_for_this_year = activity_by_date[year.to_i] ||= {}
+      activity_for_this_year[month.to_i] = row[1]
     end
     activity_by_date
   end

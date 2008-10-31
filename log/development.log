@@ -21919,3 +21919,391 @@ Rendered shared/_head (0.00017)
 Rendered shared/_header (0.00007)
 Rendered shared/_footer (0.00002)
 Completed in 0.06102 (16 reqs/sec) | Rendering: 0.01575 (25%) | DB: 0.02332 (38%) | 200 OK [http://waywework.local/month/2008/10]
+  [4;35;1mFeed Load (0.000295)[0m   [0mSELECT * FROM `feeds` [0m
+  [4;36;1mFeed Columns (0.011184)[0m   [0;1mSHOW FIELDS FROM `feeds`[0m
+  [4;35;1mFeed Load (0.000351)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;36;1mFeed Load (0.000354)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+
+
+Processing PostsController#by_month (for 127.0.0.1 at 2008-10-30 22:26:54) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlNWE3NmNmOGRhZjcyNzhiOThi
+OGRhNDNhYWFjYjU5MTY=--4997bd7b13a3101d7b4892a049eb2595b22eb5de
+  Parameters: {"month"=>"10", "action"=>"by_month", "controller"=>"posts", "year"=>"2008"}
+  [4;36;1mPost Columns (0.012581)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mSQL (0.001940)[0m   [0mSELECT count(`posts`.published) AS count_published, date_format(published, '%Y-%c') AS date_format_published_y_c FROM `posts` GROUP BY date_format(published, '%Y-%c') [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;36;1mFeed Load (0.006323)[0m   [0;1mSELECT * FROM `feeds` ORDER BY author[0m
+  [4;35;1mFeed Columns (0.001755)[0m   [0mSHOW FIELDS FROM `feeds`[0m
+Rendered posts/_whos_talking (0.01239)
+
+
+ActionView::TemplateError (can't convert String into Integer) on line #7 of posts/_archive.html.erb:
+4:   <li><%= year %></li>
+5:   <ul>
+6:     <% months.each_pair do |month, count| %>
+7:     <li><%= link_to(Date::MONTHNAMES[month], posts_by_month_url(year, month))%>(<%= count %>)</li>
+8:     <% end %>
+9:   </ul>
+10:   <% end %>
+
+    /Users/alexrothenberg/ruby/waywework/app/views/posts/_archive.html.erb:7:in `[]'
+    /Users/alexrothenberg/ruby/waywework/app/views/posts/_archive.html.erb:7:in `_run_erb_47app47views47posts47_archive46html46erb'
+    /Users/alexrothenberg/ruby/waywework/app/views/posts/_archive.html.erb:6:in `each_pair'
+    /Users/alexrothenberg/ruby/waywework/app/views/posts/_archive.html.erb:6:in `_run_erb_47app47views47posts47_archive46html46erb'
+    /Users/alexrothenberg/ruby/waywework/app/views/posts/_archive.html.erb:3:in `each_pair'
+    /Users/alexrothenberg/ruby/waywework/app/views/posts/_archive.html.erb:3:in `_run_erb_47app47views47posts47_archive46html46erb'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:342:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:342:in `execute'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/partial_template.rb:20:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/partial_template.rb:19:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:22:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/partials.rb:110:in `render_partial'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:277:in `render'
+    /Users/alexrothenberg/ruby/waywework/app/views/posts/index.html.erb:7:in `_run_erb_47app47views47posts47index46html46erb'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:342:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:342:in `execute'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:35:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:22:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:248:in `render_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1112:in `render_for_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:869:in `render_with_no_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:884:in `render_with_no_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/alexrothenberg/ruby/waywework/app/controllers/posts_controller.rb:19:in `by_month'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:579:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:13:in `passenger_orig_perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:12:in `passenger_orig_perform_action'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/railz/request_handler.rb:53:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/session_management.rb:130:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:389:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/railz/request_handler.rb:38:in `process_request'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/abstract_request_handler.rb:163:in `main_loop'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/railz/application_spawner.rb:307:in `start_request_handler'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/railz/application_spawner.rb:276:in `handle_spawn_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/utils.rb:165:in `safe_fork'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/utils.rb:163:in `fork'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/utils.rb:163:in `safe_fork'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/railz/application_spawner.rb:274:in `handle_spawn_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/utils.rb:165:in `safe_fork'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/utils.rb:163:in `fork'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/utils.rb:163:in `safe_fork'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/railz/application_spawner.rb:273:in `handle_spawn_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/abstract_server.rb:317:in `__send__'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/abstract_server.rb:317:in `main_loop'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/abstract_server.rb:168:in `start_synchronously'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/abstract_server.rb:135:in `start'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/abstract_server.rb:112:in `fork'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/abstract_server.rb:112:in `start'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/railz/application_spawner.rb:177:in `start'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/railz/framework_spawner.rb:270:in `handle_spawn_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/railz/framework_spawner.rb:263:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/railz/framework_spawner.rb:263:in `handle_spawn_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/abstract_server.rb:317:in `__send__'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/abstract_server.rb:317:in `main_loop'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/abstract_server.rb:168:in `start_synchronously'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/abstract_server.rb:135:in `start'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/abstract_server.rb:112:in `fork'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/abstract_server.rb:112:in `start'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/railz/framework_spawner.rb:87:in `start'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/spawn_manager.rb:218:in `spawn_rails_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/spawn_manager.rb:213:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/spawn_manager.rb:213:in `spawn_rails_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/spawn_manager.rb:122:in `spawn_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/spawn_manager.rb:247:in `handle_spawn_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/abstract_server.rb:317:in `__send__'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/abstract_server.rb:317:in `main_loop'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/abstract_server.rb:168:in `start_synchronously'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/bin/passenger-spawn-server:46
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PostsController#by_month (for 127.0.0.1 at 2008-10-30 22:27:13) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNWE3NmNmOGRhZjcyNzhiOThiOGRhNDNhYWFjYjU5
+MTYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--b7fc1967f29bc43ca556912052f7a3c3f549792e
+  Parameters: {"month"=>"10", "action"=>"by_month", "controller"=>"posts", "year"=>"2008"}
+  [4;36;1mPost Columns (0.012323)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mSQL (0.002602)[0m   [0mSELECT count(`posts`.published) AS count_published, date_format(published, '%Y-%c') AS date_format_published_y_c FROM `posts` GROUP BY date_format(published, '%Y-%c') [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;36;1mFeed Load (0.005980)[0m   [0;1mSELECT * FROM `feeds` ORDER BY author[0m
+  [4;35;1mFeed Columns (0.001550)[0m   [0mSHOW FIELDS FROM `feeds`[0m
+Rendered posts/_whos_talking (0.01024)
+Rendered posts/_archive (0.00063)
+  [4;36;1mPost Load (0.001370)[0m   [0;1mSELECT * FROM `posts` WHERE (date_format(published, '%Y-%c')='2008-10') ORDER BY published desc[0m
+  [4;35;1mFeed Load (0.000213)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 9) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 9) [0m
+  [4;35;1mFeed Load (0.000168)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 10) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 10) [0m
+  [4;35;1mFeed Load (0.000180)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 9) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 9) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 9) [0m
+  [4;35;1mFeed Load (0.000175)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 2) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 10) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 2) [0m
+  [4;36;1mFeed Load (0.000160)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 5) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 10) [0m
+  [4;36;1mFeed Load (0.000142)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 8) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 8) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 8) [0m
+Rendered shared/_head (0.00018)
+Rendered shared/_header (0.00007)
+Rendered shared/_footer (0.00002)
+Completed in 0.06138 (16 reqs/sec) | Rendering: 0.01615 (26%) | DB: 0.03294 (53%) | 200 OK [http://waywework.local/month/2008/10]
+
+
+Processing PostsController#by_month (for 127.0.0.1 at 2008-10-30 22:28:09) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlNWE3NmNmOGRhZjcyNzhiOThi
+OGRhNDNhYWFjYjU5MTY=--4997bd7b13a3101d7b4892a049eb2595b22eb5de
+  Parameters: {"month"=>"10", "action"=>"by_month", "controller"=>"posts", "year"=>"2008"}
+  [4;35;1mPost Columns (0.012462)[0m   [0mSHOW FIELDS FROM `posts`[0m
+  [4;36;1mSQL (0.001370)[0m   [0;1mSELECT count(`posts`.published) AS count_published, date_format(published, '%Y-%c') AS date_format_published_y_c FROM `posts` GROUP BY date_format(published, '%Y-%c') [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;35;1mFeed Load (0.010889)[0m   [0mSELECT * FROM `feeds` ORDER BY author[0m
+  [4;36;1mFeed Columns (0.001354)[0m   [0;1mSHOW FIELDS FROM `feeds`[0m
+Rendered posts/_whos_talking (0.08501)
+
+
+ActionView::TemplateError (undefined method `each_pair' for #<Array:0x2428720>) on line #3 of posts/_archive.html.erb:
+1: <h2>Archive</h2>
+2: <ul>
+3: <% @activity_by_date.sort.each_pair do |year, months| %>
+4:   <li><%= year %></li>
+5:   <ul>
+6:     <% months.sort.each_pair do |month, count| %>
+
+    /Users/alexrothenberg/ruby/waywework/app/views/posts/_archive.html.erb:3:in `_run_erb_47app47views47posts47_archive46html46erb'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:342:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:342:in `execute'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/partial_template.rb:20:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/partial_template.rb:19:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:22:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/partials.rb:110:in `render_partial'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:277:in `render'
+    /Users/alexrothenberg/ruby/waywework/app/views/posts/index.html.erb:7:in `_run_erb_47app47views47posts47index46html46erb'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:342:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:342:in `execute'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:35:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:22:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:248:in `render_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1112:in `render_for_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:869:in `render_with_no_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:884:in `render_with_no_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/alexrothenberg/ruby/waywework/app/controllers/posts_controller.rb:19:in `by_month'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:579:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:13:in `passenger_orig_perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:12:in `passenger_orig_perform_action'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/railz/request_handler.rb:53:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/session_management.rb:130:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:389:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/railz/request_handler.rb:38:in `process_request'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/abstract_request_handler.rb:163:in `main_loop'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/railz/application_spawner.rb:307:in `start_request_handler'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/railz/application_spawner.rb:276:in `handle_spawn_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/utils.rb:165:in `safe_fork'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/utils.rb:163:in `fork'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/utils.rb:163:in `safe_fork'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/railz/application_spawner.rb:274:in `handle_spawn_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/utils.rb:165:in `safe_fork'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/utils.rb:163:in `fork'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/utils.rb:163:in `safe_fork'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/railz/application_spawner.rb:273:in `handle_spawn_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/abstract_server.rb:317:in `__send__'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/abstract_server.rb:317:in `main_loop'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/abstract_server.rb:168:in `start_synchronously'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/abstract_server.rb:135:in `start'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/abstract_server.rb:112:in `fork'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/abstract_server.rb:112:in `start'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/railz/application_spawner.rb:177:in `start'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/railz/framework_spawner.rb:270:in `handle_spawn_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/railz/framework_spawner.rb:263:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/railz/framework_spawner.rb:263:in `handle_spawn_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/abstract_server.rb:317:in `__send__'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/abstract_server.rb:317:in `main_loop'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/abstract_server.rb:168:in `start_synchronously'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/abstract_server.rb:135:in `start'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/abstract_server.rb:112:in `fork'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/abstract_server.rb:112:in `start'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/railz/framework_spawner.rb:87:in `start'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/spawn_manager.rb:218:in `spawn_rails_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/spawn_manager.rb:213:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/spawn_manager.rb:213:in `spawn_rails_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/spawn_manager.rb:122:in `spawn_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/spawn_manager.rb:247:in `handle_spawn_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/abstract_server.rb:317:in `__send__'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/abstract_server.rb:317:in `main_loop'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/lib/passenger/abstract_server.rb:168:in `start_synchronously'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.3/bin/passenger-spawn-server:46
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PostsController#by_month (for 127.0.0.1 at 2008-10-30 22:28:31) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNWE3NmNmOGRhZjcyNzhiOThiOGRhNDNhYWFjYjU5
+MTYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--b7fc1967f29bc43ca556912052f7a3c3f549792e
+  Parameters: {"month"=>"10", "action"=>"by_month", "controller"=>"posts", "year"=>"2008"}
+  [4;35;1mPost Columns (0.012053)[0m   [0mSHOW FIELDS FROM `posts`[0m
+  [4;36;1mSQL (0.002135)[0m   [0;1mSELECT count(`posts`.published) AS count_published, date_format(published, '%Y-%c') AS date_format_published_y_c FROM `posts` GROUP BY date_format(published, '%Y-%c') [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;35;1mFeed Load (0.000428)[0m   [0mSELECT * FROM `feeds` ORDER BY author[0m
+  [4;36;1mFeed Columns (0.001477)[0m   [0;1mSHOW FIELDS FROM `feeds`[0m
+Rendered posts/_whos_talking (0.00486)
+Rendered posts/_archive (0.00066)
+  [4;35;1mPost Load (0.001222)[0m   [0mSELECT * FROM `posts` WHERE (date_format(published, '%Y-%c')='2008-10') ORDER BY published desc[0m
+  [4;36;1mFeed Load (0.000298)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 9) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 9) [0m
+  [4;36;1mFeed Load (0.000182)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 10) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 10) [0m
+  [4;36;1mFeed Load (0.000230)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 9) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 9) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 9) [0m
+  [4;36;1mFeed Load (0.000188)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 2) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 10) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 2) [0m
+  [4;35;1mFeed Load (0.000167)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 5) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 10) [0m
+  [4;35;1mFeed Load (0.000163)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 8) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 8) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 8) [0m
+Rendered shared/_head (0.00018)
+Rendered shared/_header (0.00008)
+Rendered shared/_footer (0.00002)
+Completed in 0.13702 (7 reqs/sec) | Rendering: 0.09718 (70%) | DB: 0.03079 (22%) | 200 OK [http://waywework.local/month/2008/10]
+
+
+Processing PostsController#by_month (for 127.0.0.1 at 2008-10-30 22:31:12) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlNWE3NmNmOGRhZjcyNzhiOThi
+OGRhNDNhYWFjYjU5MTY=--4997bd7b13a3101d7b4892a049eb2595b22eb5de
+  Parameters: {"month"=>"10", "action"=>"by_month", "controller"=>"posts", "year"=>"2008"}
+  [4;36;1mPost Columns (0.012970)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mSQL (0.002463)[0m   [0mSELECT count(`posts`.published) AS count_published, date_format(published, '%Y-%c') AS date_format_published_y_c FROM `posts` GROUP BY date_format(published, '%Y-%c') [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;36;1mFeed Load (0.000705)[0m   [0;1mSELECT * FROM `feeds` ORDER BY author[0m
+  [4;35;1mFeed Columns (0.001439)[0m   [0mSHOW FIELDS FROM `feeds`[0m
+Rendered posts/_whos_talking (0.00700)
+Rendered posts/_archive (0.00082)
+  [4;36;1mPost Load (0.001302)[0m   [0;1mSELECT * FROM `posts` WHERE (date_format(published, '%Y-%c')='2008-10') ORDER BY published desc[0m
+  [4;35;1mFeed Load (0.000214)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 9) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 9) [0m
+  [4;35;1mFeed Load (0.000161)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 10) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 10) [0m
+  [4;35;1mFeed Load (0.000153)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 9) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 9) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 9) [0m
+  [4;35;1mFeed Load (0.000163)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 2) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 10) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 2) [0m
+  [4;36;1mFeed Load (0.000189)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 5) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 10) [0m
+  [4;36;1mFeed Load (0.000158)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 8) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 8) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 8) [0m
+Rendered shared/_head (0.00018)
+Rendered shared/_header (0.00007)
+Rendered shared/_footer (0.00002)
+Completed in 0.06192 (16 reqs/sec) | Rendering: 0.01896 (30%) | DB: 0.01992 (32%) | 200 OK [http://waywework.local/month/2008/10]
+
+
+Processing PostsController#by_month (for 127.0.0.1 at 2008-10-30 22:31:53) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNWE3NmNmOGRhZjcyNzhiOThiOGRhNDNhYWFjYjU5
+MTYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--b7fc1967f29bc43ca556912052f7a3c3f549792e
+  Parameters: {"month"=>"10", "action"=>"by_month", "controller"=>"posts", "year"=>"2008"}
+  [4;35;1mPost Columns (0.012224)[0m   [0mSHOW FIELDS FROM `posts`[0m
+  [4;36;1mSQL (0.002244)[0m   [0;1mSELECT count(`posts`.published) AS count_published, date_format(published, '%Y-%c') AS date_format_published_y_c FROM `posts` GROUP BY date_format(published, '%Y-%c') [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;35;1mFeed Load (0.009176)[0m   [0mSELECT * FROM `feeds` ORDER BY author[0m
+  [4;36;1mFeed Columns (0.001752)[0m   [0;1mSHOW FIELDS FROM `feeds`[0m
+Rendered posts/_whos_talking (0.01370)
+Rendered posts/_archive (0.00064)
+  [4;35;1mPost Load (0.001278)[0m   [0mSELECT * FROM `posts` WHERE (date_format(published, '%Y-%c')='2008-10') ORDER BY published desc[0m
+  [4;36;1mFeed Load (0.000243)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 9) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 9) [0m
+  [4;36;1mFeed Load (0.000170)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 10) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 10) [0m
+  [4;36;1mFeed Load (0.000170)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 9) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 9) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 9) [0m
+  [4;36;1mFeed Load (0.000165)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 2) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 10) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 2) [0m
+  [4;35;1mFeed Load (0.000167)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 5) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 10) [0m
+  [4;35;1mFeed Load (0.000176)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 8) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 8) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 8) [0m
+Rendered shared/_head (0.00018)
+Rendered shared/_header (0.00007)
+Rendered shared/_footer (0.00002)
+Completed in 0.06402 (15 reqs/sec) | Rendering: 0.01667 (26%) | DB: 0.02776 (43%) | 200 OK [http://waywework.local/month/2008/10]

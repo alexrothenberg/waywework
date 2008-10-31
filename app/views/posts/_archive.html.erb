@@ -1,10 +1,10 @@
 <h2>Archive</h2>
 <ul>
-<% @activity_by_date.each_pair do |year, months| %>
+<% @activity_by_date.keys.sort.reverse.each do |year| %>
   <li><%= year %></li>
   <ul>
-    <% months.each_pair do |month, count| %>
-    <li><%= link_to(month, posts_by_month_url(year, month))%>(<%= count %>)</li>
+    <% @activity_by_date[year].keys.sort.each do |month| %>
+    <li><%= link_to(Date::MONTHNAMES[month], posts_by_month_url(year, month))%> (<%= @activity_by_date[year][month] %>)</li>
     <% end %>
   </ul>
   <% end %>
