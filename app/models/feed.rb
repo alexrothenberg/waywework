@@ -21,7 +21,7 @@ require 'open-uri'
 
 
 class Feed < ActiveRecord::Base
-  has_many :posts
+  has_many :posts, :dependent => :delete_all
 
   named_scope :by_author, :order => :author
   named_scope :active, lambda {|since| {:conditions => like_condition(search_string, 'clients.name'), :include => :cst_contacts}}

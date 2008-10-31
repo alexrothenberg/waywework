@@ -4,7 +4,7 @@
   <li><%= year %></li>
   <ul>
     <% months.each_pair do |month, count| %>
-    <li><%= month %>(<%= count %>)</li>
+    <li><%= link_to(month, posts_by_month_url(year, month))%>(<%= count %>)</li>
     <% end %>
   </ul>
   <% end %>
