@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   # GET /posts
   def index
-    @posts = Post.most_recent_first.all(:limit=>10)
+    @posts = Post.most_recent_first.all(:limit=>30)
     nav_info
     
     respond_to do |format|

@@ -9,7 +9,7 @@ describe FeedsController do
   describe "responding to GET index" do
 
     it "should expose all feeds as @feeds" do
-      Feed.should_receive(:find).with(:all).and_return([mock_feed])
+      Feed.should_receive(:all).and_return([mock_feed])
       get :index
       assigns[:feeds].should == [mock_feed]
     end

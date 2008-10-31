@@ -14,10 +14,10 @@ describe PostsController do
       assigns[:posts].should == [mock_post]
     end
 
-    describe "with mime type of xml" do
+    describe "with mime type of atom" do
   
-      it "should render all posts as xml" do
-        request.env["HTTP_ACCEPT"] = "application/xml"
+      it "should render all posts as atom" do
+        request.env["HTTP_ACCEPT"] = "application/xml+atom"
         Post.should_receive(:find).with(:all).and_return(posts = mock("Array of Posts"))
         posts.should_receive(:to_xml).and_return("generated XML")
         get :index

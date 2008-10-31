@@ -36,12 +36,8 @@ h2                {font-size: 15px; font-weight: normal; padding: 0 0 10px 0;  m
 .right_column h2  {font-weight: bold; margin-bottom: 0; padding: 0 0 5px 0;}
 .right_column ul ul li {padding-left:1.2em;}
 
-.content          {clear: both; padding-bottom: 20px;}
-pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px;
-}
+.left_column content  {clear: both; padding-right: 20px; padding-bottom: 20px;}
+.left_column content pre {background-color: #eee;  padding: 10px;  font-size: 11px; }
 
 
 #site             {}

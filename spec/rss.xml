@@ -9,22 +9,14 @@
     <description>TDD, BDD, and other three letter software words</description>
     <item>
       <title>Title for my first post</title>
-      <description>
-        the first post
-        </description>
+      <description>the first post</description>
       <pubDate>Mon, 15 Sep 2008 23:15:00 +0000</pubDate>
       <author>Matthew Deiters</author>
       <link>http://my.blog.com/first_post.html</link>
     </item>
     <item>
       <title>The title of my second post</title>
-      <description>
-        
-        
-        the second post
-        
-        
-        </description>
+      <description>the second post</description>
       <pubDate>Wed, 13 Feb 2008 16:24:00 +0000</pubDate>
       <author>Matthew Deiters</author>
       <link>http://my.blog.com/the_second_post.html</link>

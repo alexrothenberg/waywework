@@ -45,7 +45,7 @@ describe Feed do
   it 'should parse an atom feed from blogger' do
     feed = Feed.create!(@valid_attributes)
     xml=IO.read(File.join(RAILS_ROOT, 'spec', 'atom2.xml'))
-    feed.should_receive(:create_post).with(hash_including(:contents=>'<span style=\"font-size:85%;\"> Recently, I joined a new project.</span>', :title=>'Title for my first post', :published=>'2008-10-19 15:50:00', :url=>'http://gouravtiwari.blogspot.com/2008/10/if-you-smell-something-stinking-flog-it.html')).and_return(post1=mock('post1'))
+    feed.should_receive(:create_post).with(hash_including(:contents=>'<span style="font-size:85%;"> Recently, I joined a new project.</span>', :title=>'Title for my first post', :published=>'2008-10-19 15:50:00', :url=>'http://gouravtiwari.blogspot.com/2008/10/if-you-smell-something-stinking-flog-it.html')).and_return(post1=mock('post1'))
     feed.get_posts_from_atom(xml)
   end
   
