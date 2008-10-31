@@ -22307,3 +22307,446 @@ Rendered shared/_head (0.00018)
 Rendered shared/_header (0.00007)
 Rendered shared/_footer (0.00002)
 Completed in 0.06402 (15 reqs/sec) | Rendering: 0.01667 (26%) | DB: 0.02776 (43%) | 200 OK [http://waywework.local/month/2008/10]
+
+
+Processing PostsController#by_author (for 127.0.0.1 at 2008-10-30 22:37:09) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlNWE3NmNmOGRhZjcyNzhiOThi
+OGRhNDNhYWFjYjU5MTY=--4997bd7b13a3101d7b4892a049eb2595b22eb5de
+  Parameters: {"action"=>"by_author", "id"=>"3", "controller"=>"posts"}
+  [4;36;1mPost Columns (0.011884)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mPost Load (0.002180)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`feed_id` = '3') ORDER BY published desc[0m
+  [4;36;1mSQL (0.000926)[0m   [0;1mSELECT count(`posts`.published) AS count_published, date_format(published, '%Y-%c') AS date_format_published_y_c FROM `posts` GROUP BY date_format(published, '%Y-%c') [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;35;1mFeed Load (0.000430)[0m   [0mSELECT * FROM `feeds` ORDER BY author[0m
+  [4;36;1mFeed Columns (0.001635)[0m   [0;1mSHOW FIELDS FROM `feeds`[0m
+Rendered posts/_whos_talking (0.00437)
+Rendered posts/_archive (0.00069)
+  [4;35;1mFeed Load (0.000233)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+Rendered shared/_head (0.00020)
+Rendered shared/_header (0.00019)
+Rendered shared/_footer (0.00002)
+Completed in 0.05891 (16 reqs/sec) | Rendering: 0.01154 (19%) | DB: 0.01729 (29%) | 200 OK [http://waywework.local/author/3]
+  [4;36;1mSQL (0.000329)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000136)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mFeed Load (0.000500)[0m   [0;1mSELECT * FROM `feeds` [0m
+  [4;35;1mFeed Columns (0.002335)[0m   [0mSHOW FIELDS FROM `feeds`[0m
+  [4;36;1mSQL (0.000212)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000085)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mFeed Columns (0.013107)[0m   [0;1mSHOW FIELDS FROM `feeds`[0m
+  [4;35;1mFeed Load (0.000314)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;36;1mSQL (0.000218)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000070)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mFeed Load (0.000324)[0m   [0;1mSELECT * FROM `feeds` [0m
+  [4;35;1mFeed Columns (0.011664)[0m   [0mSHOW FIELDS FROM `feeds`[0m
+  [4;36;1mPost Columns (0.001624)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mPost Load (0.000283)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://patshaughnessy.net/2008/10/21/autocomplete-plugin-doesn-t-work-for-repeated-fields') LIMIT 1[0m
+  [4;36;1mPost Load (0.000178)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://patshaughnessy.net/2008/9/28/problems-installing-the-cutline-theme-in-mephisto') LIMIT 1[0m
+  [4;35;1mPost Load (0.000195)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://patshaughnessy.net/2008/9/9/mephisto-on-hostingrails-com') LIMIT 1[0m
+  [4;36;1mPost Load (0.000172)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://patshaughnessy.net/2008/9/3/drupal-tdd-1') LIMIT 1[0m
+  [4;35;1mPost Load (0.000378)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://gouravtiwari.blogspot.com/2008/10/if-you-smell-something-stinking-flog-it.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000187)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://gouravtiwari.blogspot.com/2008/10/agile-and-ruby-on-rails-hand-in-hand.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000379)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://www.theagiledeveloper.com/commentaries/46') LIMIT 1[0m
+  [4;36;1mPost Load (0.000167)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://www.theagiledeveloper.com/commentaries/45') LIMIT 1[0m
+  [4;35;1mPost Load (0.000179)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://www.theagiledeveloper.com/commentaries/44') LIMIT 1[0m
+  [4;36;1mPost Load (0.000169)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://www.theagiledeveloper.com/commentaries/43') LIMIT 1[0m
+  [4;35;1mPost Load (0.000174)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://www.theagiledeveloper.com/commentaries/42') LIMIT 1[0m
+  [4;36;1mPost Load (0.000181)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://www.theagiledeveloper.com/commentaries/41') LIMIT 1[0m
+  [4;35;1mPost Load (0.000183)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://www.theagiledeveloper.com/commentaries/40') LIMIT 1[0m
+  [4;36;1mPost Load (0.000167)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://www.theagiledeveloper.com/commentaries/39') LIMIT 1[0m
+  [4;35;1mPost Load (0.000184)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://www.theagiledeveloper.com/commentaries/38') LIMIT 1[0m
+  [4;36;1mPost Load (0.000194)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://www.theagiledeveloper.com/commentaries/36') LIMIT 1[0m
+  [4;35;1mPost Load (0.000373)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://bhargavgandhi.blogspot.com/2008/09/google-story.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000188)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://bhargavgandhi.blogspot.com/2008/09/sap-and-ruby.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000205)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://bhargavgandhi.blogspot.com/2008/08/rspec-stories-and-watir-web-application.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000198)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://bhargavgandhi.blogspot.com/2008/07/scrum-is-subjective.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000392)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://prasoon.blogspot.com/2008/10/technical-proficiency-gap.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000264)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://prasoon.blogspot.com/2008/09/best-practices-or-next-practices.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000227)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://prasoon.blogspot.com/2008/09/introducing-ruby-in-enterprise.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000227)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://prasoon.blogspot.com/2008/09/does-offshoring-really-save-you-money.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000211)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://prasoon.blogspot.com/2008/09/war-for-talent.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000210)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://prasoon.blogspot.com/2008/09/ignite-bangalore.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000215)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://prasoon.blogspot.com/2008/09/are-design-and-development-separate.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000215)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://prasoon.blogspot.com/2008/09/team-file-sharing-with-git.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000219)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://prasoon.blogspot.com/2008/09/are-scrum-masters-traffic-cops.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000223)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://prasoon.blogspot.com/2008/09/building-higher-performing-teams.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000226)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://prasoon.blogspot.com/2008/08/offshoring.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000226)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://prasoon.blogspot.com/2008/08/who-i-am.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000420)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://kinderman.net/articles/2008/04/09/enabling-disabling-observers-for-testing') LIMIT 1[0m
+  [4;36;1mPost Load (0.000277)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://kinderman.net/articles/2008/01/03/plugin-to-support-composed_of-aggregations-in-activerecord-finder-methods') LIMIT 1[0m
+  [4;35;1mPost Load (0.000344)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://kinderman.net/articles/2007/11/18/testing-on-high-bottom-up-versus-top-down-test-driven-development') LIMIT 1[0m
+  [4;36;1mPost Load (0.000255)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://kinderman.net/articles/2007/11/16/bug-composite_primary_keys-and-belongs_to-with-class_name-option') LIMIT 1[0m
+  [4;35;1mPost Load (0.000264)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://kinderman.net/articles/2007/11/11/reversing-screen-colors-on-a-mac-and-keeping-a-black-background-on-terminal') LIMIT 1[0m
+  [4;36;1mPost Load (0.000257)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://kinderman.net/articles/2007/10/11/selenium-core-bug-and-tinymce-anchor-tags') LIMIT 1[0m
+  [4;35;1mPost Load (0.000251)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://kinderman.net/articles/2007/09/22/learning-ruby-meta-programming-with-metakoans') LIMIT 1[0m
+  [4;36;1mPost Load (0.000260)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://kinderman.net/articles/2007/09/22/tag-permalink-bug-and-bad-content-state-values-in-typo-rev-1528') LIMIT 1[0m
+  [4;35;1mPost Load (0.000252)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://kinderman.net/articles/2007/09/20/task-dependencies-in-capistrano-2-0') LIMIT 1[0m
+  [4;36;1mPost Load (0.000244)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://kinderman.net/articles/2007/09/03/howto-clean-the-distribution-files-for-all-installed-macports-packages') LIMIT 1[0m
+
+
+Processing PostsController#by_author (for 127.0.0.1 at 2008-10-30 22:43:16) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNWE3NmNmOGRhZjcyNzhiOThiOGRhNDNhYWFjYjU5
+MTYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--b7fc1967f29bc43ca556912052f7a3c3f549792e
+  Parameters: {"action"=>"by_author", "id"=>"3", "controller"=>"posts"}
+  [4;35;1mPost Columns (0.012548)[0m   [0mSHOW FIELDS FROM `posts`[0m
+  [4;36;1mPost Load (0.001983)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`feed_id` = '3') ORDER BY published desc[0m
+  [4;35;1mSQL (0.001074)[0m   [0mSELECT count(`posts`.published) AS count_published, date_format(published, '%Y-%c') AS date_format_published_y_c FROM `posts` GROUP BY date_format(published, '%Y-%c') [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;36;1mFeed Load (0.000373)[0m   [0;1mSELECT * FROM `feeds` ORDER BY author[0m
+  [4;35;1mFeed Columns (0.001554)[0m   [0mSHOW FIELDS FROM `feeds`[0m
+Rendered posts/_whos_talking (0.00433)
+Rendered posts/_archive (0.00071)
+  [4;36;1mFeed Load (0.000325)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+Rendered shared/_head (0.00020)
+Rendered shared/_header (0.00007)
+Rendered shared/_footer (0.00002)
+Completed in 0.13844 (7 reqs/sec) | Rendering: 0.01664 (12%) | DB: 0.01786 (12%) | 200 OK [http://waywework.local/author/3]
+
+
+Processing PostsController#by_author (for 127.0.0.1 at 2008-10-30 22:43:17) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlNWE3NmNmOGRhZjcyNzhiOThi
+OGRhNDNhYWFjYjU5MTY=--4997bd7b13a3101d7b4892a049eb2595b22eb5de
+  Parameters: {"action"=>"by_author", "id"=>"3", "controller"=>"posts"}
+  [4;36;1mPost Columns (0.010740)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mPost Load (0.001431)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`feed_id` = '3') ORDER BY published desc[0m
+  [4;36;1mSQL (0.000837)[0m   [0;1mSELECT count(`posts`.published) AS count_published, date_format(published, '%Y-%c') AS date_format_published_y_c FROM `posts` GROUP BY date_format(published, '%Y-%c') [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;35;1mFeed Load (0.006297)[0m   [0mSELECT * FROM `feeds` ORDER BY author[0m
+  [4;36;1mFeed Columns (0.001544)[0m   [0;1mSHOW FIELDS FROM `feeds`[0m
+Rendered posts/_whos_talking (0.01031)
+Rendered posts/_archive (0.00068)
+  [4;35;1mFeed Load (0.000249)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+Rendered shared/_head (0.00030)
+Rendered shared/_header (0.00008)
+Rendered shared/_footer (0.00001)
+Completed in 0.05307 (18 reqs/sec) | Rendering: 0.01129 (21%) | DB: 0.02110 (39%) | 200 OK [http://waywework.local/author/3]
+  [4;36;1mSQL (0.000214)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000085)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mFeed Columns (0.011893)[0m   [0;1mSHOW FIELDS FROM `feeds`[0m
+  [4;35;1mFeed Load (0.000306)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;36;1mFeed Load (0.000352)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;35;1mPost Load (0.001194)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.feed_id = 3) [0m
+  [4;36;1mPost Columns (0.012321)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mFeed Load (0.000357)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;36;1mPost Load (0.001131)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.feed_id = 3) [0m
+  [4;35;1mFeed Load (0.000351)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;36;1mPost Load (0.001193)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.feed_id = 3) [0m
+  [4;35;1mSQL (0.000145)[0m   [0mBEGIN[0m
+  [4;36;1mPost Destroy (0.000183)[0m   [0;1m DELETE FROM `posts`
+ WHERE `id` = 7
+[0m
+  [4;35;1mSQL (0.009983)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000180)[0m   [0;1mBEGIN[0m
+  [4;35;1mPost Destroy (0.000283)[0m   [0m DELETE FROM `posts`
+ WHERE `id` = 8
+[0m
+  [4;36;1mSQL (0.000594)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000170)[0m   [0mBEGIN[0m
+  [4;36;1mPost Destroy (0.000213)[0m   [0;1m DELETE FROM `posts`
+ WHERE `id` = 9
+[0m
+  [4;35;1mSQL (0.000556)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000172)[0m   [0;1mBEGIN[0m
+  [4;35;1mPost Destroy (0.000209)[0m   [0m DELETE FROM `posts`
+ WHERE `id` = 10
+[0m
+  [4;36;1mSQL (0.001122)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000148)[0m   [0mBEGIN[0m
+  [4;36;1mPost Destroy (0.000254)[0m   [0;1m DELETE FROM `posts`
+ WHERE `id` = 11
+[0m
+  [4;35;1mSQL (0.000490)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000081)[0m   [0;1mBEGIN[0m
+  [4;35;1mPost Destroy (0.000100)[0m   [0m DELETE FROM `posts`
+ WHERE `id` = 12
+[0m
+  [4;36;1mSQL (0.000527)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000129)[0m   [0mBEGIN[0m
+  [4;36;1mPost Destroy (0.000104)[0m   [0;1m DELETE FROM `posts`
+ WHERE `id` = 13
+[0m
+  [4;35;1mSQL (0.000521)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000063)[0m   [0;1mBEGIN[0m
+  [4;35;1mPost Destroy (0.000098)[0m   [0m DELETE FROM `posts`
+ WHERE `id` = 14
+[0m
+  [4;36;1mSQL (0.000521)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000098)[0m   [0mBEGIN[0m
+  [4;36;1mPost Destroy (0.000110)[0m   [0;1m DELETE FROM `posts`
+ WHERE `id` = 15
+[0m
+  [4;35;1mSQL (0.000447)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000055)[0m   [0;1mBEGIN[0m
+  [4;35;1mPost Destroy (0.000116)[0m   [0m DELETE FROM `posts`
+ WHERE `id` = 16
+[0m
+  [4;36;1mSQL (0.000588)[0m   [0;1mCOMMIT[0m
+  [4;35;1mFeed Load (0.000335)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;36;1mPost Load (0.000973)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.feed_id = 3) [0m
+
+
+Processing PostsController#by_author (for 127.0.0.1 at 2008-10-30 22:44:07) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNWE3NmNmOGRhZjcyNzhiOThiOGRhNDNhYWFjYjU5
+MTYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--b7fc1967f29bc43ca556912052f7a3c3f549792e
+  Parameters: {"action"=>"by_author", "id"=>"3", "controller"=>"posts"}
+  [4;35;1mPost Columns (0.012868)[0m   [0mSHOW FIELDS FROM `posts`[0m
+  [4;36;1mPost Load (0.001206)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`feed_id` = '3') ORDER BY published desc[0m
+  [4;35;1mSQL (0.000858)[0m   [0mSELECT count(`posts`.published) AS count_published, date_format(published, '%Y-%c') AS date_format_published_y_c FROM `posts` GROUP BY date_format(published, '%Y-%c') [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;36;1mFeed Load (0.000360)[0m   [0;1mSELECT * FROM `feeds` ORDER BY author[0m
+  [4;35;1mFeed Columns (0.001538)[0m   [0mSHOW FIELDS FROM `feeds`[0m
+Rendered posts/_whos_talking (0.00415)
+Rendered posts/_archive (0.00056)
+Rendered shared/_head (0.00017)
+Rendered shared/_header (0.00007)
+Rendered shared/_footer (0.00003)
+Completed in 0.04928 (20 reqs/sec) | Rendering: 0.00488 (9%) | DB: 0.01683 (34%) | 200 OK [http://waywework.local/author/3]
+  [4;36;1mSQL (0.000261)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000085)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mFeed Load (0.000370)[0m   [0;1mSELECT * FROM `feeds` [0m
+  [4;35;1mFeed Columns (0.011843)[0m   [0mSHOW FIELDS FROM `feeds`[0m
+  [4;36;1mPost Columns (0.001905)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mPost Load (0.001152)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://patshaughnessy.net/2008/10/21/autocomplete-plugin-doesn-t-work-for-repeated-fields') LIMIT 1[0m
+  [4;36;1mPost Load (0.000223)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://patshaughnessy.net/2008/9/28/problems-installing-the-cutline-theme-in-mephisto') LIMIT 1[0m
+  [4;35;1mPost Load (0.000183)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://patshaughnessy.net/2008/9/9/mephisto-on-hostingrails-com') LIMIT 1[0m
+  [4;36;1mPost Load (0.000278)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://patshaughnessy.net/2008/9/3/drupal-tdd-1') LIMIT 1[0m
+  [4;35;1mPost Load (0.000343)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://gouravtiwari.blogspot.com/2008/10/if-you-smell-something-stinking-flog-it.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000178)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://gouravtiwari.blogspot.com/2008/10/agile-and-ruby-on-rails-hand-in-hand.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000800)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://www.theagiledeveloper.com/commentaries/46') LIMIT 1[0m
+  [4;36;1mSQL (0.000116)[0m   [0;1mBEGIN[0m
+  [4;35;1mPost Create (0.000302)[0m   [0mINSERT INTO `posts` (`updated_at`, `title`, `published`, `url`, `feed_id`, `contents`, `created_at`) VALUES('2008-10-31 02:44:13', 'Moved blog over to Apache Passenger in minutes', '2008-09-15', 'http://www.theagiledeveloper.com/commentaries/46', 3, '<p>\nI spent alot of time on a rather stupid issue when trying to get my blog to run under Debian, Apache and Passenger. After following the few lines of setup instructions from the site, I opened my browser and tried it out and received \"Unexpected error in Passenger: Cannot spawn application\" and \"The spawn server has exited unexpectedly.\" errors in my apache log file. Heres the fix:\n\nI had had deployed my app to /var/www/my_rails_app, so I had configured the vhost to:\n</p>\n\n<pre>\n&lt;VirtualHost *:80&gt;\n ServerName www.theagiledeveloper.com\n DocumentRoot /var/www/my_rails_app\n RailsBaseURI /\n</pre>\n<p> \nbut the directory needs to actually point at the public folder in my rails app\n</p>\n<pre>\n&lt;VirtualHost *:80&gt;\n ServerName www.theagiledeveloper.com\n DocumentRoot /var/www/my_rails_app/public\n RailsBaseURI /\n</pre>\n<p>\nonce I had this everything went smooth. Here is the entire configuration:\n</p>\n<pre>\n&lt;VirtualHost *:80&gt;\n ServerName www.theagiledeveloper.com\n DocumentRoot /var/www/my_rails_app/public\n RailsBaseURI /\n\n #Serve up static files\n <Directory \"/var/www/my_rails_app/public\">\n Options FollowSymLinks\n AllowOverride None\n Order allow,deny\n Allow from all\n </Directory>\n	 \n ErrorLog /var/log/apache2/my_rails_app_errors_log\n CustomLog /var/log/apache2/my_rails_app_log combined\n&lt;/VirtualHost&gt;\n</pre>', '2008-10-31 02:44:13')[0m
+  [4;36;1mSQL (0.026590)[0m   [0;1mCOMMIT[0m
+  [4;35;1mPost Load (0.001851)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://www.theagiledeveloper.com/commentaries/45') LIMIT 1[0m
+  [4;36;1mSQL (0.000150)[0m   [0;1mBEGIN[0m
+  [4;35;1mPost Create (0.000943)[0m   [0mINSERT INTO `posts` (`updated_at`, `title`, `published`, `url`, `feed_id`, `contents`, `created_at`) VALUES('2008-10-31 02:44:13', 'Localizing Gems (vendor everything) with Native Extensions', '2008-02-13', 'http://www.theagiledeveloper.com/commentaries/45', 3, '<p>\n	Localizing <b>all<b> libraries used by a rails app is a good strategy to building robust systems. Localizing or \'vendor everything\' mitigates version conflicts between applications and simplifies deployments as we move from one environment to another. It drastically increases the portability of our application and transparency of what we have dependencies on. Additionally it enables something I consider very important,checkout development, which essentially means a developer can check out the code from scm for the first time and be running the development environment...no lengthy \"how to setup development environment\" documents.\n</p>\n<p>We localize all our dependencies (i.e. gems) in the enterprise environment since by nature we internally run our rails apps in a \"shared hosting\" environment and would frequently run into the above issues if we didn\'t localize. It is trival to localize pure ruby gems and there are even other gems to help us make it stupid easy to \'vendor everything\', see http://gemsonrails.rubyforge.org/. Personally I don\'t find it that hard to just use the \"gem unpack command\" instead. But what about localizing gems that have native extensions...\n</p>\n\n<h3>Localizing Hpricot</h3>\n<p>If your rails app is doing any extensive XML processing you should avoid REXML as its terribly slow. Hpricot proves to be a nice XML parser for ruby but it depends on some c libraries. Since we localize everything we are going to need to figure out how to freeze the native extensions to our rails app. The tricky part of native extensions is they are unique to each OS/architecture. To set the stage we have to run our apps on several architectures:\n<ul>\n	<li>Windows</li>\n	<li>Mac OSX Intel</li>\n	<li>32 Bit RedHat</li>\n	<li>64 Bit RedHat</li>\n</ul>\n</p>\n\n<h4>1. Vendoring the gem<h4>\n<p>\nThis is the easiest part, assuming you have the hpricot gem installed on you development box, run from the command line:\n<pre>\n	cd vendor\n	gem unpack hpricot\n</pre>\n</p>\n<p>You should now have the hpricot gem source in your vendor folder.</p>\n\n<h4>2. Building the native extension by hand</h4>\n<p>\nWe need to understand the anatomy of a gem to do this next bit. Generally gems with native extensions will have a <b>ext</b> folder where the c source code and such live. When you typically install a gem the install process will compile these c source code and generate our ruby extension targeted for our particular OS Architecture and put the compiled library in under the lib folder of our gem...for example on mac the installed hpricot gem has a i686-linux folder with the compiled library under the hprict lib folder. But up until now we have only unpacked our gem to the vendor folder the native extension has not been built so our hprioct\'s lib folder will only have ruby source.\n</p>\n<p>\n	To build the native extension by hand we need to navigate the the C source code in the ext folder, create the make file, and then run the makefile to compile.\n<pre>\n	cd vendor/hpricot-0.6/ext/hpricot_scan\n	ruby extconf.rb\n	make\n</pre>\n</p>\n\n<h4>3. Moving the compiled library to the lib folder</h4>\n<p>\nIf everything went smoothly above, then you will see a new file under the ext/hpricot_scan folder. On macs this is hpricot_scan.bundle. When you install a gem with \"gem install hpriot\" this file is moved for us to the lib folder, but because we are building by hand we need to move it. We want to move it to a folder under the vendor/hpricot/lib folder target for the architecture we just built. I do this by getting the OS platform as ruby sees it.\n</p>\n<pre>\n	ruby -e \"puts RUBY_PLATFORM\"	\n</pre>\n<p>\nOn my mac, the output is \"i686-darwin8.9.1\" so I create a i686-darwin8.9.1 folder and put the hpricot_scan.bundle in this folder. I\'ll repeat step 2 (compiling the source files) above and create folders and copy the compiled library for each OS architecture (mac, various linux flavors, etc) I plan to run my rails app on. This might be a little time consuming if your app needs to run on 3 or 4 environments but once the libraries are built we can reuse this localized gem for all other rails projects. For our current project I have serveral folders with their own compiled library under the froozen hpricot\'s lib folder: i486-linux, i686-darwin8.9.1, i686-linux, x86_64-linux.\n</p>\n\n<h4>4. Configuring Rails</h4>\n<p>\n	At this point we have our localized gem ready but we need to tell rails about it. In our envionrment.rb file we want to add:\n</p>\n	<pre>\n	config.load_paths << \"#{RAILS_ROOT}/vendor/hpricot-0.6/lib\"\n config.load_paths << \"#{RAILS_ROOT}/vendor/hpricot-0.6/lib/#{RUBY_PLATFORM}\"\n </pre>\n<p>\nThis first puts the froozen hpricot in our load paths so we load up the localized gem in vendor. The second line is so we load up the right library for the right OS platform we are running on.\n</p>\n\n<p>Let me know if you have any issues/questions: mdeiters@gmail.com</p>', '2008-10-31 02:44:13')[0m
+  [4;36;1mSQL (0.005306)[0m   [0;1mCOMMIT[0m
+  [4;35;1mPost Load (0.000816)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://www.theagiledeveloper.com/commentaries/44') LIMIT 1[0m
+  [4;36;1mSQL (0.000115)[0m   [0;1mBEGIN[0m
+  [4;35;1mPost Create (0.000382)[0m   [0mINSERT INTO `posts` (`updated_at`, `title`, `published`, `url`, `feed_id`, `contents`, `created_at`) VALUES('2008-10-31 02:44:13', 'Enterprise Capistrano: Deploying to Servers With Unique Credentials', '2008-01-28', 'http://www.theagiledeveloper.com/commentaries/44', 3, '<p>\nCapistrano makes an assumption that all servers in your application stack share the same credentials. As much logical sense as this makes, in large enterprise landscapes it is often not a reality. The nature of this world (Enterprise) is that trying to shift the mindset of all shareholders (infrastructure, support teams, security, etc) and then changing long running practices is not always feasible. This is especially true when doing so on numerous severs servicing numerous other systems that depend on the already in place mismatched credentials. For us...we have our normal application servers and database servers that DO share matching credentials. But along with them we use a separate server env to store and host our assets (images, css, js) with its own credentials. \n</p>\n<p>\nStill desiring to leverage capistrano for its core automation benefits we had to monkey-patch capistrano so we could supply server specific username and passwords. Drop this in your lib folder or somewhere else more relevant. WARNING: This is basically cut-paste from the capistrano internals with some added sugar - I take no responsibility for the class design and multiple responsibilities in this rather big method.\n</p>\n<pre>\n	#This is a core class in the capistrano library. it is overridden so that we can support servers that have different user names and passwords\n	module Capistrano\n	 class SSH\n	 class << self\n	 alias :original_connect :connect \n	 def connect(server, options={}, &block)\n	 special_server_settings = options[:server_authentication] ? options[:server_authentication][server.to_s] : nil\n	 if special_server_settings.nil?\n	 return original_connect(server, options, &block)\n	 else\n	 methods = [ %w(publickey hostbased), %w(password keyboard-interactive) ]\n	 password_value = nil\n\n	 ssh_options = (options[:ssh_options] || {}).dup\n	 ssh_options[:username] = special_server_settings[:user] || server.user || options[:user] || ssh_options[:username]\n	 ssh_options[:port] = server.port || options[:port] || ssh_options[:port] || DEFAULT_PORT\n\n	 begin\n	 connection_options = ssh_options.merge(\n	 :password => password_value,\n	 :auth_methods => ssh_options[:auth_methods] || methods.shift\n	 )\n \n	 connection = Net::SSH.start(server.host, connection_options, &block)\n	 Server.apply_to(connection, server)\n\n	 rescue Net::SSH::AuthenticationFailed\n	 raise if methods.empty? || ssh_options[:auth_methods] \n	 password_value = special_server_settings[:password]\n	 password_value = password_value.call if password_value.is_a? Proc\n	 retry\n	 end\n	 end\n	 end\n	 end\n	 end \n	end\n</pre>\n<p>\nYour capfile will look something similar to this:\n</p>\n<pre>\nrole :app, 		\'thisapp.rocks.com\'\nrole :web, 		\'thisapp.rocks.com\'\nrole :db, 		\'thisdb.rocks.com\'\nrole :assets, \'my.asset.server01.com\'\n\nset :user, \'the-primary-user\'\nset :server_authentication, { \'my.asset.server01.com\' => { \n :user => \'assetusr\' ,\n :password => \'password\'}}\n }\n....\n</pre>', '2008-10-31 02:44:13')[0m
+  [4;36;1mSQL (0.020518)[0m   [0;1mCOMMIT[0m
+  [4;35;1mPost Load (0.001382)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://www.theagiledeveloper.com/commentaries/43') LIMIT 1[0m
+  [4;36;1mSQL (0.000152)[0m   [0;1mBEGIN[0m
+  [4;35;1mPost Create (0.000420)[0m   [0mINSERT INTO `posts` (`updated_at`, `title`, `published`, `url`, `feed_id`, `contents`, `created_at`) VALUES('2008-10-31 02:44:14', '2007 Retrospective', '2008-01-23', 'http://www.theagiledeveloper.com/commentaries/43', 3, 'I left ThoughtWorks a couple months ago and rejoined the ranks with independent contractors...since leaving TW I\'ve had a chance to work in unique environments with Ruby and Rails. Where it seems the majority of Rails projects are product companies (i.e. startups, ecommerce and general web sites) I have for the most part worked with large organizations and now spend most of my time with a large global management firm (a.k.a \"An Enterprise\"). The obstacles and challenges are very different then the Rails sweet spot but they provide the opportunity to close the gaps ruby has from other platforms and fill a niche (and no I do not mean JRuby). I hope to roll out most of lessons learned into the community over this next year.\n\nThe goal is to write useful content more frequently as I blogged very little in 2007 and wrote very little useful content for Ruby prior. The paucity of postings is mostly due to day to day work with my new clients and traveling:\n\n<ul>\n	<li>NY 6 times</li>\n	<li>India</li>\n	<li>France</li>\n	<li>Thailand</li>\n	<li>Australia</li>\n	<li>Hawaii</li>\n</ul>', '2008-10-31 02:44:14')[0m
+  [4;36;1mSQL (0.000754)[0m   [0;1mCOMMIT[0m
+  [4;35;1mPost Load (0.001747)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://www.theagiledeveloper.com/commentaries/42') LIMIT 1[0m
+  [4;36;1mSQL (0.007708)[0m   [0;1mBEGIN[0m
+  [4;35;1mPost Create (0.000367)[0m   [0mINSERT INTO `posts` (`updated_at`, `title`, `published`, `url`, `feed_id`, `contents`, `created_at`) VALUES('2008-10-31 02:44:14', 'Named Routes: When _url is better then _path', '2007-07-11', 'http://www.theagiledeveloper.com/commentaries/42', 3, '<p>\nAfter you configure a resource in your rails routes configuration, you have access to generate named routes with _path and _url. \nThe main difference between _url and _path can be demonstrated in the following example.\n</p>\n\n<pre>\nmap.resource :people\n</pre>\n\n<p>\nwe can now do the following:\n</p>\n\n<pre>\nperson_path(@person) #=> /people/1\n\nperson_url(@person) #=> http://localhost:3000/people/1\n</pre>\n\n<br>\n<h4>_path versus _url</h4>\n\n<p>\nSo when do we use one over the other? \n</p>\n<p>\nThe current school of thought is that in the view we use _path (i.e. person_path) as everything is relative to the current url. When we need to do any redirection in the controllers we would use _url (i.e. person_url) because the browser needs a absolute url for redirection.\n</p>\n<p>\nThe perceived advantage of relative paths (_path) in our view is that the less characters you have like href=\"/people/1\" over href=\"http://localhost:3000/people/1\" then therefore less the bytes that have to be passed across the wire. That is good to note but by using _path in views you are potentially setting yourself up for some problems. Primarily reverse proxy issues that still continue to plague rails. If our rails application is sitting on a server, lets say http://app1.server.com, but we have it behind a load balancer and other various reverse proxies (i.e. single sign on) so that it is publicly accessible with url of \"http://my.doman.com/rails-app/\" then we will have some troubles. There are several issues to note with the reverse proxy problems and there are various solutions but for the sake of staying on topic lets only look at the _path _url problem.\n\nStandard views generally are fine with relative paths as they will generate \'/person/2\' so the browser typically will look at the url in our example as \"http:/my.coman.com/rails-app/people/1\". But any view rendered from an ajax request is going to look to the browser like \"http:/my.coman.com/people/1\" omitting the sub directory \"rails-app\".</p>\n\n<p>My suggestion is that if you are not 100% sure of your deployment environment when initially developing a rails application, program a little more defensively for the sake of a couple bytes and use _url named routes instead of _path for all urls. By doing this you can be a little more prepared to adapt to your production environments as all the reverse proxy fixes will only work with absolute urls and not relative ones.</p>', '2008-10-31 02:44:14')[0m
+  [4;36;1mSQL (0.000847)[0m   [0;1mCOMMIT[0m
+  [4;35;1mPost Load (0.000733)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://www.theagiledeveloper.com/commentaries/41') LIMIT 1[0m
+  [4;36;1mSQL (0.000089)[0m   [0;1mBEGIN[0m
+  [4;35;1mPost Create (0.000197)[0m   [0mINSERT INTO `posts` (`updated_at`, `title`, `published`, `url`, `feed_id`, `contents`, `created_at`) VALUES('2008-10-31 02:44:14', 'Updated Blog', '2007-07-10', 'http://www.theagiledeveloper.com/commentaries/41', 3, 'I finally ditched Typo and rolled my own blog site. \n\nTypo seemed to have a nasty habit of consuming all my VPS memory.\n\nGood bye Typo', '2008-10-31 02:44:14')[0m
+  [4;36;1mSQL (0.000576)[0m   [0;1mCOMMIT[0m
+  [4;35;1mPost Load (0.000728)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://www.theagiledeveloper.com/commentaries/40') LIMIT 1[0m
+  [4;36;1mSQL (0.000100)[0m   [0;1mBEGIN[0m
+  [4;35;1mPost Create (0.000294)[0m   [0mINSERT INTO `posts` (`updated_at`, `title`, `published`, `url`, `feed_id`, `contents`, `created_at`) VALUES('2008-10-31 02:44:14', 'RSPEC View tests that use helpers', '2007-05-02', 'http://www.theagiledeveloper.com/commentaries/40', 3, '<p>\nRSpec 0.9.1 is out and is a great library for BDD. But I have some problems when testing views. The syntax is a bit clunky when a view calls a helper method. Lets say I have a view:\n</p>\n\n<pre>\n\n <%= if current_user.is?(:admin) %>\n render some html for admins\n <% end %>\n\n</pre> \n\n<p>\nWhen testing my view specs 9.1 enables helpers to be loaded using the :helpers option for the render method\n</p>\n<p>\nExample (lifted straight from rspec_rails file view_spec_spec.rb):\n</p>\n<pre>\ndescribe \"Given a view requiring an explicit helper\", :behaviour_type => :view do\n before(:each) do\n render \"view_spec/explicit_helper\", :helper => \'explicit\'\n end\n\n it \"the helper should be included if specified\" do\n response.should have_tag(\'div\', :content => \"This is text from a method in the ExplicitHelper\")\n end\nend\n</pre>\n\n<p>\nWhat this does is when the view is rendered it will mixin the helper ExplicitHelper dynamically. There are a couple problems with this but the main one being my view is now dependent on the helper\'s implementation. And since helpers are modules, gook luck trying to mock module methods. The second problem is in my example the <b>current_user</b> method is actually on the controller and not in a helper at all. So to resolve both issues I wanted to specify helper methods that I would mock with out depending on a helper module. \n</p>\n<p>\nTo do do this, the following code to the end of your spec_helper.rb. \n</p>\n\n<pre>\nmodule Spec\n module Rails\n module DSL\n class ViewEvalContext < Spec::Rails::DSL::FunctionalEvalContext\n def mock_helper_method method\n @controller.template.expects(method)\n end\n end\n end\n end\nend\n</pre>\n\n<p> This will allow you to right views that do not depend on any helper\'s implementation.</p>\n\n<pre>\ndescribe \"/content/index\", :behaviour_type => :view do\n\n it \"should allow editing content when user is admin\" \n mock_helper_method(:current_user).returns(mock)\n \n render \'/content/index\'\n response.should have_tag(\'div.edit-content\')\n end\n \nend\n</pre>\n\n<h4>Note: I am using the mocha library for mocking which uses the method \'expects\'. If you are using rspec\'s built in mocking then replace:\n</h4>\n\n<pre>\n@controller.template.expects(method)\n</pre> \nwith \n<pre>\n@controller.template.should_recieve(method)\n</pre>\n', '2008-10-31 02:44:14')[0m
+  [4;36;1mSQL (0.000557)[0m   [0;1mCOMMIT[0m
+  [4;35;1mPost Load (0.000671)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://www.theagiledeveloper.com/commentaries/39') LIMIT 1[0m
+  [4;36;1mSQL (0.000084)[0m   [0;1mBEGIN[0m
+  [4;35;1mPost Create (0.030442)[0m   [0mINSERT INTO `posts` (`updated_at`, `title`, `published`, `url`, `feed_id`, `contents`, `created_at`) VALUES('2008-10-31 02:44:14', 'Build Action Plugin for CruiseControl.rb', '2007-05-01', 'http://www.theagiledeveloper.com/commentaries/39', 3, 'Download at: <a href=\"http://rubyforge.org/projects/cc-post-build/\"> http://rubyforge.org/projects/cc-post-build/</a>\n\n<p>\nI created this plugin to deploy to our integration environment every time the build is successful. \n</p>\n\n<p>\nInstallation:\n<ul>\n<li> Download .zip at ruby forge </li>\n<li> Unzip files to cruisecontrol.rb /builder_plugins/installed directory </li>\n<li> Configure different post build actions for each project in the cruise_config.rb file </li>\n</ul>\n\n<p>\nConfiguration should look like:\n</p>\n<pre>\nProject.configure do |project|\n\n # other configurations\n\n # enable action on successful build\n project.post_build_action.on_successful_build = \"cap deploy_to_integration -p somepassword\" \n\nend\n</pre>', '2008-10-31 02:44:14')[0m
+  [4;36;1mSQL (0.000742)[0m   [0;1mCOMMIT[0m
+  [4;35;1mPost Load (0.001275)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://www.theagiledeveloper.com/commentaries/38') LIMIT 1[0m
+  [4;36;1mSQL (0.000149)[0m   [0;1mBEGIN[0m
+  [4;35;1mPost Create (0.000432)[0m   [0mINSERT INTO `posts` (`updated_at`, `title`, `published`, `url`, `feed_id`, `contents`, `created_at`) VALUES('2008-10-31 02:44:14', 'Encapsulation 101', '2006-11-15', 'http://www.theagiledeveloper.com/commentaries/38', 3, '<p>\nJust cause you have state class doesn\'t mean you achieved object orientation\n</p>\n<pre>\n public class State\n {\n readonly int Id;\n } \n</pre>\n<p>\nThe following breaks encapsulation\n</p>\n<pre>\n public void DoStuffWithState(State targetState)\n {\n if(state.id == targetState.id)\n {\n ....\n }\n }\n</pre>\n<p>\nThis is much better\n</p>\n<pre>\n public void DoStuffWithState(State targetState)\n {\n if(state == targetState)\n {\n ....\n }\n }\n</pre>\n<p>\nUsing Operator Overloading is key to achieve proper encapsulation\n</p>\n<pre>\npublic class State\n{\n private readonly int Id;\n \n public static bool operator ==(State x, State y)\n {\n return x.Id = y.Id;\n }\n \n}\n</pre>', '2008-10-31 02:44:14')[0m
+  [4;36;1mSQL (0.000544)[0m   [0;1mCOMMIT[0m
+  [4;35;1mPost Load (0.001211)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://www.theagiledeveloper.com/commentaries/36') LIMIT 1[0m
+  [4;36;1mSQL (0.000155)[0m   [0;1mBEGIN[0m
+  [4;35;1mPost Create (0.000662)[0m   [0mINSERT INTO `posts` (`updated_at`, `title`, `published`, `url`, `feed_id`, `contents`, `created_at`) VALUES('2008-10-31 02:44:14', 'YAGNI and Designing For the Future', '2006-10-04', 'http://www.theagiledeveloper.com/commentaries/36', 3, '<h4>YAGNI (You aren’t going to need it)</h4>\n\n<p>\nSimply stated <a href=\"http://c2.com/xp/YouArentGonnaNeedIt.html\">\"Always implement things when you actually need them, never when you just foresee that you need them.\"</a>\nThere are several reasons why this is good practice. \n</p>\n<p>\n<h4>Designing for the Future</h4>\nOnce an application is created, there is one thing that is for sure…the system will eventually be asked to change to meet certain new requirements by its users.\n</p>\n<p>\nThat means the future of every application is change and therefore it would make sense to write software in a way for it to evolve gracefully.\nBut when pairing with some one new to \"real\" object thinking...designing for the future seemed to conflict with YAGNI.\n</p>\n<p>\nThese two aspects of programming in fact are not contradictions at all but applicable in different contexts.\n</p>\n<p>\nThe ultimate goal of OOP is to provide a system with limited \"Implementation\" dependencies. Meaning Class A does not depend on how class b is implemented and so on. In a system, YAGNI would manifest itself when a developer would want provide some type of feature that they feel the business will eventually need OR introduce a measure of complexity just for \"when\" things change drastically.\n</p>\n<p>\nI think the simplest example would be factories for the creation of every different type in a system\n(I am not sure why many have such a desire to abstract a constructor)\n\nAt this point YAGNI (if it were a person) would say stick to the simplest code to implement the task and do only what the users/business ask for.\n</p>\n<p>\nBut we can still designing a system for the future without requiring additional complexity by:\n<ul>\n<li>narrowing down interfaces and responsibilities of class</li>\n<li>Creating Behavior in a way so that it can be leveraged in other contexts</li>\n</ul>\n</p>\nSo what does that mean, lets take an example of Filtering an collection of object based on some criteria\n\nLets say we have a filter class that should filter items based on its location. It can filter anything that implements IsupportLocationFiltering\n\n<pre>\ninterface ISupportLocationFiltering\n{\n State GetState();\n}\n\n\nclass FilterRule\n{\n private readonly State TargetState;\n\n public IList Filter(IList itemsToFilter)\n {\n IList filteredItems = new ArrayList();\n foreach(IsupportLocatinFiltering supporter in itemsToFilter)\n	if(items.GetState() == TagetState) filteredItems.Add(supporter)\n return filteredItems;\n }\n}\n</pre>\n\nThe above FilterRule breaks encapsulation and therefore is not designed for the future. The reason being is the filter asks for the State and proceeds to compare it against the state that we want to find items from. First we are assuming that all types that implement ISupportLocationFiltering can be filtered by matching states. Maybe we match states for all objects today but tomorrow what if we introduce a new type that can support \"Location Filtering\" but is done by checking to see if a zip code is from the\ntarget state. We can easily accommodate this by using encapsulation without adding complexity and achieving flexibility.\n\n<pre>\ninterface ISupportLocationFiltering\n{\n bool IsIn(State state);\n}\n\n\nclass FilterRule\n{\n private readonly State TargetState;\n\n public IList Filter(IList itemsToFilter)\n {\n IList filteredItems = new ArrayList();\n foreach(IsupportLocatinFiltering supporter in itemsToFilter)\n	if(items.IsIn(TagetState)) filteredItems.Add(supporter)\n return filteredItems;\n }\n}\n</pre>\n\nNow its up to each implementation of ISupportLocationFiltering to know if it can be filtered by a state. Our Interface is much more useful then just for filtering so we can accommodate future changes by renaming it to something more useable\n\n<pre>\ninterface ISupportALocation\n{\n bool IsIn(State state);\n}\n</pre>\n', '2008-10-31 02:44:14')[0m
+  [4;36;1mSQL (0.000649)[0m   [0;1mCOMMIT[0m
+  [4;35;1mPost Load (0.000358)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://bhargavgandhi.blogspot.com/2008/09/google-story.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000234)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://bhargavgandhi.blogspot.com/2008/09/sap-and-ruby.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000187)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://bhargavgandhi.blogspot.com/2008/08/rspec-stories-and-watir-web-application.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000183)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://bhargavgandhi.blogspot.com/2008/07/scrum-is-subjective.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000364)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://prasoon.blogspot.com/2008/10/technical-proficiency-gap.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000233)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://prasoon.blogspot.com/2008/09/best-practices-or-next-practices.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000211)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://prasoon.blogspot.com/2008/09/introducing-ruby-in-enterprise.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000222)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://prasoon.blogspot.com/2008/09/does-offshoring-really-save-you-money.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000166)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://prasoon.blogspot.com/2008/09/war-for-talent.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000198)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://prasoon.blogspot.com/2008/09/ignite-bangalore.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000196)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://prasoon.blogspot.com/2008/09/are-design-and-development-separate.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000196)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://prasoon.blogspot.com/2008/09/team-file-sharing-with-git.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000201)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://prasoon.blogspot.com/2008/09/are-scrum-masters-traffic-cops.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000208)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://prasoon.blogspot.com/2008/09/building-higher-performing-teams.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000205)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://prasoon.blogspot.com/2008/08/offshoring.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000206)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://prasoon.blogspot.com/2008/08/who-i-am.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000401)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://kinderman.net/articles/2008/04/09/enabling-disabling-observers-for-testing') LIMIT 1[0m
+  [4;36;1mPost Load (0.000219)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://kinderman.net/articles/2008/01/03/plugin-to-support-composed_of-aggregations-in-activerecord-finder-methods') LIMIT 1[0m
+  [4;35;1mPost Load (0.000274)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://kinderman.net/articles/2007/11/18/testing-on-high-bottom-up-versus-top-down-test-driven-development') LIMIT 1[0m
+  [4;36;1mPost Load (0.000243)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://kinderman.net/articles/2007/11/16/bug-composite_primary_keys-and-belongs_to-with-class_name-option') LIMIT 1[0m
+  [4;35;1mPost Load (0.000244)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://kinderman.net/articles/2007/11/11/reversing-screen-colors-on-a-mac-and-keeping-a-black-background-on-terminal') LIMIT 1[0m
+  [4;36;1mPost Load (0.000234)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://kinderman.net/articles/2007/10/11/selenium-core-bug-and-tinymce-anchor-tags') LIMIT 1[0m
+  [4;35;1mPost Load (0.000236)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://kinderman.net/articles/2007/09/22/learning-ruby-meta-programming-with-metakoans') LIMIT 1[0m
+  [4;36;1mPost Load (0.000239)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://kinderman.net/articles/2007/09/22/tag-permalink-bug-and-bad-content-state-values-in-typo-rev-1528') LIMIT 1[0m
+  [4;35;1mPost Load (0.000242)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://kinderman.net/articles/2007/09/20/task-dependencies-in-capistrano-2-0') LIMIT 1[0m
+  [4;36;1mPost Load (0.000245)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://kinderman.net/articles/2007/09/03/howto-clean-the-distribution-files-for-all-installed-macports-packages') LIMIT 1[0m
+  [4;35;1mPost Load (0.000434)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://blog.mmmultiworks.com/2008/6/10/farmsourcing-part-ii') LIMIT 1[0m
+  [4;36;1mPost Load (0.000250)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://blog.mmmultiworks.com/2008/5/13/farmsourcing-part-i') LIMIT 1[0m
+  [4;35;1mPost Load (0.000285)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://blog.mmmultiworks.com/2008/5/5/speaking-minnebar') LIMIT 1[0m
+  [4;36;1mPost Load (0.000249)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://blog.mmmultiworks.com/2008/4/25/bigmac-programmer') LIMIT 1[0m
+  [4;35;1mPost Load (0.000261)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://blog.mmmultiworks.com/2008/4/22/speaking-mnips') LIMIT 1[0m
+  [4;36;1mPost Load (0.000458)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://alexrothenberg.blogspot.com/2008/10/using-ruby-for-shell-scripting.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000263)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://alexrothenberg.blogspot.com/2008/10/i-want-to-share-something-i-just.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000313)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://alexrothenberg.blogspot.com/2008/08/testing-with-rspec-stories.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000328)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://alexrothenberg.blogspot.com/2008/09/perhaps-outsourcing-is-harder-than.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000282)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://alexrothenberg.blogspot.com/2008/07/working-with-excel-data-without-working_23.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000271)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://alexrothenberg.blogspot.com/2008/07/how-to-unit-test-java-class-with-static.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000285)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://alexrothenberg.blogspot.com/2008/07/dont-give-up-when-you-run-into.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000486)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://queenietakesmanhattan.blogspot.com/2008/10/genius.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000447)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://queenietakesmanhattan.blogspot.com/2008/10/once-you-go-local.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000346)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://queenietakesmanhattan.blogspot.com/2008/10/geeking-out.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000327)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://queenietakesmanhattan.blogspot.com/2008/10/country-girls.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000326)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://queenietakesmanhattan.blogspot.com/2008/10/funny-thing.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000339)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://queenietakesmanhattan.blogspot.com/2008/09/working-lunch.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000350)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://queenietakesmanhattan.blogspot.com/2008/09/from-people-who-brought-you-3700-salad.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000351)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://queenietakesmanhattan.blogspot.com/2008/09/perfect-shuck.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000340)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://queenietakesmanhattan.blogspot.com/2008/09/3700-salad.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000339)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://queenietakesmanhattan.blogspot.com/2008/08/little-gordon-swaggers-and-cusses-his.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000370)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://queenietakesmanhattan.blogspot.com/2008/08/in-end-not-so-pretty-but-quite-tasty.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000345)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://queenietakesmanhattan.blogspot.com/2008/08/kitchen-lust-follow-up.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000388)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://queenietakesmanhattan.blogspot.com/2008/08/they-turn-your-pasta-pink.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000367)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://queenietakesmanhattan.blogspot.com/2008/08/saturday-luncheon.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000375)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://queenietakesmanhattan.blogspot.com/2008/08/complete-total-and-utter-shill-with.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000366)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://queenietakesmanhattan.blogspot.com/2008/08/sometimes-simplest-things-are-best.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000367)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://queenietakesmanhattan.blogspot.com/2008/08/black-gold.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000368)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://queenietakesmanhattan.blogspot.com/2008/08/apparently-coffee-does-everything-but.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000395)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://queenietakesmanhattan.blogspot.com/2008/08/gin-is-sinand-i-like-it.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000382)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://queenietakesmanhattan.blogspot.com/2008/08/getting-my-hands-dirty.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000470)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://queenietakesmanhattan.blogspot.com/2008/07/kitchen-lust-francisfrancis-espresso.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000387)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://queenietakesmanhattan.blogspot.com/2008/07/im-in-love-calm-down-its-with-blog.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000386)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://queenietakesmanhattan.blogspot.com/2008/07/one-of-great-pleasures-of-entertaining.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000395)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://queenietakesmanhattan.blogspot.com/2008/07/how-to-host-dinner-party-without.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000391)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://queenietakesmanhattan.blogspot.com/2008/07/sometimes-it-just-has-to-be-done.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000685)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://blog.bumsonthesaddle.com/2008/10/25/bike-love') LIMIT 1[0m
+  [4;35;1mPost Load (0.000435)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://blog.bumsonthesaddle.com/2008/10/22/talking-about-bikes-on-mid-day') LIMIT 1[0m
+  [4;36;1mPost Load (0.000377)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://blog.bumsonthesaddle.com/2008/10/17/tour-of-nilgiri') LIMIT 1[0m
+  [4;35;1mPost Load (0.000394)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://blog.bumsonthesaddle.com/2008/10/10/bots-is-wide-open') LIMIT 1[0m
+  [4;36;1mPost Load (0.000364)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://blog.bumsonthesaddle.com/2008/9/11/lance-armstrong-rides-again') LIMIT 1[0m
+  [4;35;1mPost Load (0.000364)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://blog.bumsonthesaddle.com/2008/9/9/barcamp-bangalore-7') LIMIT 1[0m
+  [4;36;1mPost Load (0.000365)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://blog.bumsonthesaddle.com/2008/8/24/sexy') LIMIT 1[0m
+  [4;35;1mPost Load (0.000383)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://blog.bumsonthesaddle.com/2008/8/22/polling-a-post') LIMIT 1[0m
+  [4;36;1mPost Load (0.000412)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://blog.bumsonthesaddle.com/2008/8/22/bike-security-101') LIMIT 1[0m
+  [4;35;1mPost Load (0.000397)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://blog.bumsonthesaddle.com/2008/8/20/bicycling-out-there') LIMIT 1[0m
+  [4;36;1mPost Load (0.000405)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://blog.bumsonthesaddle.com/2008/8/15/bangalore-bikers-gets-a-url') LIMIT 1[0m
+  [4;35;1mPost Load (0.000410)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://blog.bumsonthesaddle.com/2008/8/6/ti-cycles-quick-tour') LIMIT 1[0m
+  [4;36;1mPost Load (0.000442)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://blog.bumsonthesaddle.com/2008/8/6/no-trek-bikes-for-the-moment') LIMIT 1[0m
+  [4;35;1mPost Load (0.000412)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://blog.bumsonthesaddle.com/2008/8/5/bicycling-lanes-in-bangalore-soon') LIMIT 1[0m
+  [4;36;1mPost Load (0.000482)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://blog.bumsonthesaddle.com/2008/8/5/sponsoring-mtb-himachal') LIMIT 1[0m
+
+
+Processing PostsController#by_author (for 127.0.0.1 at 2008-10-30 22:44:26) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlNWE3NmNmOGRhZjcyNzhiOThi
+OGRhNDNhYWFjYjU5MTY=--4997bd7b13a3101d7b4892a049eb2595b22eb5de
+  Parameters: {"action"=>"by_author", "id"=>"3", "controller"=>"posts"}
+  [4;36;1mPost Columns (0.011044)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mPost Load (0.001632)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`feed_id` = '3') ORDER BY published desc[0m
+  [4;36;1mSQL (0.000949)[0m   [0;1mSELECT count(`posts`.published) AS count_published, date_format(published, '%Y-%c') AS date_format_published_y_c FROM `posts` GROUP BY date_format(published, '%Y-%c') [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;35;1mFeed Load (0.000501)[0m   [0mSELECT * FROM `feeds` ORDER BY author[0m
+  [4;36;1mFeed Columns (0.001303)[0m   [0;1mSHOW FIELDS FROM `feeds`[0m
+Rendered posts/_whos_talking (0.00436)
+Rendered posts/_archive (0.00156)
+  [4;35;1mFeed Load (0.000267)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 3) [0m
+Rendered shared/_head (0.00018)
+Rendered shared/_header (0.00007)
+Rendered shared/_footer (0.00002)
+Completed in 0.05817 (17 reqs/sec) | Rendering: 0.02053 (35%) | DB: 0.01570 (26%) | 200 OK [http://waywework.local/author/3]
+  [4;35;1mPost Load (0.000679)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://karthiksr.blogspot.com/2008/06/erlang-exchange.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000472)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://karthiksr.blogspot.com/2008/06/separation-of-concerns.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000432)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://karthiksr.blogspot.com/2007/10/my-fav-road.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000428)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://karthiksr.blogspot.com/2006/12/snow-at-work.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000418)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://karthiksr.blogspot.com/2006/10/uniquely-singapore.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000459)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://karthiksr.blogspot.com/2006/08/hair-raising.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000441)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://karthiksr.blogspot.com/2006/07/universerandom.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000445)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://karthiksr.blogspot.com/2006/06/right-choice.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000453)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://karthiksr.blogspot.com/2006/05/of-principles-and-prophets.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000441)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://karthiksr.blogspot.com/2006/04/time-to-synchronize.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000442)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://karthiksr.blogspot.com/2006/03/questions.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000449)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://karthiksr.blogspot.com/2006/01/downside-of-simple-design.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000444)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://karthiksr.blogspot.com/2005/10/delicious-code.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000454)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://karthiksr.blogspot.com/2005/10/cat-ate-my-source-code.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000470)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://karthiksr.blogspot.com/2005/10/catchy-reality.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000458)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://karthiksr.blogspot.com/2005/08/capitalized.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000456)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://karthiksr.blogspot.com/2005/08/face-music.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000462)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://karthiksr.blogspot.com/2005/08/what-is-meant-by-data.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000472)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://karthiksr.blogspot.com/2005/07/and-somebody-had-time-for-this.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000499)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://karthiksr.blogspot.com/2005/07/why.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000477)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://karthiksr.blogspot.com/2005/07/communication-with-ets-yahoo.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000562)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://karthiksr.blogspot.com/2005/07/stony-spells.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000482)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://karthiksr.blogspot.com/2005/06/hard-and-powerful.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000479)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://karthiksr.blogspot.com/2005/06/first-link.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000764)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://s-r-k.blogspot.com/2008/07/erlang-adopters-on-rise.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000568)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://s-r-k.blogspot.com/2008/06/erlang-exchange-2008-report.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000500)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://s-r-k.blogspot.com/2007/11/ubuntu-webcam-story.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000493)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://s-r-k.blogspot.com/2007/08/migrate-with-care.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000487)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://s-r-k.blogspot.com/2007/08/recursive-or-iterative.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000521)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://s-r-k.blogspot.com/2006/12/eai-using-shared-database-probably-not.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000495)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://s-r-k.blogspot.com/2006/12/kickstart-and-parable.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000789)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://rohan-kini.livejournal.com/98362.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000548)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://rohan-kini.livejournal.com/98285.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000518)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://rohan-kini.livejournal.com/97839.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000528)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://rohan-kini.livejournal.com/97572.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000509)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://rohan-kini.livejournal.com/97410.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000528)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://rohan-kini.livejournal.com/97119.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000509)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://rohan-kini.livejournal.com/96977.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000510)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://rohan-kini.livejournal.com/96596.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000523)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://rohan-kini.livejournal.com/96465.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000659)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://rohan-kini.livejournal.com/96161.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000556)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://rohan-kini.livejournal.com/95761.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000563)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://rohan-kini.livejournal.com/95627.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000540)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://rohan-kini.livejournal.com/95236.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000576)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://rohan-kini.livejournal.com/95099.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000539)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://rohan-kini.livejournal.com/94945.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000541)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://rohan-kini.livejournal.com/94515.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000561)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://rohan-kini.livejournal.com/94231.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000540)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://rohan-kini.livejournal.com/94005.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000543)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://rohan-kini.livejournal.com/93793.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000575)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://rohan-kini.livejournal.com/93503.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000631)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://rohan-kini.livejournal.com/93217.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000640)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://rohan-kini.livejournal.com/93082.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000562)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://rohan-kini.livejournal.com/92705.html') LIMIT 1[0m
+  [4;35;1mPost Load (0.000650)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://rohan-kini.livejournal.com/92524.html') LIMIT 1[0m
+  [4;36;1mPost Load (0.000565)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`url` = 'http://rohan-kini.livejournal.com/92197.html') LIMIT 1[0m

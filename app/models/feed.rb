@@ -44,7 +44,7 @@ class Feed < ActiveRecord::Base
   def get_posts_from_rss rss_xml
     rss = RSS::Parser.parse(rss_xml, false)
     rss.items.each { |entry|
-      create_post(:contents=>entry.description.strip!, :url=>entry.link, :title=>entry.title, :published=>entry.date.to_formatted_s(:db))
+      create_post(:contents=>entry.description, :url=>entry.link, :title=>entry.title, :published=>entry.date.to_formatted_s(:db))
     }
   end
 
