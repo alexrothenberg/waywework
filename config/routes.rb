@@ -1,5 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :posts
+  map.posts_by_author 'author/:id', :controller=>'posts', :action=>'by_author'
+  map.posts_by_month 'month/:year/:month', :controller=>'posts', :action=>'by_month'
 
   map.resources :feeds
 

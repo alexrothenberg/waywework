@@ -2,9 +2,12 @@ Load data - rake load_data
 Cron to update - rake feeds:populate
 
 TODO
-* Dont save duplicate posts
-* Some parsing errors with getting posts
-* UI
 * Get the feed name from the posts
 * Validate the feed when its created
+* delete posts when feed deleted
+* archive by month
+* password.yml
+* ln to database.yml on deploy
+* archive and whos talking filter
+* 
 
