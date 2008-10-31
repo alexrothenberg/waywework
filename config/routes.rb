@@ -1,6 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   map.posts_by_author 'author/:id', :controller=>'posts', :action=>'by_author'
   map.posts_by_month 'month/:year/:month', :controller=>'posts', :action=>'by_month'
+  map.atom_feed '/atom', :controller => "posts", :action=>'index', :format=>'atom'
 
   map.resources :feeds
 
@@ -43,6 +44,6 @@ ActionController::Routing::Routes.draw do |map|
   # Install the default routes as the lowest priority.
   # Note: These default routes make all actions in every controller accessible via GET requests. You should
   # consider removing the them or commenting them out if you're using named routes and resources.
-  map.connect ':controller/:action/:id'
-  map.connect ':controller/:action/:id.:format'
+  # map.connect ':controller/:action/:id'
+  # map.connect ':controller/:action/:id.:format'
 end

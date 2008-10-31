@@ -3,6 +3,11 @@ class PostsController < ApplicationController
   def index
     @posts = Post.most_recent_first.all(:limit=>10)
     nav_info
+    
+    respond_to do |format|
+      format.html
+      format.atom
+    end
   end
 
   # GET /posts/by_author
