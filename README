@@ -4,11 +4,5 @@ Cron to update - rake feeds:populate
 TODO
 * Get the feed name from the posts
 * Validate the feed when its created
-* delete posts when feed deleted
-* archive by month
-* password.yml
-* ln to database.yml on deploy
-* archive and whos talking filter
 * Atom feed
-* parse rss?
 
