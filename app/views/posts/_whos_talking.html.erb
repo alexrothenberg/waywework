@@ -1,0 +1,4 @@
+<h2>Who is talking?</h2>
+<ul>
+<% @active_feeds.each { |feed| %><li><%=link_to(feed.author, feed.url)%></li><%}%>
+</ul>

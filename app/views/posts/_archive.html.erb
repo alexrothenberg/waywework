@@ -1,0 +1,11 @@
+<h2>Archive</h2>
+<ul>
+<% @activity_by_date.each_pair do |year, months| %>
+  <li><%= year %></li>
+  <ul>
+    <% months.each_pair do |month, count| %>
+    <li><%= month %>(<%= count %>)</li>
+    <% end %>
+  </ul>
+  <% end %>
+</ul>
