@@ -1,8 +1,8 @@
-Load data - rake load_data
+Load data - rake load_data (a sample set)
 Cron to update - rake feeds:populate
 
 TODO
 * Get the feed name from the posts
 * Validate the feed when its created
-* Atom feed
+* specs
 
