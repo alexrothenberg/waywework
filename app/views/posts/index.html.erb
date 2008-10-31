@@ -1,17 +1,34 @@
+<div id="site">
+  
+  <div class="right right_column">
+    <%= render :partial=>'posts/whos_talking'%>
+    <br/>
+    <br/>
+    <%= render :partial=>'posts/archive'%>
+
+  </div>
+  
+  <div class="left left_column">
+    <table>
+      <tr>
+        <th>Feed url</th>
+        <th>Contents</th>
+      </tr>
+
+      <% for post in @posts %>
+
+      <h1><%= link_to post.title, post.url %></h1>
+      <h2><%= distance_of_time_in_words(Time.now, post.published) %> ago | <%= link_to "#{post.feed.author}: #{post.feed.name}", post.feed.url %></h3>
+
+      <p class="content"><%= post.contents %></p>
+      <div class="clear"></div>
+
+      <% end %>
+    </table>
+  </div>
+  
+  <div class="clear"></div>
+</div>
 
 
-<table>
-  <tr>
-    <th>Feed url</th>
-    <th>Contents</th>
-  </tr>
 
-<% for post in @posts %>
-
-<h1><%= link_to post.title, post.url %></h1>
-<h2><%= distance_of_time_in_words(Time.now, post.published) %> ago | <%= link_to "#{post.feed.author}: #{post.feed.name}", post.feed.url %></h3>
-
-<p class="content"><%= post.contents %></p>
-<div class="clear"></div>
-
-<% end %>

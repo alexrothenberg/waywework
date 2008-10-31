@@ -8,23 +8,8 @@
   <div id="wrapper">
   <%= render :partial => "shared/header" %>
 
-  <div id="site">
-    
-    <div class="right right_column">
-      <%= render :partial=>'posts/whos_talking'%>
-      <br/>
-      <br/>
-      <%= render :partial=>'posts/archive'%>
+  <%= yield %>
 
-    </div>
-    
-    <div class="left left_column">
-    <%= yield %>
-    </div>
-    
-    <div class="clear"></div>
-  </div>
-  
   <%= render :partial => "shared/footer" %>
   </div>
 
