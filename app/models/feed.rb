@@ -37,20 +37,25 @@ class Feed < ActiveRecord::Base
     feed = Atom::Feed.new(atom_xml)
     feed.entries.each { |entry|
       link = entry.links.detect {|l| l.rel == 'alternate'}
-      create_post(:contents=>entry.content.value, :url=>link.href, :title=>entry.title, :published=>entry.published.to_s(:db))
+      create_post(:contents=>entry.content.value, :url=>link.href, :title=>entry.title, :published=>entry.published.to_s(:db), :updated=>entry.updated.to_s(:db))
     }
   end  
   
   def get_posts_from_rss rss_xml
     rss = RSS::Parser.parse(rss_xml, false)
     rss.items.each { |entry|
-      create_post(:contents=>entry.description, :url=>entry.link, :title=>entry.title, :published=>entry.date.to_formatted_s(:db))
+      create_post(:contents=>entry.description, :url=>entry.link, :title=>entry.title, :published=>entry.date.to_formatted_s(:db), :updated=>entry.date.to_formatted_s(:db))
     }
   end
 
   def create_post params
     params.merge!(:feed_id=>id) 
-    Post.create(params) unless Post.find_by_url(params[:url])
+    existing_post = Post.find_by_url(params[:url])
+    if existing_post
+      existing_post.update_attributes(params)
+    else
+      Post.create(params) 
+    end
   end
 
 

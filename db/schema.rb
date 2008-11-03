@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081031143453) do
+ActiveRecord::Schema.define(:version => 20081103143931) do
 
   create_table "feeds", :force => true do |t|
     t.string   "url"
@@ -27,9 +27,10 @@ ActiveRecord::Schema.define(:version => 20081031143453) do
     t.text     "contents"
     t.string   "title"
     t.string   "url"
-    t.date     "published"
+    t.datetime "published"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "updated"
   end
 
   add_index "posts", ["published", "feed_id"], :name => "index_posts_on_published_and_feed_id"
