@@ -9,7 +9,9 @@ describe PostsController do
   describe "responding to GET index" do
 
     it "should expose all posts as @posts" do
-      Post.should_receive(:find).with(:all).and_return([mock_post])
+      Post.should_receive(:most_recent_first).and_return(post_proxy=mock('Post named scope proxy'))
+      post_proxy.should_receive(:all).with(:limit=>30).and_return([mock_post])
+      @controller.should_receive(:nav_info)
       get :index
       assigns[:posts].should == [mock_post]
     end
@@ -18,10 +20,11 @@ describe PostsController do
   
       it "should render all posts as atom" do
         request.env["HTTP_ACCEPT"] = "application/xml+atom"
-        Post.should_receive(:find).with(:all).and_return(posts = mock("Array of Posts"))
-        posts.should_receive(:to_xml).and_return("generated XML")
+        Post.should_receive(:most_recent_first).and_return(post_proxy=mock('Post named scope proxy'))
+        post_proxy.should_receive(:all).with(:limit=>30).and_return([mock_post])
+        @controller.should_receive(:nav_info)
         get :index
-        response.body.should == "generated XML"
+        assigns[:posts].should == [mock_post]
       end
     
     end

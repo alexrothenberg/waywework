@@ -13,7 +13,7 @@
       <% for post in @posts %>
 
         <h1><%= link_to post.title, post.url %></h1>
-        <h2><%= distance_of_time_in_words(Time.now, post.published) %> ago | <%= link_to "#{post.feed.author}: #{post.feed.name}", post.feed.url %></h3>
+        <h2><%= distance_of_time_in_words(Time.now, post.published) %> ago | <%= link_to "#{post.feed.author}: #{post.feed.name}", post.feed.url %></h2>
 
         <p class="content"><%= post.contents %></p>
         <div class="clear"></div>

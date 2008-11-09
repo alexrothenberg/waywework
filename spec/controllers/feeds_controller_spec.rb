@@ -2,12 +2,17 @@ require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe FeedsController do
 
+  before :each do
+    @controller.should_receive(:authenticate).and_return(true)
+  end
+
+
   def mock_feed(stubs={})
     @mock_feed ||= mock_model(Feed, stubs)
   end
   
   describe "responding to GET index" do
-
+    
     it "should expose all feeds as @feeds" do
       Feed.should_receive(:all).and_return([mock_feed])
       get :index
