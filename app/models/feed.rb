@@ -24,7 +24,6 @@ class Feed < ActiveRecord::Base
   has_many :posts, :dependent => :delete_all
 
   named_scope :by_author, :order => :author
-  named_scope :active, lambda {|since| {:conditions => like_condition(search_string, 'clients.name'), :include => :cst_contacts}}
   
   
   def get_feed
@@ -32,13 +31,13 @@ class Feed < ActiveRecord::Base
     uri.read
   end
   
-  
   def get_posts_from_atom atom_xml
     feed = Atom::Feed.new(atom_xml)
     feed.entries.each { |entry|
       link = entry.links.detect {|l| l.rel == 'alternate'}
       create_post(:contents=>entry.content.value, :url=>link.href, :title=>entry.title, :published=>entry.published.to_s(:db), :updated=>entry.updated.to_s(:db))
     }
+    return !feed.entries.blank?
   end  
   
   def get_posts_from_rss rss_xml
@@ -46,6 +45,7 @@ class Feed < ActiveRecord::Base
     rss.items.each { |entry|
       create_post(:contents=>entry.description, :url=>entry.link, :title=>entry.title, :published=>entry.date.to_formatted_s(:db), :updated=>entry.date.to_formatted_s(:db))
     }
+    return !rss.items.blank?
   end
 
   def create_post params
@@ -62,11 +62,8 @@ class Feed < ActiveRecord::Base
   def get_latest
     puts "getting feed for #{name}"
     xml = get_feed
-    if xml =~ /<rss/
-      get_posts_from_rss xml
-    else
-      get_posts_from_atom xml
-    end
+    got_atom_posts = get_posts_from_atom xml
+    get_posts_from_rss xml unless got_atom_posts
   end
       
 end
