@@ -16,6 +16,6 @@ set :user, 'patshau'
 set :use_sudo, false
 
 
-role :app, "it"
-role :web, "it"
-role :db,  "it", :primary => true
+role :app, "patshaughnessy.net"
+role :web, "patshaughnessy.net"
+role :db,  "patshaughnessy.net", :primary => true

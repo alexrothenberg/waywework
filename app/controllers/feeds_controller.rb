@@ -87,9 +87,9 @@ class FeedsController < ApplicationController
   
   protected
   def authenticate
-     authenticate_or_request_with_http_basic do | user_name, password|
-       pwd = YAML::load_file(File.join(RAILS_ROOT, %w[config password.yml]))['feed_password']
-      user_name == "alexpat" && password == pwd
+    authenticate_or_request_with_http_basic do | user_name, password|
+      security_yml = YAML::load_file(File.join(RAILS_ROOT, %w[config password.yml]))
+      user_name == security_yml['username'] && password == security_yml['password']
     end
   end
   
