@@ -3,7 +3,7 @@
 <% @activity_by_date.keys.sort.reverse.each do |year| %>
   <li><%= year %></li>
   <ul>
-    <% @activity_by_date[year].keys.sort.each do |month| %>
+    <% @activity_by_date[year].keys.sort.reverse.each do |month| %>
     <li><%= link_to(Date::MONTHNAMES[month], posts_by_month_url(year, month))%> (<%= @activity_by_date[year][month] %>)</li>
     <% end %>
   </ul>

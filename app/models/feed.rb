@@ -24,7 +24,8 @@ class Feed < ActiveRecord::Base
   has_many :posts, :dependent => :delete_all
 
   named_scope :by_author, :order => :author
-  
+
+  after_create { |feed| feed.get_latest unless feed.name && feed.url}
   
   def get_feed
     uri = URI.parse(feed_url)
@@ -37,6 +38,7 @@ class Feed < ActiveRecord::Base
       link = entry.links.detect {|l| l.rel == 'alternate'}
       create_post(:contents=>entry.content.value, :url=>link.href, :title=>entry.title, :published=>entry.published.to_s(:db), :updated=>entry.updated.to_s(:db))
     }
+    update_attributes(:name=>feed.title, :url=>feed.links.detect{|link| link.type=='text/html'}.href) unless name && url
     return !feed.entries.blank?
   end  
   
@@ -64,6 +66,8 @@ class Feed < ActiveRecord::Base
     xml = get_feed
     got_atom_posts = get_posts_from_atom xml
     get_posts_from_rss xml unless got_atom_posts
+    
+    
   end
       
 end
