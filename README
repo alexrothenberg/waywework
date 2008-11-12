@@ -1,8 +1,10 @@
+This is a simple blog aggregator we put together in a few days.  We put it together for the site http://waywework.it
+
 Load data - rake load_data (a sample set)
 Cron to update - rake feeds:populate
 
 TODO
 * Get the feed name from the posts
 * Validate the feed when its created
-* specs
+* UI on IE
 
