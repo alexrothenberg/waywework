@@ -38,8 +38,9 @@ class Feed < ActiveRecord::Base
       link = entry.links.detect {|l| l.rel == 'alternate'}
       create_post(:contents=>entry.content.value, :url=>link.href, :title=>entry.title, :published=>entry.published.to_s(:db), :updated=>entry.updated.to_s(:db))
     }
+    return false if feed.entries.blank?
     update_attributes(:name=>feed.title, :url=>feed.links.detect{|link| link.type=='text/html'}.href) unless name && url
-    return !feed.entries.blank?
+    return true
   end  
   
   def get_posts_from_rss rss_xml
@@ -47,7 +48,9 @@ class Feed < ActiveRecord::Base
     rss.items.each { |entry|
       create_post(:contents=>entry.description, :url=>entry.link, :title=>entry.title, :published=>entry.date.to_formatted_s(:db), :updated=>entry.date.to_formatted_s(:db))
     }
-    return !rss.items.blank?
+    return false if rss.items.blank?
+    update_attributes(:name=>rss.channel.title, :url=>rss.channel.link) unless name && url
+    return true
   end
 
   def create_post params
@@ -66,8 +69,6 @@ class Feed < ActiveRecord::Base
     xml = get_feed
     got_atom_posts = get_posts_from_atom xml
     get_posts_from_rss xml unless got_atom_posts
-    
-    
   end
       
 end

@@ -17,6 +17,7 @@ require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 describe Feed do
   before(:each) do
     @valid_attributes = {
+      :author => "value for author",
       :url => "value for url",
       :name => "value for name",
       :feed_url => "value for feed_url"
@@ -24,7 +25,14 @@ describe Feed do
   end
 
   it "should create a new instance given valid attributes" do
-    Feed.create!(@valid_attributes)
+    feed = Feed.new(@valid_attributes)
+    feed.save
+  end
+  
+  it "should create a new instance given valid attributes and load posts" do
+    feed = Feed.new(:author => "value for author", :feed_url => "value for feed_url")
+    feed.should_receive(:get_latest)
+    feed.save
   end
   
   it 'should download a feed' do
@@ -70,6 +78,26 @@ describe Feed do
     feed.should_receive(:get_posts_from_atom).with(xml).and_return(false)
     feed.should_receive(:get_posts_from_rss).with(xml)
     feed.get_latest
+  end
+  
+  it 'should get name and url from atom feed xml if blank' do
+    feed = Feed.new(:author => "value for author", :feed_url => "value for feed_url")
+    entries = stub('Entries', :each=>true, :blank? => false)
+    Atom::Feed.should_receive(:new).and_return(atom=stub('Atom', :entries=>entries, :title=>:feed_title, :links=>[link=mock('Link', :type=>'text/html', :href=>:feed_url)]))
+    feed.should_receive(:update_attributes).with(:name=>:feed_title, :url=>:feed_url)
+    feed.get_posts_from_atom(xml=mock('XML Feed'))
+    feed.should_receive(:get_latest)
+    feed.save
+  end
+  
+  it 'should get name and url from rss feed xml if blank' do
+    feed = Feed.new(:author => "value for author", :feed_url => "value for feed_url")
+    items = stub('Items', :each=>true, :blank? => false)
+    RSS::Parser.should_receive(:parse).and_return(rss=stub('Rss', :items=>items, :channel=>stub('Channel', :title=>:feed_title, :link=>:feed_url)))
+    feed.should_receive(:update_attributes).with(:name=>:feed_title, :url=>:feed_url)
+    feed.get_posts_from_rss(xml=mock('XML Feed'))
+    feed.should_receive(:get_latest)
+    feed.save
   end
   
 end
