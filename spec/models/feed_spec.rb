@@ -69,14 +69,16 @@ describe Feed do
     feed = Feed.create!(@valid_attributes)
     feed.should_receive(:get_feed).and_return(xml='an atom feed')
     feed.should_receive(:get_posts_from_atom).with(xml).and_return(true)
+    feed.stubs(:puts)
     feed.get_latest
   end
   
-  it 'should get the atom feed and save posts' do
+  it 'should get the rss feed and save posts' do
     feed = Feed.create!(@valid_attributes)
     feed.should_receive(:get_feed).and_return(xml='an rss feed')
     feed.should_receive(:get_posts_from_atom).with(xml).and_return(false)
     feed.should_receive(:get_posts_from_rss).with(xml)
+    feed.stubs(:puts)
     feed.get_latest
   end
   

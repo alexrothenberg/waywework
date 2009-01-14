@@ -34,10 +34,13 @@ class Feed < ActiveRecord::Base
   
   def get_posts_from_atom atom_xml
     feed = Atom::Feed.new(atom_xml)
-    feed.entries.each { |entry|
-      link = entry.links.detect {|l| l.rel == 'alternate'}
-      create_post(:contents=>entry.content.value, :url=>link.href, :title=>entry.title, :published=>entry.published.to_s(:db), :updated=>entry.updated.to_s(:db))
-    }
+    feed.entries.each do |entry|
+      if entry.published
+        link = entry.links.detect {|l| l.rel == 'alternate'}
+        content = entry.summary || entry.content
+        create_post(:contents=>content.value, :url=>link.href, :title=>entry.title, :published=>entry.published.to_s(:db), :updated=>entry.updated.to_s(:db))
+      end
+    end
     return false if feed.entries.blank?
     update_attributes(:name=>feed.title, :url=>feed.links.detect{|link| link.type=='text/html'}.href) unless name && url
     return true

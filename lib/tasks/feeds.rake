@@ -3,7 +3,11 @@ namespace :feeds do
   task :populate => :environment do
     feeds = Feed.all
     feeds.each do |feed|
-      feed.get_latest
+      begin
+        feed.get_latest
+      rescue 
+        puts "Error getting feed for #{feed.inspect} #{$!}"
+      end
     end
   end
 end
