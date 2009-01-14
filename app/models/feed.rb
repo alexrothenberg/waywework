@@ -38,7 +38,8 @@ class Feed < ActiveRecord::Base
       if entry.published
         link = entry.links.detect {|l| l.rel == 'alternate'}
         content = entry.summary || entry.content
-        create_post(:contents=>content.value, :url=>link.href, :title=>entry.title, :published=>entry.published.to_s(:db), :updated=>entry.updated.to_s(:db))
+        content = content.value if content.mime_type == 'text/html'
+        create_post(:contents=>content, :url=>link.href, :title=>entry.title, :published=>entry.published.to_s(:db), :updated=>entry.updated.to_s(:db))
       end
     end
     return false if feed.entries.blank?
