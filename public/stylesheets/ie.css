@@ -15,7 +15,7 @@ body        { text-align: center; }
 /* This fixes the problem where IE6 adds an extra 3px margin to
    two columns that are floated up against each other. */
 
-* html .column { overflow-x: hidden; } /* IE6 fix */
+* html .left_column, .right_column, .column { overflow-x: hidden; } /* IE6 fix */
 
 .pull-1, .pull-2, .pull-3, .pull-4,
 .push-1, .push-2, .push-3, .push-4, 
