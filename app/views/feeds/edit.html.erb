@@ -1,7 +1,13 @@
 <h1>Editing feed</h1>
 
 <% form_for(@feed) do |f| %>
-  <%= f.error_messages %>
+  <% if @feed.errors.any? %>
+    <ul>
+      <% @feed.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
 
   <p>
     <%= f.label :url %><br />

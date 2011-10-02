@@ -19,7 +19,7 @@ class PostsController < ApplicationController
 
   # GET /posts
   def by_month
-    @posts = Post.most_recent_first.by_date_published("#{params[:year]}-#{params[:month]}")
+    @posts = Post.most_recent_first.by_date_published(Date.strptime("#{params[:year]}-#{params[:month]}", "%Y-%m"))
     nav_info
     render :action=>:index
   end

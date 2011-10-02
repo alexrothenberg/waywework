@@ -23,15 +23,15 @@ require 'open-uri'
 class Feed < ActiveRecord::Base
   has_many :posts, :dependent => :delete_all
 
-  named_scope :by_author, :order => :author
+  scope :by_author, order(:author)
 
   after_create { |feed| feed.get_latest unless feed.name && feed.url}
-  
+
   def get_feed
     uri = URI.parse(feed_url)
     uri.read
   end
-  
+
   def get_posts_from_atom atom_xml
     feed = Atom::Feed.new(atom_xml)
     feed.entries.each do |entry|
@@ -41,12 +41,12 @@ class Feed < ActiveRecord::Base
         content = content.value if content.mime_type == 'text/html'
         create_post(:contents=>content, :url=>link.href, :title=>entry.title, :published=>entry.published.to_s(:db), :updated=>entry.updated.to_s(:db))
       end
-    end
+    end unless false
     return false if feed.entries.blank?
     update_attributes(:name=>feed.title, :url=>feed.links.detect{|link| link.type=='text/html'}.href) unless name && url
     return true
-  end  
-  
+  end
+
   def get_posts_from_rss rss_xml
     rss = RSS::Parser.parse(rss_xml, false)
     rss.items.each { |entry|
@@ -58,12 +58,12 @@ class Feed < ActiveRecord::Base
   end
 
   def create_post params
-    params.merge!(:feed_id=>id) 
+    params.merge!(:feed_id=>id)
     existing_post = Post.find_by_url(params[:url])
     if existing_post
       existing_post.update_attributes(params)
     else
-      Post.create(params) 
+      Post.create(params)
     end
   end
 
@@ -74,5 +74,5 @@ class Feed < ActiveRecord::Base
     got_atom_posts = get_posts_from_atom xml
     get_posts_from_rss xml unless got_atom_posts
   end
-      
+
 end

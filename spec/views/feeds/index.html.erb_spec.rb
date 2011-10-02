@@ -1,10 +1,10 @@
 require File.expand_path(File.dirname(__FILE__) + '/../../spec_helper')
 
 describe "/feeds/index.html.erb" do
-  include FeedsHelper
+  include AtomFeedHelper
   
   before(:each) do
-    assigns[:feeds] = [
+    assign(:feeds, [
       stub_model(Feed,
         :url => "value for url",
         :name => "value for name",
@@ -15,14 +15,14 @@ describe "/feeds/index.html.erb" do
         :name => "value for name",
         :feed_url => "value for feed_url"
       )
-    ]
+    ])
   end
 
   it "should render list of feeds" do
-    render "/feeds/index.html.erb"
-    response.should have_tag("tr>td", "value for url", 2)
-    response.should have_tag("tr>td", "value for name", 2)
-    response.should have_tag("tr>td", "value for feed_url", 2)
+    render
+    rendered.should =~ /value for url/
+    rendered.should =~ /value for name/
+    rendered.should =~ /value for feed_url/
   end
 end
 

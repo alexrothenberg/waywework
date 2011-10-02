@@ -23,10 +23,9 @@ describe FeedsController do
   
       it "should render all feeds as xml" do
         request.env["HTTP_ACCEPT"] = "application/xml"
-        Feed.should_receive(:find).with(:all).and_return(feeds = mock("Array of Feeds"))
-        feeds.should_receive(:to_xml).and_return("generated XML")
+        Feed.should_receive(:all).and_return(feeds = [{:feed=>'something'}])
         get :index
-        response.body.should == "generated XML"
+        response.body.should == feeds.to_xml
       end
     
     end

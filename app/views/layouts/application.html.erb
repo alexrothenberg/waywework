@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Way We Work</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <link rel="alternate" type="application/atom+xml" title="WayWeWork - Atom" href="<%= atom_feed_url %>" />
+  <%= csrf_meta_tags %>
+
+  <!--[if lt IE 7.]>
+    <script defer type="text/javascript" src="/javascripts/pngfix.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+  <div id="band"></div>
+  <div id="wrapper">
+    <%= render :partial => "shared/header" %>
+    <%= yield %>
+    <%= render :partial => "shared/footer" %>
+  </div>
+
+</body>
+</html>

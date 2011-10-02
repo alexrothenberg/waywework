@@ -1,0 +1,53 @@
+body  {
+	font: normal 13px Arial, sans-serif;
+	color: #222;
+	margin: 0 auto;
+	background: #ecf6f8 url(/images/bg.png) repeat-x;
+	padding: 0 0 0 0;
+	line-height: 160%;
+}
+div, img, form, ul {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+
+div, span, td, .text_l {text-align: left;}
+.clear 		      	{clear: both;}
+.tr,
+td.tr	 	        	{text-align: right;}
+.tc,
+td.tc		        	{text-align: center;}
+a 			        	{text-decoration: underline; color: #679aa5; }
+a:hover       		{text-decoration: none; }
+.left 		      	{float: left;}
+.right 		       	{float: right;}
+li				        {list-style: none;}
+
+#wrapper	      	{width: 90%; margin: 0 auto; padding: 0 0 0 0; text-align: center;}
+#wrapper div      {text-align: left;}
+
+h1                {font-size: 27px; font-weight: bold; padding: 20px 0 0 0; margin-top: 20px; line-height: 130%; border-top: 1px solid #679aa5;}
+h1 a              {text-decoration: none;}
+h1 a:hover        {text-decoration: underline;}
+
+h2                {font-size: 15px; font-weight: normal; padding: 0 0 10px 0;  margin-bottom: 20px;}
+
+#site             {}
+
+#band             {padding: 3px; background: #86bec9; margin-bottom: 25px;}
+
+.left_column      {width: 80%;}
+.left_column content  {clear: both; padding-right: 20px; padding-bottom: 20px;}
+.left_column h1  {margin-right: 20px;}
+blockquote,pre {background-color: #eee;  padding: 10px;  font-size: 11px; }
+.right_column     {width: 20%; padding-top: 20px;}
+.right_column li  {margin: 3px 0; font-weight: bold;}
+.right_column h2  {font-weight: bold; margin-bottom: 0; padding: 0 0 5px 0;}
+.right_column ul ul li {padding-left:1.2em;}
+
+
+#footer			      {padding: 20px 0 0 0; font-size: 11px; color: #555; font-weight: bold;}
+
+#message		      {padding: 14px; z-index: 100000; position: fixed; top: 38%; left: 40%; display: none; background: #78c89d; color: #222; font-size: 28px;}
+#waiter 		      {z-index:100000; position:fixed; background:white; display: none; height: 13px; width: 208px; border:0px; top: 50%; left: 50%; margin: -6px 0 0 -104px;}
