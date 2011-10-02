@@ -19,6 +19,9 @@ end
 
 gem 'jquery-rails'
 
+gem 'thin'
+gem 'pg'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
