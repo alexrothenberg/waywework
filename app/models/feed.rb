@@ -27,6 +27,10 @@ class Feed < ActiveRecord::Base
 
   after_create { |feed| feed.get_latest unless feed.name && feed.url}
 
+  def to_param
+    "#{id}-#{author.gsub(' ', '_')}"
+  end
+
   def get_feed
     uri = URI.parse(feed_url)
     uri.read

@@ -5,6 +5,7 @@ describe "/feeds/edit.html.erb" do
     assign(:feed, @feed = stub_model(Feed,
       :new_record? => false,
       :url => "value for url",
+      :author => 'Alex Rothenberg',
       :name => "value for name",
       :feed_url => "value for feed_url"
       )

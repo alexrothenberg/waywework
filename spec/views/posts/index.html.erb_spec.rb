@@ -20,8 +20,8 @@ describe "/posts/index.html.erb" do
       )
     ])
     assign(:active_feeds, [
-      stub_model(Feed,  :id=>1, :author=>9),
-      stub_model(Feed,  :id=>2, :author=>10)
+      stub_model(Feed,  :id=>1, :author=>'Alex'),
+      stub_model(Feed,  :id=>2, :author=>'Yash')
     ])
     assign(:activity_by_date,
       {2007 => {1 => 5, 2=>10},

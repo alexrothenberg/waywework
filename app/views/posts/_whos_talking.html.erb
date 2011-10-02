@@ -1,4 +1,4 @@
 <h2>Who is talking?</h2>
 <ul>
-<% @active_feeds.each { |feed| %><li><%=link_to(feed.author, posts_by_author_url(feed.id))%></li><%}%>
+<% @active_feeds.each { |feed| %><li><%=link_to(feed.author, posts_by_author_url(feed))%></li><%}%>
 </ul>

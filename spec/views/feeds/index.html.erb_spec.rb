@@ -7,11 +7,13 @@ describe "/feeds/index.html.erb" do
     assign(:feeds, [
       stub_model(Feed,
         :url => "value for url",
+        :author => 'Alex Rothenberg',
         :name => "value for name",
         :feed_url => "value for feed_url"
       ),
       stub_model(Feed,
         :url => "value for url",
+        :author => 'Pat Shaughnessy',
         :name => "value for name",
         :feed_url => "value for feed_url"
       )

@@ -6,6 +6,7 @@ describe "/feeds/show.html.erb" do
   before(:each) do
     assign(:feed, @feed = stub_model(Feed,
       :url => "value for url",
+      :author => 'Alex Rothenberg',
       :name => "value for name",
       :feed_url => "value for feed_url"
     ))

@@ -28,20 +28,20 @@ describe Feed do
     feed = Feed.new(@valid_attributes)
     feed.save
   end
-  
+
   it "should create a new instance given valid attributes and load posts" do
     feed = Feed.new(:author => "value for author", :feed_url => "value for feed_url")
     feed.should_receive(:get_latest)
     feed.save
   end
-  
+
   it 'should download a feed' do
     feed = Feed.create!(@valid_attributes)
     URI.should_receive(:parse).with(feed.feed_url).and_return(feed_uri=mock('feed uri'))
     feed_uri.should_receive(:read).and_return(expected_xml=mock('expected xml'))
     feed.get_feed.should == expected_xml
   end
-  
+
   it 'should parse an atom feed' do
     feed = Feed.create!(@valid_attributes)
     xml=IO.read(File.join(Rails.root, 'spec', 'atom.xml'))
@@ -50,7 +50,7 @@ describe Feed do
     feed.stub!(:puts)
     feed.get_posts_from_atom(xml)
   end
-  
+
   it 'should parse an atom feed from blogger' do
     feed = Feed.create!(@valid_attributes)
     xml=IO.read(File.join(Rails.root, 'spec', 'atom2.xml'))
@@ -58,7 +58,7 @@ describe Feed do
     feed.stub!(:puts)
     feed.get_posts_from_atom(xml)
   end
-  
+
   it 'should parse a rss feed' do
     feed = Feed.create!(@valid_attributes)
     xml=IO.read(File.join(Rails.root, 'spec', 'rss.xml'))
@@ -66,7 +66,7 @@ describe Feed do
     feed.should_receive(:create_post).with(hash_including(:contents=>'the second post', :title=>'The title of my second post', :published=>'2008-02-13 11:24:00', :url=>'http://my.blog.com/the_second_post.html')).and_return(post2=mock('post2'))
     feed.get_posts_from_rss(xml)
   end
-  
+
   it 'should get the atom feed and save posts' do
     feed = Feed.create!(@valid_attributes)
     feed.should_receive(:get_feed).and_return(xml='an atom feed')
@@ -74,7 +74,7 @@ describe Feed do
     feed.stub!(:puts)
     feed.get_latest
   end
-  
+
   it 'should get the rss feed and save posts' do
     feed = Feed.create!(@valid_attributes)
     feed.should_receive(:get_feed).and_return(xml='an rss feed')
@@ -83,7 +83,7 @@ describe Feed do
     feed.stub!(:puts)
     feed.get_latest
   end
-  
+
   it 'should get name and url from atom feed xml if blank' do
     feed = Feed.new(:author => "value for author", :feed_url => "value for feed_url")
     entries = stub('Entries', :each=>true, :blank? => false)
@@ -94,7 +94,7 @@ describe Feed do
     feed.should_receive(:get_latest)
     feed.save
   end
-  
+
   it 'should get name and url from rss feed xml if blank' do
     feed = Feed.new(:author => "value for author", :feed_url => "value for feed_url")
     items = stub('Items', :each=>true, :blank? => false)
@@ -104,5 +104,10 @@ describe Feed do
     feed.should_receive(:get_latest)
     feed.save
   end
-  
+
+  describe '#to_param' do
+    subject { Feed.new(:author => "Alex Rothenberg") }
+    its(:to_param) { should =~ /(\d*)-Alex_Rothenberg/ }
+  end
+
 end
