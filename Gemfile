@@ -19,8 +19,12 @@ end
 
 gem 'jquery-rails'
 
-gem 'thin'
-gem 'pg'
+# Heroku config
+group :production do
+  gem 'therubyracer'
+  gem 'pg'
+  gem 'thin'
+end
 
 # Use unicorn as the web server
 # gem 'unicorn'
