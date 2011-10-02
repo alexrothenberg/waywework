@@ -32,11 +32,13 @@ end
 # Deploy with Capistrano
 # gem 'capistrano'
 
-# To use debugger
-# gem 'ruby-debug'
+group :development do
+  # To use debugger
+  gem 'ruby-debug'
+end
 
 gem 'atom'
-group :development, :test, :devutility do
+group :development, :test do
   gem "rspec-rails"
   gem "factory_girl_rails"
   gem "haml-rails"

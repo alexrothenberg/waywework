@@ -42,7 +42,7 @@ class Feed < ActiveRecord::Base
       if entry.published
         link = entry.links.detect {|l| l.rel == 'alternate'}
         content = entry.summary || entry.content
-        content = content.value if content.mime_type == 'text/html'
+        content = content.value if (content.mime_type == 'text/html') && content.respond_to?(:value)
         create_post(:contents=>content, :url=>link.href, :title=>entry.title, :published=>entry.published.to_s(:db), :updated=>entry.updated.to_s(:db))
       end
     end unless false
@@ -73,7 +73,7 @@ class Feed < ActiveRecord::Base
 
 
   def get_latest
-    puts "getting feed for #{name}"
+    puts "getting feed for #{author}-#{name}"
     xml = get_feed
     got_atom_posts = get_posts_from_atom xml
     get_posts_from_rss xml unless got_atom_posts
