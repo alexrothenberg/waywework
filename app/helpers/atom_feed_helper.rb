@@ -62,9 +62,8 @@ module AtomFeedHelper
 
     xml = options[:xml] || eval("xml", block.binding)
     xml.instruct!
-
     xml.feed "xml:lang" => options[:language] || "en-US", "xmlns" => 'http://www.w3.org/2005/Atom' do
-      xml.id("tag:#{request.host},#{options[:schema_date]}:#{request.request_uri.split(".")[0]}")
+      xml.id("tag:#{request.host},2011:atom")
       xml.link(:rel => 'alternate', :type => 'text/html', :href => options[:root_url] || (request.protocol + request.host_with_port))
       xml.link(:rel => 'self', :type => 'application/atom+xml', :href => options[:url] || request.url)
 
