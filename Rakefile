@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-WayweworkIt::Application.load_tasks
+WayWeWork::Application.load_tasks
