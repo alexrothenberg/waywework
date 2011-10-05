@@ -26,7 +26,7 @@ class PostsController < ApplicationController
 
 protected
   def nav_info
-    @active_feeds = Feed.by_author
+    @active_feeds = Feed.by_most_recent_post
     @activity_by_date = Post.activity_by_date
   end
 end

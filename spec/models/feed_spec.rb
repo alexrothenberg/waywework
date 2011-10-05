@@ -109,5 +109,20 @@ describe Feed do
     subject { Feed.new(:author => "Alex Rothenberg") }
     its(:to_param) { should =~ /(\d*)-Alex_Rothenberg/ }
   end
+  
+  describe '.by_most_recent_post' do
+    let(:alex) { FactoryGirl.create :feed }
+    let(:pat)  { FactoryGirl.create :feed }
+    let(:amit) { FactoryGirl.create :feed }
+    before do
+      FactoryGirl.create(:post, :feed => alex, :published => 1.year.ago)
+      FactoryGirl.create(:post, :feed => alex, :published => 1.month.ago)
+      FactoryGirl.create(:post, :feed => pat,  :published => 2.days.ago)
+      FactoryGirl.create(:post, :feed => pat,  :published => 1.day.ago) 
+      FactoryGirl.create(:post, :feed => amit, :published => 2.months.ago)                                                  
+    end
+    subject { Feed.by_most_recent_post }
+    it { should == [pat, alex, amit] }
+  end
 
 end

@@ -22,8 +22,9 @@ require 'open-uri'
 
 class Feed < ActiveRecord::Base
   has_many :posts, :dependent => :delete_all
-
+  scope :by_most_recent_post, includes(:posts).merge(Post.most_recent_first)
   scope :by_author, order(:author)
+
 
   after_create { |feed| feed.get_latest unless feed.name && feed.url}
 
