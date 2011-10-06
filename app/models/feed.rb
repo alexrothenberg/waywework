@@ -80,4 +80,14 @@ class Feed < ActiveRecord::Base
     get_posts_from_rss xml unless got_atom_posts
   end
 
+  def self.update_all
+    Feed.all.each do |feed|
+      begin
+        feed.get_latest
+      rescue 
+        puts "Error updating feed for #{feed.inspect} #{$!}"
+      end
+    end
+  end
+
 end
