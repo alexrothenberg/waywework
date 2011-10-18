@@ -1,4 +1,4 @@
-atom_feed(:url => atom_feed_url) do |feed|
+atom_feed(:url => atom_feed_url, :schema_date => 2005) do |feed|
   feed.title("WayWeWork")
   feed.updated(@posts.first.published)
 
