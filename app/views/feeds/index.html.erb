@@ -2,18 +2,20 @@
 
 <table>
   <tr>
-    <th>Name</th>
     <th>Author</th>
-    <th>Url</th>
+    <th>Twitter Username</th>
     <th>Feed url</th>
+    <th>Name</th>
+    <th>Url</th>
   </tr>
 
 <% for feed in @feeds %>
   <tr>
-    <td><%=h feed.name %></td>
     <td><%=h feed.author %></td>
-    <td><%=h feed.url %></td>
+    <td><%=h feed.twitter_username_with_at_sign %></td>
     <td><%=h feed.feed_url %></td>
+    <td><%=h feed.name %></td>
+    <td><%=h feed.url %></td>
     <td><%= link_to 'Show', feed %></td>
     <td><%= link_to 'Edit', edit_feed_path(feed) %></td>
     <td><%= link_to 'Destroy', feed, :confirm => 'Are you sure?', :method => :delete %></td>

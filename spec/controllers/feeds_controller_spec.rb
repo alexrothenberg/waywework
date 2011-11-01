@@ -14,7 +14,7 @@ describe FeedsController do
   describe "responding to GET index" do
     
     it "should expose all feeds as @feeds" do
-      Feed.should_receive(:all).and_return([mock_feed])
+      Feed.should_receive(:by_author).and_return([mock_feed])
       get :index
       assigns[:feeds].should == [mock_feed]
     end
@@ -23,7 +23,7 @@ describe FeedsController do
   
       it "should render all feeds as xml" do
         request.env["HTTP_ACCEPT"] = "application/xml"
-        Feed.should_receive(:all).and_return(feeds = [{:feed=>'something'}])
+        Feed.should_receive(:by_author).and_return(feeds = [{:feed=>'something'}])
         get :index
         response.body.should == feeds.to_xml
       end
