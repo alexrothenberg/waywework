@@ -8,6 +8,10 @@ gem 'rails', '3.1.0'
 gem 'sqlite3'
 
 gem 'json'
+gem 'twitter'
+gem 'atom'
+gem 'jquery-rails'
+gem "haml-rails"
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -17,7 +21,6 @@ group :assets do
   gem 'uglifier'
 end
 
-gem 'jquery-rails'
 
 # Heroku config
 group :production do
@@ -37,10 +40,12 @@ group :development do
   gem 'ruby-debug'
 end
 
-gem 'atom'
 group :development, :test do
   gem "rspec-rails"
+end
+
+group :test do
   gem "factory_girl_rails"
-  gem "haml-rails"
   gem 'faker'
+  gem 'webmock'
 end

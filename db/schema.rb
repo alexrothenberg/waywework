@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081103143931) do
+ActiveRecord::Schema.define(:version => 20111101103006) do
 
   create_table "feeds", :force => true do |t|
     t.string   "url"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20081103143931) do
     t.string   "author"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "twitter_username"
   end
 
   add_index "feeds", ["author"], :name => "index_feeds_on_author"

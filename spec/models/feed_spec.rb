@@ -124,5 +124,47 @@ describe Feed do
     subject { Feed.by_most_recent_post }
     it { should == [pat, alex, amit] }
   end
+  
+  describe 'following on twitter' do
+    let(:feed_with_twitter_account   ) { FactoryGirl.build :feed, :twitter_username => 'alexrothenberg' }
+    describe 'in Production' do
+      before { Rails.env.stub(:production?).and_return(true) }
+      describe 'for feed without a twitter account' do
+        let(:feed_without_twitter_account) { FactoryGirl.create :feed, :twitter_username => nil               }
+        subject { FactoryGirl.create :feed, :twitter_username => nil }
+        it 'should not follow' do
+          Twitter.should_not_receive(:follow)
+          subject
+        end
+        its(:twitter_username             ) { should == nil }
+        its(:twitter_username_with_at_sign) { should == nil }
+      end
+      describe 'for feed with a twitter account' do
+        let(:feed) { FactoryGirl.create :feed, :twitter_username => 'alexrothenberg' }
+        before do
+          Twitter.should_receive(:follow).with('alexrothenberg')
+        end
+        subject { feed }
+        its(:twitter_username             ) { should == 'alexrothenberg' }
+        its(:twitter_username_with_at_sign) { should == '@alexrothenberg' }
+        describe 'updating with an @ prefix' do
+          before do
+            Twitter.should_receive(:follow).with('alex_rothenberg2')
+            feed.update_attributes(:twitter_username => '@alex_rothenberg2')
+          end
+          subject { feed }
+          its(:twitter_username             ) { should == 'alex_rothenberg2' }
+          its(:twitter_username_with_at_sign) { should == '@alex_rothenberg2' }
+        end
+      end
+    end
+    describe 'in Development does not tweet' do
+      before { Rails.env.should_not be_production }
+      it 'should not follow' do
+        Twitter.should_not_receive(:follow)
+        FactoryGirl.build :feed, :twitter_username => 'alexrothenberg'
+      end
+    end
+  end
 
 end

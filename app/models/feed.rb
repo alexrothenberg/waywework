@@ -27,6 +27,21 @@ class Feed < ActiveRecord::Base
 
 
   after_create { |feed| feed.get_latest unless feed.name && feed.url}
+  after_save :follow_on_twitter
+  
+  def follow_on_twitter
+    if Rails.env.production?
+      Twitter.follow(twitter_username) if twitter_username_changed? && !twitter_username.empty?
+    end
+  end
+  
+  def twitter_username= twitter_username
+    twitter_username = twitter_username.sub('@', '') if twitter_username
+    super(twitter_username)
+  end
+  def twitter_username_with_at_sign
+    "@#{twitter_username}" unless twitter_username.blank?
+  end
 
   def to_param
     "#{id}-#{author.gsub(' ', '_')}"

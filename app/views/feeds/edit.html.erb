@@ -1,6 +1,6 @@
 <h1>Editing feed</h1>
 
-<% form_for(@feed) do |f| %>
+<%= form_for(@feed) do |f| %>
   <% if @feed.errors.any? %>
     <ul>
       <% @feed.errors.full_messages.each do |msg| %>
@@ -24,6 +24,10 @@
   <p>
     <%= f.label :feed_url %><br />
     <%= f.text_field :feed_url %>
+  </p>
+  <p>
+    <%= f.label :twitter_username %><br />
+    <%= f.text_field :twitter_username %>
   </p>
   <p>
     <%= f.submit "Update" %>

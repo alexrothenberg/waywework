@@ -1,9 +1,10 @@
 FactoryGirl.define do
   factory :feed do 
-    url       { "http://#{Faker::Internet.domain_name}" }
-    feed_url  { "#{url}/feed"                }
-    name      { Faker::Lorem.words.join(' ') }
-    author    { Faker::Name.name             }
+    url              { "http://#{Faker::Internet.domain_name}" }
+    feed_url         { "#{url}/feed"                }
+    name             { Faker::Lorem.words.join(' ') }
+    author           { Faker::Name.name             }
+    twitter_username { "@#{author.gsub(' ', '_')}"  }
   end
   factory :post do 
     feed
