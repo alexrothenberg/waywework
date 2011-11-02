@@ -34,8 +34,9 @@ describe Post do
       describe 'for feed without a twitter account' do
         let(:feed_without_twitter_account) { FactoryGirl.create :feed, :twitter_username => nil               }
         it 'should not tweet' do
-          Twitter.should_not_receive(:update)
-          FactoryGirl.create(:post, :title => 'this is an interesting blog post', :url => 'http://some.blog.com/2011/about_stuff', :feed => feed_without_twitter_account)
+          Twitter.should_receive(:update).
+                  with('This is an interesting blog post http://some.blog.com/2011/about_stuff via @WayWeWorkIT')
+          FactoryGirl.create(:post, :title => 'This is an interesting blog post', :url => 'http://some.blog.com/2011/about_stuff', :feed => feed_without_twitter_account)
         end
       end
       describe 'for feed with a twitter account' do

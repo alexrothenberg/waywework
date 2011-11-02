@@ -16,12 +16,12 @@
 class Post < ActiveRecord::Base
   scope :most_recent_first, order('posts.published desc')
   scope :by_date_published, lambda {|date| where(["published <= ? and published >= ?", date.end_of_month, date.beginning_of_month]) }
-  
+
   belongs_to :feed
 
   after_create :tweet
-  delegate :twitter_username, :twitter_username_with_at_sign, :to => :feed
-  
+  delegate :twitter_username, :to => :feed
+
   def Post.activity_by_date
     activity = Post.count(:published, :group=>"published") #date_format(published, '%Y-%c')")
     activity_by_date = {}
@@ -33,13 +33,17 @@ class Post < ActiveRecord::Base
     end
     activity_by_date
   end
-  
+
+  def twitter_username_with_at_sign
+    feed.twitter_username_with_at_sign || '@WayWeWorkIT'
+  end
+
   def tweet
-    if Rails.env.production? && twitter_username
+    if Rails.env.production?
       short_url_length = 20 # should query as this may change.  See https://dev.twitter.com/docs/tco-link-wrapper/faq#Will_t.co-wrapped_links_always_be_the_same_length
       non_title_part_of_tweet = " #{'x'*short_url_length} via #{twitter_username_with_at_sign}"
       max_title_length = 140 - non_title_part_of_tweet.length
-    
+
       Twitter.update("#{title.truncate(max_title_length)} #{url} via #{twitter_username_with_at_sign}")
     end
   end
