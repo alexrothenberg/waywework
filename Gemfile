@@ -1,5 +1,5 @@
 source 'http://rubygems.org'
-ruby '1.8.7'
+ruby '1.8.7' if Bundler::VERSION >= '1.2.0' # this check was added in bundler 1.2
 
 gem 'rails', '3.1.0'
 
