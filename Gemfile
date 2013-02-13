@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
-ruby '1.8.7' if Bundler::VERSION >= '1.2.0' # this check was added in bundler 1.2
+ruby '1.8.7'
 
-gem 'rails'
+gem 'rails', '>= 3.2.12'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
