@@ -35,7 +35,7 @@ describe Post do
         let(:feed_without_twitter_account) { FactoryGirl.create :feed, :twitter_username => nil               }
         it 'should not tweet' do
           Twitter.should_receive(:update).
-                  with('This is an interesting blog post http://some.blog.com/2011/about_stuff via @WayWeWorkIT')
+                  with('This is an interesting blog post http://some.blog.com/2011/about_stuff?utm_source=waywework&utm_medium=twitter via @WayWeWorkIT')
           FactoryGirl.create(:post, :title => 'This is an interesting blog post', :url => 'http://some.blog.com/2011/about_stuff', :feed => feed_without_twitter_account)
         end
       end
@@ -43,7 +43,7 @@ describe Post do
         before { Twitter.should_receive(:follow).with('alexrothenberg') }
         it 'should tweet when' do
           Twitter.should_receive(:update).
-                  with('This is an interesting blog post http://some.blog.com/2011/about_stuff via @alexrothenberg')
+                  with('This is an interesting blog post http://some.blog.com/2011/about_stuff?utm_source=waywework&utm_medium=twitter via @alexrothenberg')
 
           FactoryGirl.create(:post, :title => 'This is an interesting blog post',
                                     :url => 'http://some.blog.com/2011/about_stuff',
@@ -51,7 +51,7 @@ describe Post do
         end
         it 'should tweet with truncated title when title is too long' do
           Twitter.should_receive(:update).
-                  with('This is an interesting blog post with a really long title that goes on and on for way too long -... http://some.blog.com/2011/about_stuff via @alexrothenberg')
+                  with('This is an interesting blog post with a really long title that goes on and on for way too long -... http://some.blog.com/2011/about_stuff?utm_source=waywework&utm_medium=twitter via @alexrothenberg')
 
           FactoryGirl.create(:post, :title => 'This is an interesting blog post with a really long title that goes on and on for way too long - in fact so long it needs to be truncated',
                                     :url => 'http://some.blog.com/2011/about_stuff',

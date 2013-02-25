@@ -22,6 +22,14 @@ class Post < ActiveRecord::Base
   after_create :tweet
   delegate :twitter_username, :to => :feed
 
+  def url_with_source
+    "#{url}?utm_source=waywework"
+  end
+
+  def url_with_source_and_medium(medium)
+    "#{url_with_source}&utm_medium=#{medium}"
+  end
+
   def Post.activity_by_date
     activity = Post.count(:published, :group=>"published") #date_format(published, '%Y-%c')")
     activity_by_date = {}
@@ -44,7 +52,7 @@ class Post < ActiveRecord::Base
       non_title_part_of_tweet = " #{'x'*short_url_length} via #{twitter_username_with_at_sign}"
       max_title_length = 140 - non_title_part_of_tweet.length
 
-      Twitter.update("#{title.truncate(max_title_length)} #{url} via #{twitter_username_with_at_sign}")
+      Twitter.update("#{title.truncate(max_title_length)} #{url_with_source_and_medium('twitter')} via #{twitter_username_with_at_sign}")
     end
   end
 end
