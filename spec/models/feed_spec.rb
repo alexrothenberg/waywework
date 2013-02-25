@@ -45,8 +45,8 @@ describe Feed do
   it 'should parse an atom feed' do
     feed = Feed.create!(@valid_attributes)
     xml=IO.read(File.join(Rails.root, 'spec', 'atom.xml'))
-    feed.should_receive(:create_post).with(hash_including(:contents=>'the first post', :title=>'Title for my first post', :published=>'2008-10-21 02:51:00', :url=>'http://my.blog.com/first_post.html')).and_return(post1=mock('post1'))
-    feed.should_receive(:create_post).with(hash_including(:contents=>'the second post', :title=>'The title of my second post', :published=>'2008-09-28 03:01:00', :url=>'http://my.blog.com/the_second_post.html')).and_return(post2=mock('post2'))
+    feed.should_receive(:create_post).with(hash_including(:contents=>'the first post',  :title=>'Title for my first post',     :published=>Time.zone.parse('2008-10-21 02:51:00').to_s(:db), :url=>'http://my.blog.com/first_post.html'     )).and_return(post1=mock('post1'))
+    feed.should_receive(:create_post).with(hash_including(:contents=>'the second post', :title=>'The title of my second post', :published=>Time.zone.parse('2008-09-28 03:01:00').to_s(:db), :url=>'http://my.blog.com/the_second_post.html')).and_return(post2=mock('post2'))
     feed.stub!(:puts)
     feed.get_posts_from_atom(xml)
   end
@@ -62,8 +62,8 @@ describe Feed do
   it 'should parse a rss feed' do
     feed = Feed.create!(@valid_attributes)
     xml=IO.read(File.join(Rails.root, 'spec', 'rss.xml'))
-    feed.should_receive(:create_post).with(hash_including(:contents=>'the first post', :title=>'Title for my first post', :published=>'2008-09-15 19:15:00', :url=>'http://my.blog.com/first_post.html')).and_return(post1=mock('post1'))
-    feed.should_receive(:create_post).with(hash_including(:contents=>'the second post', :title=>'The title of my second post', :published=>'2008-02-13 11:24:00', :url=>'http://my.blog.com/the_second_post.html')).and_return(post2=mock('post2'))
+    feed.should_receive(:create_post).with(hash_including(:contents=>'the first post',  :title=>'Title for my first post',     :published=>Time.zone.parse('2008-09-15 19:15:00').to_s(:db), :url=>'http://my.blog.com/first_post.html'     )).and_return(post1=mock('post1'))
+    feed.should_receive(:create_post).with(hash_including(:contents=>'the second post', :title=>'The title of my second post', :published=>Time.zone.parse('2008-02-13 11:24:00').to_s(:db), :url=>'http://my.blog.com/the_second_post.html')).and_return(post2=mock('post2'))
     feed.get_posts_from_rss(xml)
   end
 
@@ -109,7 +109,7 @@ describe Feed do
     subject { Feed.new(:author => "Alex Rothenberg") }
     its(:to_param) { should =~ /(\d*)-Alex_Rothenberg/ }
   end
-  
+
   describe '.by_most_recent_post' do
     let(:alex) { FactoryGirl.create :feed }
     let(:pat)  { FactoryGirl.create :feed }
@@ -118,13 +118,13 @@ describe Feed do
       FactoryGirl.create(:post, :feed => alex, :published => 1.year.ago)
       FactoryGirl.create(:post, :feed => alex, :published => 1.month.ago)
       FactoryGirl.create(:post, :feed => pat,  :published => 2.days.ago)
-      FactoryGirl.create(:post, :feed => pat,  :published => 1.day.ago) 
-      FactoryGirl.create(:post, :feed => amit, :published => 2.months.ago)                                                  
+      FactoryGirl.create(:post, :feed => pat,  :published => 1.day.ago)
+      FactoryGirl.create(:post, :feed => amit, :published => 2.months.ago)
     end
     subject { Feed.by_most_recent_post }
     it { should == [pat, alex, amit] }
   end
-  
+
   describe 'following on twitter' do
     let(:feed_with_twitter_account   ) { FactoryGirl.build :feed, :twitter_username => 'alexrothenberg' }
     describe 'in Production' do
