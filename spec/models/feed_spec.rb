@@ -62,8 +62,8 @@ describe Feed do
   it 'should parse a rss feed' do
     feed = Feed.create!(@valid_attributes)
     xml=IO.read(File.join(Rails.root, 'spec', 'rss.xml'))
-    feed.should_receive(:create_post).with(hash_including(:contents=>'the first post',  :title=>'Title for my first post',     :published=>Time.zone.parse('2008-09-15 19:15:00').to_s(:db), :url=>'http://my.blog.com/first_post.html'     )).and_return(post1=mock('post1'))
-    feed.should_receive(:create_post).with(hash_including(:contents=>'the second post', :title=>'The title of my second post', :published=>Time.zone.parse('2008-02-13 11:24:00').to_s(:db), :url=>'http://my.blog.com/the_second_post.html')).and_return(post2=mock('post2'))
+    feed.should_receive(:create_post).with(hash_including(:contents=>'the first post',  :title=>'Title for my first post',     :url=>'http://my.blog.com/first_post.html'     )).and_return(post1=mock('post1'))
+    feed.should_receive(:create_post).with(hash_including(:contents=>'the second post', :title=>'The title of my second post', :url=>'http://my.blog.com/the_second_post.html')).and_return(post2=mock('post2'))
     feed.get_posts_from_rss(xml)
   end
 
