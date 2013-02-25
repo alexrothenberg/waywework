@@ -5,3 +5,5 @@
 require File.expand_path('../config/application', __FILE__)
 
 WayWeWork::Application.load_tasks
+
+task :ci => [:'db:migrate', :spec]
