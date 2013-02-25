@@ -7,7 +7,7 @@ gem 'rails', '>= 3.2.12'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 group :development, :test do
-  # gem 'sqlite3'
+  gem 'sqlite3'
 end
 
 gem 'json'
