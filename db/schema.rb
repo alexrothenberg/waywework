@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -8,11 +9,11 @@
 # from scratch. The latter is a flawed and unsustainable approach (the more migrations
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
-# It's strongly recommended to check this file into your version control system.
+# It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111101103006) do
+ActiveRecord::Schema.define(version: 20130501105901) do
 
-  create_table "feeds", :force => true do |t|
+  create_table "feeds", force: true do |t|
     t.string   "url"
     t.string   "name"
     t.string   "feed_url"
@@ -20,11 +21,12 @@ ActiveRecord::Schema.define(:version => 20111101103006) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "twitter_username"
+    t.string   "category"
   end
 
-  add_index "feeds", ["author"], :name => "index_feeds_on_author"
+  add_index "feeds", ["author"], name: "index_feeds_on_author"
 
-  create_table "posts", :force => true do |t|
+  create_table "posts", force: true do |t|
     t.integer  "feed_id"
     t.text     "contents"
     t.string   "title"
@@ -33,8 +35,9 @@ ActiveRecord::Schema.define(:version => 20111101103006) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "updated"
+    t.string   "category"
   end
 
-  add_index "posts", ["published", "feed_id"], :name => "index_posts_on_published_and_feed_id"
+  add_index "posts", ["published", "feed_id"], name: "index_posts_on_published_and_feed_id"
 
 end

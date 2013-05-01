@@ -2,23 +2,41 @@
 
   <div class="right right_column">
     <%= render :partial=>'posts/whos_talking'%>
-    <br/>
-    <br/>
     <%= render :partial=>'posts/archive'%>
 
   </div>
 
   <div class="left left_column">
 
-      <% for post in @posts %>
+    <div class="blogs">
+      <nav>
+        <ul>
+          <li><%= link_to "All", root_url, :class=>"nav_item_all" %> </li>
+          <li><%= link_to "Agile", posts_by_category_url(:agile), :class=>"nav_item_agile" %></li>
+          <li><%= link_to "Technology", posts_by_category_url(:technology), :class=>"nav_item_tech" %></li>
+          <li><%= link_to "Trivia", posts_by_category_url(:trivia), :class=>"nav_item_trivia" %></li>
+        </ul>
+      </nav>
 
-        <h1><%= link_to post.title, post.url_with_source_and_medium('referral') %></h1>
-        <h2><%= distance_of_time_in_words(Time.now, post.published) %> ago | <%= link_to "#{post.feed.author}: #{post.feed.name}", post.feed.url %></h2>
+      <% @posts.each do |row| %>
 
-        <p class="content"><%= post.contents.html_safe %></p>
-        <div class="clear"></div>
+      <div class="row">
+        <% row.each do |post| %>
+        <div class="col <%=post.styleClass%>">
+          <div class="container-<%=post.styleClass%>">
+            <h1><%= link_to post.title, post.url_with_source_and_medium('referral') %></h1>
+            <h2><%= distance_of_time_in_words(Time.now, post.published) %> ago | <%= link_to "#{post.feed.author}: #{post.feed.name}", post.feed.url %></h2>
+
+            <p class="content"><%= strip_tags post.contents %></p>
+          </div>
+        </div>
+        <% end %>
+      </div>
 
       <% end %>
+
+    </div>
+
   </div>
 
   <div class="clear"></div>

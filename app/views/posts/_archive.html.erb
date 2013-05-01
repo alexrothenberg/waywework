@@ -1,5 +1,5 @@
-<h2>Archive</h2>
-<ul>
+<h2><a onclick="toggle('archives')">Archive</h2>
+<ul id="archives">
 <% @activity_by_date.keys.sort.reverse.each do |year| %>
   <li><%= year %></li>
   <ul>

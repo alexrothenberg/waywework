@@ -1,3 +1,4 @@
+<div class="content">
 <h1>New feed</h1>
 
 <%= form_for(@feed) do |f| %>
@@ -22,8 +23,13 @@
     <%= f.text_field :twitter_username %>
   </p>
   <p>
+    <%= f.label :category %><br />
+    <%= f.select :category, options_for_select([:technology, :trivia]) %>
+  </p>
+  <p>
     <%= f.submit "Create" %>
   </p>
 <% end %>
 
 <%= link_to 'Back', feeds_path %>
+</div>

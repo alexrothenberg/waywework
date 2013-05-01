@@ -12,13 +12,8 @@
 #  updated_at :datetime
 #
 
-require 'atom'
-require 'net/http'
-require 'uri'
-require 'rss/1.0'
-require 'rss/2.0'
+require 'rss'
 require 'open-uri'
-
 
 class Feed < ActiveRecord::Base
   has_many :posts, :dependent => :delete_all
@@ -49,28 +44,36 @@ class Feed < ActiveRecord::Base
 
   def get_feed
     uri = URI.parse(feed_url)
+    puts uri
     uri.read
   end
 
   def get_posts_from_atom atom_xml
-    feed = Atom::Feed.new(atom_xml)
-    feed.entries.each do |entry|
-      if entry.published
+    feed = RSS::Parser.parse(atom_xml, false)
+    atom = true
+    feed.items.each do |entry|
+      atom = entry.respond_to?(:published)
+      if atom && entry.published
         link = entry.links.detect {|l| l.rel == 'alternate'}
+        link = entry.links.first unless link
+        link = link.href if link
         content = entry.summary || entry.content
-        content = content.value if (content.mime_type == 'text/html') && content.respond_to?(:value)
-        create_post(:contents=>content, :url=>link.href, :title=>entry.title, :published=>entry.published.to_s(:db), :updated=>entry.updated.to_s(:db))
+        content = content.content if (content.type == 'html' || entry.summary) && content.respond_to?(:content)
+        create_post(:contents=>content, :url=>link, :title=>entry.title.content, :category=>category,:published=>entry.published.to_s(:db), :updated=>entry.updated.to_s(:db))
       end
     end unless false
-    return false if feed.entries.blank?
-    update_attributes(:name=>feed.title, :url=>feed.links.detect{|link| link.type=='text/html'}.href) unless name && url
+    return false if feed.items.blank?
+    return false if !atom
+    link = feed.links.detect{|link| link.type=='text/html'}
+    link = link.href if link
+    update_attributes(:name=>feed.title.content, :url=> link) unless name && url
     return true
   end
 
   def get_posts_from_rss rss_xml
     rss = RSS::Parser.parse(rss_xml, false)
     rss.items.each { |entry|
-      create_post(:contents=>entry.description, :url=>entry.link, :title=>entry.title, :published=>entry.date.to_formatted_s(:db), :updated=>entry.date.to_formatted_s(:db))
+      create_post(:contents=>entry.description, :url=>entry.link, :title=>entry.title, :category=>category, :published=>entry.date.to_formatted_s(:db), :updated=>entry.date.to_formatted_s(:db))
     }
     return false if rss.items.blank?
     update_attributes(:name=>rss.channel.title, :url=>rss.channel.link) unless name && url

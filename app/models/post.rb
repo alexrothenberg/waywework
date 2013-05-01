@@ -17,6 +17,9 @@ class Post < ActiveRecord::Base
   scope :most_recent_first, order('posts.published desc')
   scope :by_date_published, lambda {|date| where(["published <= ? and published >= ?", date.end_of_month, date.beginning_of_month]) }
 
+  @styleClass = :blue
+  attr_accessor :styleClass
+
   belongs_to :feed
 
   after_create :tweet

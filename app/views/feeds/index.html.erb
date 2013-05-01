@@ -1,3 +1,7 @@
+<div class="content">
+
+<%= link_to 'New feed', new_feed_path, :class => "btn" %>
+
 <h1>Listing feeds</h1>
 
 <table>
@@ -7,6 +11,10 @@
     <th>Feed url</th>
     <th>Name</th>
     <th>Url</th>
+    <th>Category</th>
+    <th></th>
+    <th></th>
+    <th></th>
   </tr>
 
 <% for feed in @feeds %>
@@ -16,6 +24,7 @@
     <td><%=h feed.feed_url %></td>
     <td><%=h feed.name %></td>
     <td><%=h feed.url %></td>
+    <td><%=h feed.category %></td>
     <td><%= link_to 'Show', feed %></td>
     <td><%= link_to 'Edit', edit_feed_path(feed) %></td>
     <td><%= link_to 'Destroy', feed, :confirm => 'Are you sure?', :method => :delete %></td>
@@ -23,6 +32,4 @@
 <% end %>
 </table>
 
-<br />
-
-<%= link_to 'New feed', new_feed_path %>
+</div>

@@ -4,7 +4,7 @@ class FeedsController < ApplicationController
   # GET /feeds
   # GET /feeds.xml
   def index
-    @feeds = Feed.by_author
+    @feeds = Feed.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -42,7 +42,7 @@ class FeedsController < ApplicationController
   # POST /feeds
   # POST /feeds.xml
   def create
-    @feed = Feed.new(params[:feed])
+    @feed = Feed.new(feed_params)
 
     respond_to do |format|
       if @feed.save
@@ -62,7 +62,7 @@ class FeedsController < ApplicationController
     @feed = Feed.find(params[:id])
 
     respond_to do |format|
-      if @feed.update_attributes(params[:feed])
+      if @feed.update_attributes(feed_params)
         flash[:notice] = 'Feed was successfully updated.'
         format.html { redirect_to(@feed) }
         format.xml  { head :ok }
@@ -91,5 +91,10 @@ class FeedsController < ApplicationController
       (user_name == ENV['WAYWEWORK_USERNAME']) && (password == ENV['WAYWEWORK_PASSWORD'])
     end
   end
-  
+
+  private
+  def feed_params
+    params.require(:feed).permit(:author, :feed_url, :twitter_username, :category)
+  end
+
 end
