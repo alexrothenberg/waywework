@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 
   # GET /posts
   def index
-    @posts = arrange Post.most_recent_first.all(:limit=>30)
+    @posts = arrange Post.most_recent_first.all(:limit=>40)
     nav_info
     
     respond_to do |format|
@@ -14,20 +14,20 @@ class PostsController < ApplicationController
 
   # GET /posts/by_author
   def by_author
-    @posts = arrange Post.most_recent_first.limit(50).find_all_by_feed_id(params[:id])
+    @posts = arrange Post.most_recent_first.limit(40).find_all_by_feed_id(params[:id])
     nav_info
     render :action=>:index
   end
 
   # GET /posts
   def by_month
-    @posts = arrange Post.most_recent_first.limit(50).by_date_published(Date.strptime("#{params[:year]}-#{params[:month]}", "%Y-%m"))
+    @posts = arrange Post.most_recent_first.limit(40).by_date_published(Date.strptime("#{params[:year]}-#{params[:month]}", "%Y-%m"))
     nav_info
     render :action=>:index
   end
 
   def by_category
-    @posts = arrange Post.most_recent_first.limit(50).find_all_by_category(params[:category])
+    @posts = arrange Post.most_recent_first.limit(60).find_all_by_category(params[:category])
     nav_info
     render :action=>:index
   end
