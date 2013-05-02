@@ -2,7 +2,7 @@ body  {
 	font: normal 13px Arial, sans-serif;
 	color: #222;
 	margin: 0 auto;
-	background: #F6F5F2; /* url(/assets/bg.png) repeat-x;*/
+	background: #F7F7F7; /* url(/assets/bg.png) repeat-x;*/
 	padding: 0 0 0 0;
 	line-height: 160%;
 }
@@ -52,10 +52,11 @@ blockquote,pre {background-color: #eee;  padding: 10px;  font-size: 11px; }
 #message		      {padding: 14px; z-index: 100000; position: fixed; top: 38%; left: 40%; display: none; background: #78c89d; color: #222; font-size: 28px;}
 #waiter 		      {z-index:100000; position:fixed; background:white; display: none; height: 13px; width: 208px; border:0px; top: 50%; left: 50%; margin: -6px 0 0 -104px;}
 
-.blogs .row { clear: both;} .blogs .row .col { width: 20%; margin: 1%; background-color: #fff; color: #777; float: left; height: 30em; border: 1px #ddd solid; box-shadow: 0.3em 0.3em 0.25em #888; overflow: auto;}
-.col .container-red, .col .container-green, .col .container-orange, .col .container-blue {min-height: 92%; padding: 5%; }
-.col .container-red { border-bottom: 6px solid #E14938; } .col .container-green { border-bottom: 6px solid #70B90D; } .col .container-orange { border-bottom: 6px solid #FF7F00; } .col .container-blue { border-bottom: 6px solid #0CF; } .col a { color: inherit;} .col h1 { margin-top: 0;}
-.col.red h1 a { color: #E14938;} .col.green h1 a { color: #70B90D;} .col.orange h1 a { color: #FF7F00; } .col.blue h1 a { color: #0CF; }
+.blogs .row { clear: both;} .blogs .row .col { width: 20%; margin: 1%; background-color: #fff; color: #777; float: left; height: 30em; border: 1px #eee solid; overflow: auto;}
+.col .container-red, .col .container-green, .col .container-orange, .col .container-blue, .col .container-lime, .col .container-purple, .col .container-yellow, .col .container-black {min-height: 92%; padding: 5%; }
+.col .container-red { border-bottom: 8px solid #E78E94; } .col .container-green { border-bottom: 8px solid #A2DBE2; } .col .container-orange { border-bottom: 8px solid #FE8142; } .col .container-blue { border-bottom: 8px solid #88BBDE; } .col a { color: inherit;} .col h1 { margin-top: 0;}
+.col .container-purple { border-bottom: 8px solid #D895C6;} .col .container-yellow { border-bottom: 8px solid #FDCD49;} .col .container-black { border-bottom: 8px solid #3C3431;} .col .container-lime { border-bottom: 8px solid #FEEB43; }
+.col.red h1 a { color: #E78E94;} .col.green h1 a { color: #A2DBE2;} .col.orange h1 a { color: #FE8142; } .col.blue h1 a { color: #88BBDE; } .col.purple h1 a { color: #D895C6;} .col.yellow h1 a { color: #FDCD49;} .col.black h1 a { color: #3C3431;} .col.lime h1 a { color: #FEEB43; }
 .col h2 {font-size: 1em;font-style: italic; color: #BBB;}
 nav {
 margin: 0;

@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  @@styles = [:red, :orange, :green, :blue]
+  @@styles = [:red, :orange, :green, :lime, :purple, :yellow, :black, :blue]
 
   # GET /posts
   def index
@@ -46,7 +46,7 @@ protected
       row = [] if (post_index % 4 == 0)
       rows << row if (post_index % 4 == 0)
       post.styleClass = @@styles[post_index % 4] if rows.length % 2 == 1
-      post.styleClass = @@styles[3 - (post_index % 4)] if rows.length % 2 == 0
+      post.styleClass = @@styles[4 + (post_index % 4)] if rows.length % 2 == 0
       row << post
       post_index += 1
     end
