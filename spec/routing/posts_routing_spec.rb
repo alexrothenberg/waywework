@@ -6,7 +6,7 @@ describe "route recognition" do
   end
 
   it "should generate params for #atom" do
-    get("/atom").should route_to("posts#index", :format=>:atom)
+    get("/atom").should route_to("posts#index")
   end
 
   it "should generate params for #by_month" do

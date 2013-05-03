@@ -7,18 +7,18 @@ describe "/posts/index.html.erb" do
       :name=>'feed name',
       :url => 'feed url'
       )
-    assign(:posts, [
+    assign(:posts, [[
       stub_model(Post,
         :contents => "value for contents",
         :published => Time.now - 1.day,
         :feed => stub_feed
       ),
       stub_model(Post,
-        :contents => "value for contents",
+        :contents => "value for other contents",
         :published => Time.now - 1.month,
         :feed => stub_feed
       )
-    ])
+    ]])
     assign(:active_feeds, [
       stub_model(Feed,  :id=>1, :author=>'Alex'),
       stub_model(Feed,  :id=>2, :author=>'Yash')

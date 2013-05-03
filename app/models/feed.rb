@@ -44,7 +44,6 @@ class Feed < ActiveRecord::Base
 
   def get_feed
     uri = URI.parse(feed_url)
-    puts uri
     uri.read
   end
 
@@ -57,9 +56,12 @@ class Feed < ActiveRecord::Base
         link = entry.links.detect {|l| l.rel == 'alternate'}
         link = entry.links.first unless link
         link = link.href if link
+        published = entry.published ? entry.published.content.to_formatted_s(:db) : nil
+        updated = entry.updated ? entry.updated.content.to_formatted_s(:db) : nil
+
         content = entry.summary || entry.content
         content = content.content if (content.type == 'html' || entry.summary) && content.respond_to?(:content)
-        create_post(:contents=>content, :url=>link, :title=>entry.title.content, :category=>category,:published=>entry.published.to_s(:db), :updated=>entry.updated.to_s(:db))
+        create_post(:contents=>content, :url=>link, :title=>entry.title.content, :category=>category,:published=>published.to_s, :updated=>updated.to_s)
       end
     end unless false
     return false if feed.items.blank?

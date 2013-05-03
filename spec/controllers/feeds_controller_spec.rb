@@ -14,7 +14,7 @@ describe FeedsController do
   describe "responding to GET index" do
     
     it "should expose all feeds as @feeds" do
-      Feed.should_receive(:by_author).and_return([mock_feed])
+      Feed.should_receive(:all).and_return([mock_feed])
       get :index
       assigns[:feeds].should == [mock_feed]
     end
@@ -23,7 +23,7 @@ describe FeedsController do
   
       it "should render all feeds as xml" do
         request.env["HTTP_ACCEPT"] = "application/xml"
-        Feed.should_receive(:by_author).and_return(feeds = [{:feed=>'something'}])
+        Feed.should_receive(:all).and_return(feeds = [{:feed=>'something'}])
         get :index
         response.body.should == feeds.to_xml
       end
@@ -79,14 +79,14 @@ describe FeedsController do
     describe "with valid params" do
       
       it "should expose a newly created feed as @feed" do
-        Feed.should_receive(:new).with({'these' => 'params'}).and_return(mock_feed(:save => true))
-        post :create, :feed => {:these => 'params'}
+        Feed.should_receive(:new).with({'author' => 'params'}).and_return(mock_feed(:save => true))
+        post :create, :feed => {:author => 'params'}
         assigns(:feed).should equal(mock_feed)
       end
 
       it "should redirect to the created feed" do
         Feed.stub!(:new).and_return(mock_feed(:save => true))
-        post :create, :feed => {}
+        post :create, :feed => {:author => "params"}
         response.should redirect_to(feed_url(mock_feed))
       end
       
@@ -95,14 +95,14 @@ describe FeedsController do
     describe "with invalid params" do
 
       it "should expose a newly created but unsaved feed as @feed" do
-        Feed.stub!(:new).with({'these' => 'params'}).and_return(mock_feed(:save => false))
-        post :create, :feed => {:these => 'params'}
+        Feed.stub!(:new).with({'author' => 'params'}).and_return(mock_feed(:save => false))
+        post :create, :feed => {:author => 'params'}
         assigns(:feed).should equal(mock_feed)
       end
 
       it "should re-render the 'new' template" do
         Feed.stub!(:new).and_return(mock_feed(:save => false))
-        post :create, :feed => {}
+        post :create, :feed => {:author => "params"}
         response.should render_template('new')
       end
       
@@ -116,19 +116,19 @@ describe FeedsController do
 
       it "should update the requested feed" do
         Feed.should_receive(:find).with("37").and_return(mock_feed)
-        mock_feed.should_receive(:update_attributes).with({'these' => 'params'})
-        put :update, :id => "37", :feed => {:these => 'params'}
+        mock_feed.should_receive(:update_attributes).with({'author' => 'params'})
+        put :update, :id => "37", :feed => {:author => 'params'}
       end
 
       it "should expose the requested feed as @feed" do
         Feed.stub!(:find).and_return(mock_feed(:update_attributes => true))
-        put :update, :id => "1"
+        put :update, :id => "1", :feed => { :author => "params" }
         assigns(:feed).should equal(mock_feed)
       end
 
       it "should redirect to the feed" do
         Feed.stub!(:find).and_return(mock_feed(:update_attributes => true))
-        put :update, :id => "1"
+        put :update, :id => "1", :feed => { :author => "params" }
         response.should redirect_to(feed_url(mock_feed))
       end
 
@@ -138,19 +138,19 @@ describe FeedsController do
 
       it "should update the requested feed" do
         Feed.should_receive(:find).with("37").and_return(mock_feed)
-        mock_feed.should_receive(:update_attributes).with({'these' => 'params'})
-        put :update, :id => "37", :feed => {:these => 'params'}
+        mock_feed.should_receive(:update_attributes).with({'author' => 'params'})
+        put :update, :id => "37", :feed => {:author => 'params'}
       end
 
       it "should expose the feed as @feed" do
         Feed.stub!(:find).and_return(mock_feed(:update_attributes => false))
-        put :update, :id => "1"
+        put :update, :id => "1", :feed => { :author => "params" }
         assigns(:feed).should equal(mock_feed)
       end
 
       it "should re-render the 'edit' template" do
         Feed.stub!(:find).and_return(mock_feed(:update_attributes => false))
-        put :update, :id => "1"
+        put :update, :id => "1", :feed => { :author => "params" }
         response.should render_template('edit')
       end
 
