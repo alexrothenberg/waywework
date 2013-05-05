@@ -14,8 +14,8 @@
 #
 
 class Post < ActiveRecord::Base
-  scope :most_recent_first, order('posts.published desc')
-  scope :by_date_published, lambda {|date| where(["published <= ? and published >= ?", date.end_of_month, date.beginning_of_month]) }
+  scope :most_recent_first, -> { order('posts.published desc') }
+  scope :by_date_published, -> { lambda {|date| where(["published <= ? and published >= ?", date.end_of_month, date.beginning_of_month]) } }
 
   @styleClass = :blue
   attr_accessor :styleClass
@@ -34,7 +34,7 @@ class Post < ActiveRecord::Base
   end
 
   def Post.activity_by_date
-    activity = Post.count(:published, :group=>"published") #date_format(published, '%Y-%c')")
+    activity = Post.group(:published).count(:published) #date_format(published, '%Y-%c')")
     activity_by_date = {}
     activity.each do |row|
       # raise row[0].year.inspect

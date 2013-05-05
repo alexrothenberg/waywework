@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 
   # GET /posts
   def index
-    @posts = arrange Post.most_recent_first.all(:limit=>40)
+    @posts = arrange Post.most_recent_first.limit(40).load
     nav_info
     
     respond_to do |format|
@@ -29,7 +29,7 @@ class PostsController < ApplicationController
   def by_category
     @posts = arrange Post.most_recent_first.limit(60).find_all_by_category(params[:category])
     nav_info
-    render :action=>:index
+    render action: 'index'
   end
 
 protected
