@@ -3,39 +3,53 @@ class PostsController < ApplicationController
 
   # GET /posts
   def index
-    @posts = arrange Post.most_recent_first.limit(40).load
+    page = get_offset params
+    @posts = arrange Post.most_recent_first.offset(page).limit(40).load
     nav_info
     
     respond_to do |format|
       format.html
       format.atom
-    end
+    end if !params[:page]
+    render action: "page", layout: false if params[:page]
   end
 
   # GET /posts/by_author
   def by_author
-    @posts = arrange Post.most_recent_first.limit(40).find_all_by_feed_id(params[:id])
+    page = get_offset params
+    @posts = arrange Post.most_recent_first.offset(page).limit(40).find_all_by_feed_id(params[:id])
     nav_info
-    render :action=>:index
+    render :action=>:index if !params[:page]
+    render action: "page", layout: false if params[:page]
   end
 
   # GET /posts
   def by_month
-    @posts = arrange Post.most_recent_first.limit(40).by_date_published(Date.strptime("#{params[:year]}-#{params[:month]}", "%Y-%m"))
+    page = get_offset params
+    @posts = arrange Post.most_recent_first.offset(page).limit(40).by_date_published(Date.strptime("#{params[:year]}-#{params[:month]}", "%Y-%m"))
     nav_info
-    render :action=>:index
+    render :action=>:index if !params[:page]
+    render action: "page", layout: false if params[:page]
   end
 
   def by_category
-    @posts = arrange Post.most_recent_first.limit(60).find_all_by_category(params[:category])
+    page = get_offset(params, 60)
+    @posts = arrange Post.most_recent_first.offset(page).limit(60).find_all_by_category(params[:category])
     nav_info
-    render action: 'index'
+    render :action=>:index if !params[:page]
+    render action: "page", layout: false if params[:page]
   end
 
 protected
   def nav_info
     @active_feeds = Feed.by_most_recent_post
     @activity_by_date = Post.activity_by_date
+  end
+
+  def get_offset(params, entries_per_page = 40)
+    page = params[:page]
+    page ||= 1
+    (page.to_i-1)*entries_per_page
   end
 
   def arrange(posts)

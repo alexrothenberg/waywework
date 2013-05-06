@@ -49,6 +49,10 @@ WayWeWork::Application.routes.draw do
   get 'posts/:category' =>'posts#by_category', :as => :posts_by_category
   get 'author/:id' =>'posts#by_author', :as => :posts_by_author
   get 'month/:year/:month' =>'posts#by_month', :as => :posts_by_month
+  get 'posts/all/:page' =>'posts#index', :as => :all_posts_by_page
+  get 'posts/:category/:page' =>'posts#by_category', :as => :posts_by_category_and_page
+  get 'author/:id/:page' =>'posts#by_author', :as => :posts_by_author_and_page
+  get 'month/:year/:month/:page' =>'posts#by_month', :as => :posts_by_month_and_page
   get '/atom' => 'posts#index', :as => :atom_feed, :format => :atom
   
   resources :feeds
