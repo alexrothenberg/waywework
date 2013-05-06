@@ -22,7 +22,7 @@ class Post < ActiveRecord::Base
 
   belongs_to :feed
 
-  #after_create :tweet
+  after_create :tweet
   delegate :twitter_username, :to => :feed
 
   def url_with_source
