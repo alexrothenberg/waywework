@@ -1,8 +1,18 @@
+@font-face {
+    font-family: SourceSansProRegular;
+    src: url(../fonts/SourceSansPro-Regular.ttf);
+}
+@font-face {
+    font-family: Sintony;
+    src: url(../fonts/Sintony-Regular.ttf);
+}
+
 body  {
-	font: normal 13px Arial, sans-serif;
+	font: normal 13px SourceSansProRegular;
+	padding-top: 40px;
 	color: #222;
 	margin: 0 auto;
-	background: #F7F7F7; /* url(/assets/bg.png) repeat-x;*/
+	background: #EFEFEB; /* url(/assets/bg.png) repeat-x;*/
 	padding: 0 0 0 0;
 	line-height: 160%;
 }
@@ -12,18 +22,13 @@ div, img, form, ul {
 	border: 0px;
 }
 
-@font-face {
-    font-family: SourceSansProRegular;
-    src: url(../fonts/SourceSansPro-Regular.ttf);
-}
-
 div, span, td, .text_l {text-align: left;}
 .clear 		      	{clear: both;}
 .tr,
 td.tr	 	        	{text-align: right;}
 .tc,
 td.tc		        	{text-align: center;}
-a 			        	{text-decoration: underline; color: #679aa5; }
+a 			        	{text-decoration: underline; color: #7D7D7A; }
 a:hover       		{text-decoration: none; }
 .left 		      	{float: left;}
 .right 		       	{float: right;}
@@ -46,7 +51,7 @@ h2                {font-size: 15px; font-weight: normal; padding: 0 0 10px 0;  m
 .left_column content  {clear: both; padding-right: 20px; padding-bottom: 20px;}
 .left_column h1  {margin-right: 20px;}
 blockquote,pre {background-color: #eee;  padding: 10px;  font-size: 11px; }
-.right_column     {width: 20%; padding-top: 20px;}
+.right_column     {width: 20%; padding-top: 75px;}
 .right_column li  {margin: 3px 0; font-weight: bold;}
 .right_column h2  {font-weight: bold; margin-bottom: 0; padding: 0 0 5px 0;}
 .right_column ul ul li {padding-left:1.2em;}
@@ -59,6 +64,7 @@ blockquote,pre {background-color: #eee;  padding: 10px;  font-size: 11px; }
 
 .blogs .row { clear: both;} .blogs .row .col { width: 20%; margin: 1%; background-color: #fff; color: #777; float: left; height: 35em; border: 1px #eee solid; overflow-x: auto; overflow-y: hidden; font-family: SourceSansProRegular; width: 22%;}
 .blogs .row .col img { max-width: 100%; height: auto !important; }
+.col .post-container { overflow-y: hidden; overflow-x: auto; height: 32em;}
 .col .container-red, .col .container-green, .col .container-orange, .col .container-blue, .col .container-lime, .col .container-purple, .col .container-yellow, .col .container-black {min-height: 93%; padding: 5%; }
 .col .container-red { border-bottom: 8px solid #E78E94; } .col .container-green { border-bottom: 8px solid #A2DBE2; } .col .container-orange { border-bottom: 8px solid #FE8142; } .col .container-blue { border-bottom: 8px solid #88BBDE; } 
 .col a { color: inherit;} .col h1 { margin-top: 0; padding-top: 0.25em; }
@@ -88,8 +94,8 @@ color: #736D64;
 display: inline-block;
 text-transform: uppercase;
 text-decoration: none !important;
-font-size: 1.5em;
-padding: 1em .6em;
+font-size: 1.9em;
+padding: 0.6em .6em;
 -webkit-transition: .25s;
 -moz-transition: .25s;
 -ms-transition: .25s;
@@ -132,8 +138,8 @@ padding: 5px;
 
 .btn { padding: 1em; background-color: #7FC04C; color: #fff; -moz-border-radius: 0.5em; border-radius: 0.5em; float: right;}
 
-.right_column h2 { background-color: #1E82B9; padding: 1em; color: #FFF; margin-bottom: 1em;}
-.right_column h2 a { color: inherit; text-decoration: none;}
+.right_column h2 { background-color: #A9A9A4; padding: 1em; color: #FFF; margin-bottom: 1em;}
+.right_column h2 a { color: inherit; text-decoration: none; cursor: pointer;}
 .right_column ul#authors, ul#archives { display: none; }
 #authors li { background-color: #EEEEEE; padding: 0.25em 1em;}
 #authors li a { text-decoration: none; color: #666;}

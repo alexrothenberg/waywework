@@ -24,10 +24,12 @@
         <% row.each do |post| %>
         <div class="col <%=post.styleClass%>">
           <div class="container-<%=post.styleClass%>">
-            <h1><%= link_to post.title, post.url_with_source_and_medium('referral') %></h1>
-            <h2><%= distance_of_time_in_words(Time.now, post.published) %> ago | <%= link_to "#{post.feed.author}: #{post.feed.name}", post.feed.url %></h2>
+            <div class="post-container">
+              <h1><%= link_to post.title, post.url_with_source_and_medium('referral') %></h1>
+              <h2><%= distance_of_time_in_words(Time.now, post.published) %> ago | <%= link_to "#{post.feed.author}: #{post.feed.name}", post.feed.url %></h2>
 
-            <p class="content"><%= sanitize post.contents.html_safe, :tags => %w(img a) %></p>
+              <p class="content"><%= sanitize post.contents.html_safe, :tags => %w(img a) %></p>
+            </div>
           </div>
         </div>
         <% end %>
