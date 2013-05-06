@@ -58,7 +58,7 @@ blockquote,pre {background-color: #eee;  padding: 10px;  font-size: 11px; }
 #waiter 		      {z-index:100000; position:fixed; background:white; display: none; height: 13px; width: 208px; border:0px; top: 50%; left: 50%; margin: -6px 0 0 -104px;}
 
 .blogs .row { clear: both;} .blogs .row .col { width: 20%; margin: 1%; background-color: #fff; color: #777; float: left; height: 35em; border: 1px #eee solid; overflow-x: auto; overflow-y: hidden; font-family: SourceSansProRegular; width: 22%;}
-.blogs .row .col img { width: 100%; height: auto !important; }
+.blogs .row .col img { max-width: 100%; height: auto !important; }
 .col .container-red, .col .container-green, .col .container-orange, .col .container-blue, .col .container-lime, .col .container-purple, .col .container-yellow, .col .container-black {min-height: 93%; padding: 5%; }
 .col .container-red { border-bottom: 8px solid #E78E94; } .col .container-green { border-bottom: 8px solid #A2DBE2; } .col .container-orange { border-bottom: 8px solid #FE8142; } .col .container-blue { border-bottom: 8px solid #88BBDE; } 
 .col a { color: inherit;} .col h1 { margin-top: 0; padding-top: 0.25em; }
