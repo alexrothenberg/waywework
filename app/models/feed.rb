@@ -51,13 +51,15 @@ class Feed < ActiveRecord::Base
     feed = RSS::Parser.parse(atom_xml, false)
     atom = true
     feed.items.each do |entry|
-      atom = entry.respond_to?(:published)
-      if atom && entry.published
+      atom = !entry.respond_to?(:description)
+      if atom && entry.updated
         link = entry.links.detect {|l| l.rel == 'alternate'}
         link = entry.links.first unless link
         link = link.href if link
-        published = entry.published ? entry.published.content.to_formatted_s(:db) : nil
+        published = entry.published ? entry.published.content.to_formatted_s(:db) : nil if entry.respond_to?(:published)
+
         updated = entry.updated ? entry.updated.content.to_formatted_s(:db) : nil
+        published ||= updated
 
         content = entry.summary || entry.content
         content = content.content if (content.type == 'html' || entry.summary) && content.respond_to?(:content)
