@@ -143,3 +143,7 @@ padding: 5px;
 .right_column ul#authors, ul#archives { display: none; }
 #authors li { background-color: #EEEEEE; padding: 0.25em 1em;}
 #authors li a { text-decoration: none; color: #666;}
+#archives li a { text-decoration: none; }
+#archives { padding: 0 1em; }
+
+
