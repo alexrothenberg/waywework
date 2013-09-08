@@ -5,6 +5,8 @@ WayWeWork is a RSS and Atom feed aggregator. It has an ability to collect blogs 
 
 Formats supported are Atom and RSS.
 
+A working example is hosted at [http://thewaywework.herokuapp.com/](http://thewaywework.herokuapp.com/)
+
 ## Main Features
 
 * Register/ manage sources of feeds.
