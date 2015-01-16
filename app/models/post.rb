@@ -14,8 +14,8 @@
 #
 
 class Post < ActiveRecord::Base
-  scope :most_recent_first, order('posts.published desc')
-  scope :by_date_published, lambda {|date| where(["published <= ? and published >= ?", date.end_of_month, date.beginning_of_month]) }
+  scope :most_recent_first, -> { order('posts.published desc') }
+  scope :by_date_published, lambda {|date| where(["published <= ? and published >= ?", date.end_of_month, date.beginning_of_month]) } 
 
   @styleClass = :blue
   attr_accessor :styleClass
@@ -34,7 +34,7 @@ class Post < ActiveRecord::Base
   end
 
   def Post.activity_by_date
-    activity = Post.count(:published, :group=>"published") #date_format(published, '%Y-%c')")
+    activity = Post.group(:published).count(:published) #date_format(published, '%Y-%c')")
     activity_by_date = {}
     activity.each do |row|
       # raise row[0].year.inspect
@@ -51,11 +51,15 @@ class Post < ActiveRecord::Base
 
   def tweet
     if Rails.env.production?
-      short_url_length = 20 # should query as this may change.  See https://dev.twitter.com/docs/tco-link-wrapper/faq#Will_t.co-wrapped_links_always_be_the_same_length
-      non_title_part_of_tweet = " #{'x'*short_url_length} via #{twitter_username_with_at_sign}"
-      max_title_length = 140 - non_title_part_of_tweet.length
+      begin
+        short_url_length = 20 # should query as this may change.  See https://dev.twitter.com/docs/tco-link-wrapper/faq#Will_t.co-wrapped_links_always_be_the_same_length
+        non_title_part_of_tweet = " #{'x'*short_url_length} via #{twitter_username_with_at_sign}"
+        max_title_length = 140 - non_title_part_of_tweet.length
 
-      Twitter.update("#{title.truncate(max_title_length)} #{url_with_source_and_medium('twitter')} via #{twitter_username_with_at_sign}")
+        Twitter.update("#{title.truncate(max_title_length)} #{url_with_source_and_medium('twitter')} via #{twitter_username_with_at_sign}")
+      rescue
+        puts "there was an error sending the tweet"
+      end
     end
   end
 end
