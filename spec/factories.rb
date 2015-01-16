@@ -11,7 +11,7 @@ FactoryGirl.define do
     contents           { Faker::Lorem.paragraphs.join(' ') }
     title              { Faker::Lorem.words.join(' ')      }
     url                { "#{feed.url}/#{title.gsub(' ', '/')}" }
-    published          { rand(10).days.ago }
+    published          { rand(1).days.ago }
   end
 end
 
