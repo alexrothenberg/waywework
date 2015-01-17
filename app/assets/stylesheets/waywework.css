@@ -159,4 +159,4 @@ padding: 5px;
 #authors li a { text-decoration: none; color: #666;}
 #archives li a { text-decoration: none; }
 #archives { padding: 0 1em; }
-a.nextPage { background: #ccc; padding: 0.5em 1em; }
+a.nextPage { background: #ddd; border: 1px solid #ccc; margin: 1%; padding: 0.5em 3em; }
