@@ -41,7 +41,7 @@ describe Post do
       end
       describe 'for feed with a twitter account' do
         before { Twitter.should_receive(:follow).with('alexrothenberg') }
-        it 'should tweet when' do
+        it 'should tweet' do
           Twitter.should_receive(:update).
                   with('This is an interesting blog post http://some.blog.com/2011/about_stuff?utm_source=waywework&utm_medium=twitter via @alexrothenberg')
 
@@ -56,6 +56,15 @@ describe Post do
           FactoryGirl.create(:post, :title => 'This is an interesting blog post with a really long title that goes on and on for way too long - in fact so long it needs to be truncated',
                                     :url => 'http://some.blog.com/2011/about_stuff',
                                     :feed => feed_with_twitter_account)
+        end
+        it 'should not tweet when the post is too old' do
+          Twitter.should_not_receive(:update).
+                  with('This is an interesting blog post http://some.blog.com/2011/about_stuff?utm_source=waywework&utm_medium=twitter via @alexrothenberg')
+
+          FactoryGirl.create(:post, :title => 'This is an interesting blog post',
+                                    :url => 'http://some.blog.com/2011/about_stuff',
+                                    :feed => feed_with_twitter_account,
+                                    :published => 10.days.ago)
         end
       end
     end

@@ -51,15 +51,23 @@ class Post < ActiveRecord::Base
 
   def tweet
     if Rails.env.production?
-      begin
-        short_url_length = 20 # should query as this may change.  See https://dev.twitter.com/docs/tco-link-wrapper/faq#Will_t.co-wrapped_links_always_be_the_same_length
-        non_title_part_of_tweet = " #{'x'*short_url_length} via #{twitter_username_with_at_sign}"
-        max_title_length = 140 - non_title_part_of_tweet.length
+      if newPost?
+        begin
+          short_url_length = 20 # should query as this may change.  See https://dev.twitter.com/docs/tco-link-wrapper/faq#Will_t.co-wrapped_links_always_be_the_same_length
+          non_title_part_of_tweet = " #{'x'*short_url_length} via #{twitter_username_with_at_sign}"
+          max_title_length = 140 - non_title_part_of_tweet.length
 
-        Twitter.update("#{title.truncate(max_title_length)} #{url_with_source_and_medium('twitter')} via #{twitter_username_with_at_sign}")
-      rescue
-        puts "there was an error sending the tweet"
+          Twitter.update("#{title.truncate(max_title_length)} #{url_with_source_and_medium('twitter')} via #{twitter_username_with_at_sign}")
+        rescue
+          puts "there was an error sending the tweet"
+        end
       end
     end
+
+  end
+
+  def newPost?
+    two_days_ago = (Date.today - 2)
+    published && published > two_days_ago
   end
 end
