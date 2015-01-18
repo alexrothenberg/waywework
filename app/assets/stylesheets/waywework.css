@@ -78,11 +78,11 @@ blockquote,pre {background-color: #eee;  padding: 10px;  font-size: 11px; }
 }
 @media all and (min-width: 400px) and (max-width: 1024px) {
 	.blogs .row .col { width: 45%;}
-	.col .container-red, .col .container-green, .col .container-orange, .col .container-blue, .col .container-lime, .col .container-purple, .col .container-yellow, .col .container-black {min-height: 93%; padding: 2% 5%; }
+	.col .container-red, .col .container-green, .col .container-orange, .col .container-blue, .col .container-lime, .col .container-purple, .col .container-yellow, .col .container-black {min-height: 95%; padding: 2% 5%; }
 }
 @media all and (max-width: 399px) {
 	.blogs .row .col { width: 95%;}
-	.col .container-red, .col .container-green, .col .container-orange, .col .container-blue, .col .container-lime, .col .container-purple, .col .container-yellow, .col .container-black {min-height: 93%; padding: 2% 5%; }
+	.col .container-red, .col .container-green, .col .container-orange, .col .container-blue, .col .container-lime, .col .container-purple, .col .container-yellow, .col .container-black {min-height: 96%; padding: 2% 5%; }
 }
 
 nav {
